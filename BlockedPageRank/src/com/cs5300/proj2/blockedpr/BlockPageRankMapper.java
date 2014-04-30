@@ -6,11 +6,9 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
-import com.cs5300.proj2.preprocess.Constants;
-
 /**
  * <p><b>Map task for each block.
- * The input tuple is < nodeId , outGoingEdgeList >
+ * 
  * </b></p>
  * @author kt466
  *
@@ -25,38 +23,39 @@ public class BlockPageRankMapper extends Mapper<LongWritable, Text, Text, Text>{
 		line = line.trim();
 		String[] tuple = line.split("\\s+");
 		int nodeID = Integer.parseInt(tuple[0]);
-		String[] outNodes = tuple[1].split(",");
+		double pageRank = Double.valueOf(tuple[1]);
+		int degree = Integer.parseInt(tuple[2]);
+		String[] outNodes = tuple[3].split(",");
 		
 		int blockID = new Integer(lookupBlockID(nodeID));
 		
-		// for this node, value to pass is nodeID, previous pageRank and outgoing edgelist
-		// map key:blockID value:PR nodeID pageRank <outgoing edgelist>
+	
 		Text mapperKey = new Text(String.valueOf(blockID));
-		Text mapperValue = new Text("PR " + tuple[0] + " " + String.valueOf(Constants.INIT_PR) + " "
-				+ tuple[1]);
+		Text mapperValue = new Text("PR " + nodeID + " " + String.valueOf(pageRank) + " "
+				+ tuple[3]);
+	
+		//Output tuple ( key , value )
+		//= < blockID , PR nodeID pageRank {outGoingEdgeList}>
 		context.write(mapperKey, mapperValue);
 		
-		// find the blockID for the outgoing edge
-				// if the outgoing edge lies within a different block, we also need to send our
-				// node's info to that block with a label of "BC" (boundary condition)
-
+	
 		for (int i = 0; i < outNodes.length; i++) {
 			int out = (int) Double.valueOf(outNodes[i]).longValue();
 			int blockIDOut = lookupBlockID(out);
 			mapperKey = new Text(String.valueOf(blockIDOut));
-			// the 2 nodes are in the same block
+			
+			//Check if both the nodes are in the same block.
 			if (blockIDOut == blockID) {
 				
-				// map key:blockID value:BE node nodeOut
+				// Output key:blockID value:BE node nodeOut
 				mapperValue = new Text("BE " + String.valueOf(nodeID) + " " + outNodes[i]);
 			
-				// this is an edge node - the incoming node is in another block
 			} else {
 				
 				// the pageRankFactor is used by the reducer to calculate the new
 				// pageRank for the outgoing edges
 				
-				double pageRankFactor = (Constants.INIT_PR / (double)outNodes.length);
+				double pageRankFactor = (pageRank / (double)degree);
 				
 				String pageRankFactorString = String.valueOf(pageRankFactor);
 				// map key:blockID value:BC node nodeOut pageRankFactor 

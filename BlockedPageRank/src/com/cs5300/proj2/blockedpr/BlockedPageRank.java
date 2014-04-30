@@ -24,8 +24,8 @@ public class BlockedPageRank {
 			System.err.println("Usage (no trailing slashes): project2.PageRankBlock s3n://<in filename> s3n://<out bucket>");
 			System.exit(2);
 		}*/
-		String inputFile = "/home/kira/git/blockedPageRank/preprocessedInputKT466.txt";
-		String outputPath = "/home/kira/git/blockedPageRank";
+		String inputFile = "/home/kira/blockedPageRank/preprocessedInputKT466.txt";
+		String outputPath = "/home/kira/blockedPageRank/runs";
 
 		int i = 0;
 		double residualErrorAvg = 0.0f;

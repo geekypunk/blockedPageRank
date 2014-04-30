@@ -2,7 +2,6 @@ package com.cs5300.proj2.preprocess;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -15,13 +14,8 @@ import java.util.List;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
-import com.amazonaws.regions.Region;
-import com.amazonaws.regions.Regions;
-import com.amazonaws.services.elasticmapreduce.AmazonElasticMapReduce;
-import com.amazonaws.services.elasticmapreduce.AmazonElasticMapReduceClient;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.GetObjectRequest;
-import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
 
 
@@ -47,7 +41,7 @@ public class PreprocessInput {
 		try{
 		
 			//createFilteredEdgesFile();
-			//createPreprocessedInputFile();
+			createPreprocessedInputFile();
 			
 		}catch(Exception e){
 		
@@ -91,9 +85,9 @@ public class PreprocessInput {
 	
 	private static void createPreprocessedInputFile() throws IOException{
 		
-		File inFile = new File("preprocessedEdgesKt466.txt"); 
+		File inFile = new File("/home/kira/preprocessedEdgesKt466.txt"); 
 		//File inFile = new File("test"); 
-		File outFile = new File("preprocessedInputKT466.txt");      
+		File outFile = new File("/home/kira/preprocessedInputKT466.txt");      
 		BufferedReader reader = new BufferedReader(new FileReader(inFile));
 		FileWriter fw = new FileWriter(outFile);
 		BufferedWriter bw = new BufferedWriter(fw);
@@ -115,7 +109,7 @@ public class PreprocessInput {
 					  sb.append(outNodes.get(i)).append(",");
 				  }
 				  sb.append(outNodes.get(outNodes.size()-1));
-				  bw.write(oldnode+" "+sb.toString()+"\n");
+				  bw.write(oldnode+" "+Constants.INIT_PR+" "+outNodes.size()+" "+sb.toString()+"\n");
 				  oldnode = currentNode;
 				  outNodes = new ArrayList<Integer>();
 				  outNodes.add(Integer.parseInt(parts[1]));
@@ -130,7 +124,7 @@ public class PreprocessInput {
 			sb.append(outNodes.get(i)).append(",");
 		}
 		sb.append(outNodes.get(outNodes.size()-1));
-		bw.write(oldnode+" "+sb.toString());
+		bw.write(oldnode+" "+Constants.INIT_PR+" "+outNodes.size()+" "+sb.toString()+"\n");
 		bw.close();
 	}
 	

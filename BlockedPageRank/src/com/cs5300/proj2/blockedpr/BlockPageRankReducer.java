@@ -12,6 +12,11 @@ import com.cs5300.proj2.preprocess.Constants;
 
 
 
+/**
+ * Run reducer for every block
+ * @author kt466
+ *
+ */
 public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 
 	private HashMap<String, Double> newPR = new HashMap<String, Double>();
@@ -30,7 +35,6 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		Text input = new Text();
 		String[] inputTokens = null;
 		
-		// initialize/reset all variables
 		double pageRankOld =  0.0;
 		double residualError =  0.0;
 		
