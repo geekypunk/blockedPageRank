@@ -1,0 +1,2225 @@
+14/04/30 17:46:02 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/04/30 17:46:02 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+14/04/30 17:46:02 WARN mapred.JobClient: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+14/04/30 17:46:02 INFO input.FileInputFormat: Total input paths to process : 1
+14/04/30 17:46:02 WARN snappy.LoadSnappy: Snappy native library not loaded
+14/04/30 17:46:03 INFO mapred.JobClient: Running job: job_local_0001
+14/04/30 17:46:03 INFO util.ProcessTree: setsid exited with exit code 0
+14/04/30 17:46:03 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@1320ebf
+14/04/30 17:46:03 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:46:03 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:46:03 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:46:04 INFO mapred.JobClient:  map 0% reduce 0%
+14/04/30 17:46:06 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:06 INFO mapred.MapTask: bufstart = 0; bufend = 6132971; bufvoid = 99614720
+14/04/30 17:46:06 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:46:07 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:46:07 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:07 INFO mapred.MapTask: bufstart = 6132971; bufend = 12759716; bufvoid = 99614720
+14/04/30 17:46:07 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:46:08 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:46:08 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:08 INFO mapred.MapTask: bufstart = 12759716; bufend = 19134630; bufvoid = 99614720
+14/04/30 17:46:08 INFO mapred.MapTask: kvstart = 196607; kvend = 131070; length = 327680
+14/04/30 17:46:09 INFO mapred.LocalJobRunner: 
+14/04/30 17:46:09 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:46:10 INFO mapred.JobClient:  map 19% reduce 0%
+14/04/30 17:46:10 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:10 INFO mapred.MapTask: bufstart = 19134630; bufend = 26046423; bufvoid = 99614720
+14/04/30 17:46:10 INFO mapred.MapTask: kvstart = 131070; kvend = 65533; length = 327680
+14/04/30 17:46:10 INFO mapred.MapTask: Finished spill 3
+14/04/30 17:46:11 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:11 INFO mapred.MapTask: bufstart = 26046423; bufend = 33750000; bufvoid = 99614720
+14/04/30 17:46:11 INFO mapred.MapTask: kvstart = 65533; kvend = 327677; length = 327680
+14/04/30 17:46:11 INFO mapred.MapTask: Finished spill 4
+14/04/30 17:46:12 INFO mapred.LocalJobRunner: 
+14/04/30 17:46:12 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:12 INFO mapred.MapTask: bufstart = 33750000; bufend = 41269218; bufvoid = 99614720
+14/04/30 17:46:12 INFO mapred.MapTask: kvstart = 327677; kvend = 262140; length = 327680
+14/04/30 17:46:13 INFO mapred.JobClient:  map 35% reduce 0%
+14/04/30 17:46:13 INFO mapred.MapTask: Finished spill 5
+14/04/30 17:46:14 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:14 INFO mapred.MapTask: bufstart = 41269218; bufend = 51579394; bufvoid = 99614720
+14/04/30 17:46:14 INFO mapred.MapTask: kvstart = 262140; kvend = 196603; length = 327680
+14/04/30 17:46:14 INFO mapred.MapTask: Finished spill 6
+14/04/30 17:46:15 INFO mapred.LocalJobRunner: 
+14/04/30 17:46:15 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:15 INFO mapred.MapTask: bufstart = 51579394; bufend = 61075142; bufvoid = 99614720
+14/04/30 17:46:15 INFO mapred.MapTask: kvstart = 196603; kvend = 131066; length = 327680
+14/04/30 17:46:16 INFO mapred.JobClient:  map 48% reduce 0%
+14/04/30 17:46:16 INFO mapred.MapTask: Finished spill 7
+14/04/30 17:46:16 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:16 INFO mapred.MapTask: bufstart = 61075142; bufend = 69506787; bufvoid = 99614720
+14/04/30 17:46:16 INFO mapred.MapTask: kvstart = 131066; kvend = 65529; length = 327680
+14/04/30 17:46:17 INFO mapred.MapTask: Finished spill 8
+14/04/30 17:46:18 INFO mapred.LocalJobRunner: 
+14/04/30 17:46:18 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:18 INFO mapred.MapTask: bufstart = 69506787; bufend = 77557331; bufvoid = 99614720
+14/04/30 17:46:18 INFO mapred.MapTask: kvstart = 65529; kvend = 327673; length = 327680
+14/04/30 17:46:18 INFO mapred.MapTask: Finished spill 9
+14/04/30 17:46:19 INFO mapred.JobClient:  map 64% reduce 0%
+14/04/30 17:46:19 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:19 INFO mapred.MapTask: bufstart = 77557331; bufend = 85181439; bufvoid = 99614720
+14/04/30 17:46:19 INFO mapred.MapTask: kvstart = 327673; kvend = 262136; length = 327680
+14/04/30 17:46:19 INFO mapred.MapTask: Finished spill 10
+14/04/30 17:46:20 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:20 INFO mapred.MapTask: bufstart = 85181439; bufend = 93030700; bufvoid = 99614720
+14/04/30 17:46:20 INFO mapred.MapTask: kvstart = 262136; kvend = 196599; length = 327680
+14/04/30 17:46:21 INFO mapred.MapTask: Finished spill 11
+14/04/30 17:46:21 INFO mapred.LocalJobRunner: 
+14/04/30 17:46:21 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:21 INFO mapred.MapTask: bufstart = 93030700; bufend = 768281; bufvoid = 99614720
+14/04/30 17:46:21 INFO mapred.MapTask: kvstart = 196599; kvend = 131062; length = 327680
+14/04/30 17:46:22 INFO mapred.JobClient:  map 83% reduce 0%
+14/04/30 17:46:22 INFO mapred.MapTask: Finished spill 12
+14/04/30 17:46:23 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:23 INFO mapred.MapTask: bufstart = 768281; bufend = 8409259; bufvoid = 99614720
+14/04/30 17:46:23 INFO mapred.MapTask: kvstart = 131062; kvend = 65525; length = 327680
+14/04/30 17:46:23 INFO mapred.MapTask: Finished spill 13
+14/04/30 17:46:23 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:46:24 INFO mapred.MapTask: Finished spill 14
+14/04/30 17:46:24 INFO mapred.Merger: Merging 15 sorted segments
+14/04/30 17:46:24 INFO mapred.Merger: Merging 6 intermediate segments out of a total of 15
+14/04/30 17:46:24 INFO mapred.LocalJobRunner: 
+14/04/30 17:46:25 INFO mapred.JobClient:  map 100% reduce 0%
+14/04/30 17:46:27 INFO mapred.Merger: Down to the last merge-pass, with 10 segments left of total size: 120981128 bytes
+14/04/30 17:46:27 INFO mapred.LocalJobRunner: 
+14/04/30 17:46:30 INFO mapred.LocalJobRunner: 
+14/04/30 17:46:33 INFO mapred.LocalJobRunner: 
+14/04/30 17:46:33 INFO mapred.Task: Task:attempt_local_0001_m_000000_0 is done. And is in the process of commiting
+14/04/30 17:46:36 INFO mapred.LocalJobRunner: 
+14/04/30 17:46:36 INFO mapred.LocalJobRunner: 
+14/04/30 17:46:36 INFO mapred.Task: Task 'attempt_local_0001_m_000000_0' done.
+14/04/30 17:46:36 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@1909402
+14/04/30 17:46:36 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:46:36 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:46:36 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:46:37 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:37 INFO mapred.MapTask: bufstart = 0; bufend = 7492790; bufvoid = 99614720
+14/04/30 17:46:37 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:46:37 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:46:38 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:38 INFO mapred.MapTask: bufstart = 7492790; bufend = 14768974; bufvoid = 99614720
+14/04/30 17:46:38 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:46:38 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:46:39 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:39 INFO mapred.MapTask: bufstart = 14768974; bufend = 22133734; bufvoid = 99614720
+14/04/30 17:46:39 INFO mapred.MapTask: kvstart = 196607; kvend = 131070; length = 327680
+14/04/30 17:46:39 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:46:40 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:40 INFO mapred.MapTask: bufstart = 22133734; bufend = 29718143; bufvoid = 99614720
+14/04/30 17:46:40 INFO mapred.MapTask: kvstart = 131070; kvend = 65533; length = 327680
+14/04/30 17:46:41 INFO mapred.MapTask: Finished spill 3
+14/04/30 17:46:41 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:41 INFO mapred.MapTask: bufstart = 29718143; bufend = 37254543; bufvoid = 99614720
+14/04/30 17:46:41 INFO mapred.MapTask: kvstart = 65533; kvend = 327677; length = 327680
+14/04/30 17:46:42 INFO mapred.MapTask: Finished spill 4
+14/04/30 17:46:42 INFO mapred.LocalJobRunner: 
+14/04/30 17:46:42 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:42 INFO mapred.MapTask: bufstart = 37254543; bufend = 44821748; bufvoid = 99614720
+14/04/30 17:46:42 INFO mapred.MapTask: kvstart = 327677; kvend = 262140; length = 327680
+14/04/30 17:46:43 INFO mapred.JobClient:  map 69% reduce 0%
+14/04/30 17:46:43 INFO mapred.MapTask: Finished spill 5
+14/04/30 17:46:43 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:43 INFO mapred.MapTask: bufstart = 44821748; bufend = 52244395; bufvoid = 99614720
+14/04/30 17:46:43 INFO mapred.MapTask: kvstart = 262140; kvend = 196603; length = 327680
+14/04/30 17:46:44 INFO mapred.MapTask: Finished spill 6
+14/04/30 17:46:44 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:44 INFO mapred.MapTask: bufstart = 52244395; bufend = 59345160; bufvoid = 99614720
+14/04/30 17:46:44 INFO mapred.MapTask: kvstart = 196603; kvend = 131066; length = 327680
+14/04/30 17:46:44 INFO mapred.MapTask: Finished spill 7
+14/04/30 17:46:45 INFO mapred.LocalJobRunner: 
+14/04/30 17:46:45 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:45 INFO mapred.MapTask: bufstart = 59345160; bufend = 66491156; bufvoid = 99614720
+14/04/30 17:46:45 INFO mapred.MapTask: kvstart = 131066; kvend = 65529; length = 327680
+14/04/30 17:46:45 INFO mapred.MapTask: Finished spill 8
+14/04/30 17:46:46 INFO mapred.JobClient:  map 80% reduce 0%
+14/04/30 17:46:46 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:46 INFO mapred.MapTask: bufstart = 66491156; bufend = 74531024; bufvoid = 99614720
+14/04/30 17:46:46 INFO mapred.MapTask: kvstart = 65529; kvend = 327673; length = 327680
+14/04/30 17:46:47 INFO mapred.MapTask: Finished spill 9
+14/04/30 17:46:47 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:47 INFO mapred.MapTask: bufstart = 74531024; bufend = 82072063; bufvoid = 99614720
+14/04/30 17:46:47 INFO mapred.MapTask: kvstart = 327673; kvend = 262136; length = 327680
+14/04/30 17:46:48 INFO mapred.MapTask: Finished spill 10
+14/04/30 17:46:48 INFO mapred.LocalJobRunner: 
+14/04/30 17:46:49 INFO mapred.JobClient:  map 89% reduce 0%
+14/04/30 17:46:49 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:49 INFO mapred.MapTask: bufstart = 82072063; bufend = 91553555; bufvoid = 99614720
+14/04/30 17:46:49 INFO mapred.MapTask: kvstart = 262136; kvend = 196599; length = 327680
+14/04/30 17:46:49 INFO mapred.MapTask: Finished spill 11
+14/04/30 17:46:50 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:50 INFO mapred.MapTask: bufstart = 91553555; bufend = 1830976; bufvoid = 99614720
+14/04/30 17:46:50 INFO mapred.MapTask: kvstart = 196599; kvend = 131062; length = 327680
+14/04/30 17:46:50 INFO mapred.MapTask: Finished spill 12
+14/04/30 17:46:51 INFO mapred.LocalJobRunner: 
+14/04/30 17:46:52 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:46:52 INFO mapred.MapTask: bufstart = 1830976; bufend = 11077571; bufvoid = 99614720
+14/04/30 17:46:52 INFO mapred.MapTask: kvstart = 131062; kvend = 65525; length = 327680
+14/04/30 17:46:52 INFO mapred.JobClient:  map 96% reduce 0%
+14/04/30 17:46:52 INFO mapred.MapTask: Finished spill 13
+14/04/30 17:46:52 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:46:52 INFO mapred.MapTask: Finished spill 14
+14/04/30 17:46:52 INFO mapred.Merger: Merging 15 sorted segments
+14/04/30 17:46:52 INFO mapred.Merger: Merging 6 intermediate segments out of a total of 15
+14/04/30 17:46:54 INFO mapred.LocalJobRunner: 
+14/04/30 17:46:55 INFO mapred.JobClient:  map 100% reduce 0%
+14/04/30 17:46:55 INFO mapred.Merger: Down to the last merge-pass, with 10 segments left of total size: 121597136 bytes
+14/04/30 17:46:57 INFO mapred.LocalJobRunner: 
+14/04/30 17:47:00 INFO mapred.LocalJobRunner: 
+14/04/30 17:47:01 INFO mapred.Task: Task:attempt_local_0001_m_000001_0 is done. And is in the process of commiting
+14/04/30 17:47:03 INFO mapred.LocalJobRunner: 
+14/04/30 17:47:03 INFO mapred.LocalJobRunner: 
+14/04/30 17:47:03 INFO mapred.Task: Task 'attempt_local_0001_m_000001_0' done.
+14/04/30 17:47:03 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@18d6157
+14/04/30 17:47:03 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:47:03 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:47:03 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:47:04 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:47:04 INFO mapred.MapTask: bufstart = 0; bufend = 7428557; bufvoid = 99614720
+14/04/30 17:47:04 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:47:05 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:47:05 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:47:05 INFO mapred.MapTask: bufstart = 7428557; bufend = 14604241; bufvoid = 99614720
+14/04/30 17:47:05 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:47:05 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:47:05 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:47:05 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:47:05 INFO mapred.Merger: Merging 3 sorted segments
+14/04/30 17:47:05 INFO mapred.Merger: Down to the last merge-pass, with 3 segments left of total size: 17802232 bytes
+14/04/30 17:47:06 INFO mapred.Task: Task:attempt_local_0001_m_000002_0 is done. And is in the process of commiting
+14/04/30 17:47:09 INFO mapred.LocalJobRunner: 
+14/04/30 17:47:09 INFO mapred.LocalJobRunner: 
+14/04/30 17:47:09 INFO mapred.Task: Task 'attempt_local_0001_m_000002_0' done.
+14/04/30 17:47:09 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@14d583a
+14/04/30 17:47:09 INFO mapred.LocalJobRunner: 
+14/04/30 17:47:09 INFO mapred.Merger: Merging 3 sorted segments
+14/04/30 17:47:09 INFO mapred.Merger: Down to the last merge-pass, with 3 segments left of total size: 260380456 bytes
+14/04/30 17:47:09 INFO mapred.LocalJobRunner: 
+Block:0 node:10327 pageRank:1.986879887217654E-6
+Block:1 node:20372 pageRank:5.1747681751943E-7
+Block:10 node:110566 pageRank:1.9040036716004593E-6
+Block:11 node:120944 pageRank:1.4593640091648059E-6
+Block:12 node:130998 pageRank:2.2410545803400393E-7
+Block:13 node:140573 pageRank:5.285821953194194E-7
+Block:14 node:150952 pageRank:2.1890460137472094E-7
+14/04/30 17:47:15 INFO mapred.LocalJobRunner: reduce > reduce
+Block:15 node:161331 pageRank:2.1890460137472094E-7
+14/04/30 17:47:16 INFO mapred.JobClient:  map 100% reduce 71%
+Block:16 node:171153 pageRank:5.950463300238116E-7
+Block:17 node:181513 pageRank:3.528980311335823E-7
+Block:18 node:191624 pageRank:5.2627918292925674E-6
+Block:19 node:202003 pageRank:4.473081419096938E-6
+Block:2 node:30628 pageRank:3.1013605654076705E-7
+14/04/30 17:47:18 INFO mapred.LocalJobRunner: reduce > reduce
+Block:20 node:212382 pageRank:4.6699648293273795E-7
+14/04/30 17:47:19 INFO mapred.JobClient:  map 100% reduce 74%
+Block:21 node:222761 pageRank:0.0017487211354794065
+Block:22 node:232592 pageRank:5.908084113854599E-7
+Block:23 node:242877 pageRank:5.924235392985854E-7
+Block:24 node:252937 pageRank:2.1890460137472094E-7
+Block:25 node:263148 pageRank:3.0400350358720106E-7
+Block:26 node:273209 pageRank:2.1890460137472094E-7
+14/04/30 17:47:21 INFO mapred.LocalJobRunner: reduce > reduce
+Block:27 node:283472 pageRank:4.6699648293273795E-7
+14/04/30 17:47:22 INFO mapred.JobClient:  map 100% reduce 77%
+Block:28 node:293254 pageRank:2.6721723094128213E-7
+Block:29 node:303042 pageRank:5.213075406385147E-6
+Block:3 node:40643 pageRank:2.809275717642252E-7
+Block:30 node:313369 pageRank:7.507533294581932E-7
+Block:31 node:323521 pageRank:2.1890460137472094E-7
+14/04/30 17:47:24 INFO mapred.LocalJobRunner: reduce > reduce
+Block:32 node:333882 pageRank:6.737397175644188E-7
+Block:33 node:343662 pageRank:2.841919386268307E-7
+14/04/30 17:47:25 INFO mapred.JobClient:  map 100% reduce 79%
+Block:34 node:353643 pageRank:3.772709392529705E-7
+Block:35 node:363928 pageRank:3.5325866312913197E-7
+Block:36 node:374235 pageRank:1.4562140460997882E-6
+Block:37 node:384553 pageRank:6.323910706380826E-7
+14/04/30 17:47:27 INFO mapred.LocalJobRunner: reduce > reduce
+Block:38 node:394928 pageRank:7.346437291602649E-7
+Block:39 node:404711 pageRank:2.487422988718135E-7
+14/04/30 17:47:28 INFO mapred.JobClient:  map 100% reduce 81%
+Block:4 node:50460 pageRank:2.1890460137472094E-7
+Block:40 node:414616 pageRank:3.119111968090322E-7
+Block:41 node:424746 pageRank:5.552982875459865E-7
+Block:42 node:434706 pageRank:2.8320485605448617E-6
+Block:43 node:444488 pageRank:4.507589061743242E-6
+14/04/30 17:47:30 INFO mapred.LocalJobRunner: reduce > reduce
+Block:44 node:454284 pageRank:5.018739566984647E-7
+Block:45 node:464397 pageRank:1.0060282830577855E-5
+14/04/30 17:47:31 INFO mapred.JobClient:  map 100% reduce 84%
+Block:46 node:474195 pageRank:1.2506989119735995E-6
+Block:47 node:484049 pageRank:6.155632297374852E-7
+Block:48 node:493967 pageRank:2.1890460137472094E-7
+Block:49 node:503751 pageRank:3.719427017747795E-6
+14/04/30 17:47:33 INFO mapred.LocalJobRunner: reduce > reduce
+Block:5 node:60840 pageRank:2.1890460137472094E-7
+14/04/30 17:47:34 INFO mapred.JobClient:  map 100% reduce 87%
+Block:50 node:514130 pageRank:6.616428463693583E-7
+Block:51 node:524509 pageRank:0.0017459497324177277
+14/04/30 17:47:36 INFO mapred.LocalJobRunner: reduce > reduce
+Block:52 node:534708 pageRank:1.1418298673694752E-6
+14/04/30 17:47:37 INFO mapred.JobClient:  map 100% reduce 90%
+Block:53 node:545087 pageRank:0.0013638434631717585
+Block:54 node:555466 pageRank:0.0020613372241777977
+14/04/30 17:47:39 INFO mapred.LocalJobRunner: reduce > reduce
+Block:55 node:565845 pageRank:3.1732173672866457E-6
+14/04/30 17:47:40 INFO mapred.JobClient:  map 100% reduce 93%
+Block:56 node:576224 pageRank:1.2631760437369708E-6
+Block:57 node:586603 pageRank:1.0213322198081047E-6
+Block:58 node:596584 pageRank:4.052477251359281E-6
+Block:59 node:606366 pageRank:3.4295054215372943E-7
+14/04/30 17:47:42 INFO mapred.LocalJobRunner: reduce > reduce
+Block:6 node:70590 pageRank:3.114616074144924E-7
+Block:60 node:616147 pageRank:8.391343052697633E-7
+Block:61 node:626447 pageRank:8.874203650052082E-6
+14/04/30 17:47:43 INFO mapred.JobClient:  map 100% reduce 96%
+Block:62 node:636239 pageRank:1.0794607032509802E-6
+Block:63 node:646021 pageRank:3.1193905695897734E-7
+Block:64 node:655803 pageRank:2.1890460137472094E-7
+Block:65 node:665665 pageRank:9.837311544572078E-7
+14/04/30 17:47:45 INFO mapred.LocalJobRunner: reduce > reduce
+Block:66 node:675447 pageRank:1.278142902314538E-6
+Block:67 node:685229 pageRank:2.796207953285524E-7
+Block:7 node:80117 pageRank:2.1890460137472094E-7
+14/04/30 17:47:46 INFO mapred.JobClient:  map 100% reduce 98%
+Block:8 node:90496 pageRank:0.0015659703178507785
+Block:9 node:100500 pageRank:2.599696597258504E-7
+14/04/30 17:47:47 INFO mapred.Task: Task:attempt_local_0001_r_000000_0 is done. And is in the process of commiting
+14/04/30 17:47:47 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:47:47 INFO mapred.Task: Task attempt_local_0001_r_000000_0 is allowed to commit now
+14/04/30 17:47:47 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0001_r_000000_0' to /home/kira/blockedPageRank/runs/run1
+14/04/30 17:47:48 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:47:48 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:47:48 INFO mapred.Task: Task 'attempt_local_0001_r_000000_0' done.
+14/04/30 17:47:49 INFO mapred.JobClient:  map 100% reduce 100%
+14/04/30 17:47:49 INFO mapred.JobClient: Job complete: job_local_0001
+14/04/30 17:47:49 INFO mapred.JobClient: Counters: 21
+14/04/30 17:47:49 INFO mapred.JobClient:   com.cs5300.proj2.blockedpr.Counters
+14/04/30 17:47:49 INFO mapred.JobClient:     RESIDUAL_ERROR=1898427902
+14/04/30 17:47:49 INFO mapred.JobClient:   File Output Format Counters 
+14/04/30 17:47:49 INFO mapred.JobClient:     Bytes Written=72882400
+14/04/30 17:47:49 INFO mapred.JobClient:   FileSystemCounters
+14/04/30 17:47:49 INFO mapred.JobClient:     FILE_BYTES_READ=1712601008
+14/04/30 17:47:49 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=2163452312
+14/04/30 17:47:49 INFO mapred.JobClient:   File Input Format Counters 
+14/04/30 17:47:49 INFO mapred.JobClient:     Bytes Read=72710077
+14/04/30 17:47:49 INFO mapred.JobClient:   Map-Reduce Framework
+14/04/30 17:47:49 INFO mapred.JobClient:     Reduce input groups=68
+14/04/30 17:47:49 INFO mapred.JobClient:     Map output materialized bytes=260380468
+14/04/30 17:47:49 INFO mapred.JobClient:     Combine output records=0
+14/04/30 17:47:49 INFO mapred.JobClient:     Map input records=679841
+14/04/30 17:47:49 INFO mapred.JobClient:     Reduce shuffle bytes=0
+14/04/30 17:47:49 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+14/04/30 17:47:49 INFO mapred.JobClient:     Reduce output records=679841
+14/04/30 17:47:49 INFO mapred.JobClient:     Spilled Records=27793879
+14/04/30 17:47:49 INFO mapred.JobClient:     Map output bytes=243747323
+14/04/30 17:47:49 INFO mapred.JobClient:     CPU time spent (ms)=0
+14/04/30 17:47:49 INFO mapred.JobClient:     Total committed heap usage (bytes)=1627914240
+14/04/30 17:47:49 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+14/04/30 17:47:49 INFO mapred.JobClient:     Combine input records=0
+14/04/30 17:47:49 INFO mapred.JobClient:     Map output records=8216053
+14/04/30 17:47:49 INFO mapred.JobClient:     SPLIT_RAW_BYTES=369
+14/04/30 17:47:49 INFO mapred.JobClient:     Reduce input records=8216053
+2.791805738235294
+Residual error for iteration 0: 2.7918
+14/04/30 17:47:49 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+14/04/30 17:47:49 WARN mapred.JobClient: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+14/04/30 17:47:49 INFO input.FileInputFormat: Total input paths to process : 1
+14/04/30 17:47:49 INFO mapred.JobClient: Running job: job_local_0002
+14/04/30 17:47:49 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@45a690
+14/04/30 17:47:49 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:47:49 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:47:49 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:47:50 INFO mapred.JobClient:  map 0% reduce 0%
+14/04/30 17:47:50 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:47:50 INFO mapred.MapTask: bufstart = 0; bufend = 6278548; bufvoid = 99614720
+14/04/30 17:47:50 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:47:51 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:47:51 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:47:51 INFO mapred.MapTask: bufstart = 6278548; bufend = 14021563; bufvoid = 99614720
+14/04/30 17:47:51 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:47:52 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:47:53 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:47:53 INFO mapred.MapTask: bufstart = 14021563; bufend = 24292148; bufvoid = 99614720
+14/04/30 17:47:53 INFO mapred.MapTask: kvstart = 196607; kvend = 131070; length = 327680
+14/04/30 17:47:53 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:47:54 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:47:54 INFO mapred.MapTask: bufstart = 24292148; bufend = 33661158; bufvoid = 99614720
+14/04/30 17:47:54 INFO mapred.MapTask: kvstart = 131070; kvend = 65533; length = 327680
+14/04/30 17:47:55 INFO mapred.MapTask: Finished spill 3
+14/04/30 17:47:55 INFO mapred.LocalJobRunner: 
+14/04/30 17:47:55 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:47:55 INFO mapred.MapTask: bufstart = 33661158; bufend = 42235718; bufvoid = 99614720
+14/04/30 17:47:55 INFO mapred.MapTask: kvstart = 65533; kvend = 327677; length = 327680
+14/04/30 17:47:56 INFO mapred.MapTask: Finished spill 4
+14/04/30 17:47:56 INFO mapred.JobClient:  map 30% reduce 0%
+14/04/30 17:47:56 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:47:56 INFO mapred.MapTask: bufstart = 42235718; bufend = 50116575; bufvoid = 99614720
+14/04/30 17:47:56 INFO mapred.MapTask: kvstart = 327677; kvend = 262140; length = 327680
+14/04/30 17:47:57 INFO mapred.MapTask: Finished spill 5
+14/04/30 17:47:58 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:47:58 INFO mapred.MapTask: bufstart = 50116575; bufend = 57234841; bufvoid = 99614720
+14/04/30 17:47:58 INFO mapred.MapTask: kvstart = 262140; kvend = 196603; length = 327680
+14/04/30 17:47:58 INFO mapred.LocalJobRunner: 
+14/04/30 17:47:58 INFO mapred.MapTask: Finished spill 6
+14/04/30 17:47:59 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:47:59 INFO mapred.MapTask: bufstart = 57234841; bufend = 65138584; bufvoid = 99614720
+14/04/30 17:47:59 INFO mapred.MapTask: kvstart = 196603; kvend = 131066; length = 327680
+14/04/30 17:47:59 INFO mapred.JobClient:  map 48% reduce 0%
+14/04/30 17:47:59 INFO mapred.MapTask: Finished spill 7
+14/04/30 17:48:00 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:00 INFO mapred.MapTask: bufstart = 65138584; bufend = 72560560; bufvoid = 99614720
+14/04/30 17:48:00 INFO mapred.MapTask: kvstart = 131066; kvend = 65529; length = 327680
+14/04/30 17:48:00 INFO mapred.MapTask: Finished spill 8
+14/04/30 17:48:01 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:01 INFO mapred.MapTask: bufstart = 72560560; bufend = 79958790; bufvoid = 99614720
+14/04/30 17:48:01 INFO mapred.MapTask: kvstart = 65529; kvend = 327673; length = 327680
+14/04/30 17:48:01 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:01 INFO mapred.MapTask: Finished spill 9
+14/04/30 17:48:02 INFO mapred.JobClient:  map 69% reduce 0%
+14/04/30 17:48:02 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:02 INFO mapred.MapTask: bufstart = 79958790; bufend = 87212583; bufvoid = 99614720
+14/04/30 17:48:02 INFO mapred.MapTask: kvstart = 327673; kvend = 262136; length = 327680
+14/04/30 17:48:02 INFO mapred.MapTask: Finished spill 10
+14/04/30 17:48:03 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:03 INFO mapred.MapTask: bufstart = 87212583; bufend = 94759052; bufvoid = 99614720
+14/04/30 17:48:03 INFO mapred.MapTask: kvstart = 262136; kvend = 196599; length = 327680
+14/04/30 17:48:03 INFO mapred.MapTask: Finished spill 11
+14/04/30 17:48:04 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:04 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:04 INFO mapred.MapTask: bufstart = 94759052; bufend = 2526156; bufvoid = 99614720
+14/04/30 17:48:04 INFO mapred.MapTask: kvstart = 196599; kvend = 131062; length = 327680
+14/04/30 17:48:05 INFO mapred.MapTask: Finished spill 12
+14/04/30 17:48:05 INFO mapred.JobClient:  map 89% reduce 0%
+14/04/30 17:48:05 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:05 INFO mapred.MapTask: bufstart = 2526156; bufend = 9749150; bufvoid = 99614720
+14/04/30 17:48:05 INFO mapred.MapTask: kvstart = 131062; kvend = 65525; length = 327680
+14/04/30 17:48:05 INFO mapred.MapTask: Finished spill 13
+14/04/30 17:48:05 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:48:06 INFO mapred.MapTask: Finished spill 14
+14/04/30 17:48:06 INFO mapred.Merger: Merging 15 sorted segments
+14/04/30 17:48:06 INFO mapred.Merger: Merging 6 intermediate segments out of a total of 15
+14/04/30 17:48:07 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:08 INFO mapred.JobClient:  map 100% reduce 0%
+14/04/30 17:48:08 INFO mapred.Merger: Down to the last merge-pass, with 10 segments left of total size: 119089465 bytes
+14/04/30 17:48:10 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:13 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:15 INFO mapred.Task: Task:attempt_local_0002_m_000000_0 is done. And is in the process of commiting
+14/04/30 17:48:16 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:16 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:16 INFO mapred.Task: Task 'attempt_local_0002_m_000000_0' done.
+14/04/30 17:48:16 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@17a9387
+14/04/30 17:48:16 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:48:16 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:48:16 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:48:17 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:17 INFO mapred.MapTask: bufstart = 0; bufend = 6814732; bufvoid = 99614720
+14/04/30 17:48:17 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:48:17 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:48:18 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:18 INFO mapred.MapTask: bufstart = 6814732; bufend = 14277891; bufvoid = 99614720
+14/04/30 17:48:18 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:48:18 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:48:19 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:19 INFO mapred.MapTask: bufstart = 14277891; bufend = 21719209; bufvoid = 99614720
+14/04/30 17:48:19 INFO mapred.MapTask: kvstart = 196607; kvend = 131070; length = 327680
+14/04/30 17:48:19 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:48:20 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:20 INFO mapred.MapTask: bufstart = 21719209; bufend = 29342534; bufvoid = 99614720
+14/04/30 17:48:20 INFO mapred.MapTask: kvstart = 131070; kvend = 65533; length = 327680
+14/04/30 17:48:20 INFO mapred.MapTask: Finished spill 3
+14/04/30 17:48:21 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:21 INFO mapred.MapTask: bufstart = 29342534; bufend = 36401678; bufvoid = 99614720
+14/04/30 17:48:21 INFO mapred.MapTask: kvstart = 65533; kvend = 327677; length = 327680
+14/04/30 17:48:21 INFO mapred.MapTask: Finished spill 4
+14/04/30 17:48:22 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:22 INFO mapred.MapTask: bufstart = 36401678; bufend = 43213241; bufvoid = 99614720
+14/04/30 17:48:22 INFO mapred.MapTask: kvstart = 327677; kvend = 262140; length = 327680
+14/04/30 17:48:22 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:22 INFO mapred.MapTask: Finished spill 5
+14/04/30 17:48:23 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:23 INFO mapred.MapTask: bufstart = 43213241; bufend = 50312367; bufvoid = 99614720
+14/04/30 17:48:23 INFO mapred.MapTask: kvstart = 262140; kvend = 196603; length = 327680
+14/04/30 17:48:23 INFO mapred.JobClient:  map 70% reduce 0%
+14/04/30 17:48:23 INFO mapred.MapTask: Finished spill 6
+14/04/30 17:48:24 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:24 INFO mapred.MapTask: bufstart = 50312367; bufend = 57592370; bufvoid = 99614720
+14/04/30 17:48:24 INFO mapred.MapTask: kvstart = 196603; kvend = 131066; length = 327680
+14/04/30 17:48:24 INFO mapred.MapTask: Finished spill 7
+14/04/30 17:48:25 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:25 INFO mapred.MapTask: bufstart = 57592370; bufend = 65606407; bufvoid = 99614720
+14/04/30 17:48:25 INFO mapred.MapTask: kvstart = 131066; kvend = 65529; length = 327680
+14/04/30 17:48:25 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:25 INFO mapred.MapTask: Finished spill 8
+14/04/30 17:48:26 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:26 INFO mapred.MapTask: bufstart = 65606407; bufend = 73010256; bufvoid = 99614720
+14/04/30 17:48:26 INFO mapred.MapTask: kvstart = 65529; kvend = 327673; length = 327680
+14/04/30 17:48:26 INFO mapred.JobClient:  map 81% reduce 0%
+14/04/30 17:48:26 INFO mapred.MapTask: Finished spill 9
+14/04/30 17:48:27 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:27 INFO mapred.MapTask: bufstart = 73010256; bufend = 83093553; bufvoid = 99614720
+14/04/30 17:48:27 INFO mapred.MapTask: kvstart = 327673; kvend = 262136; length = 327680
+14/04/30 17:48:27 INFO mapred.MapTask: Finished spill 10
+14/04/30 17:48:28 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:28 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:28 INFO mapred.MapTask: bufstart = 83093553; bufend = 93046775; bufvoid = 99614720
+14/04/30 17:48:28 INFO mapred.MapTask: kvstart = 262136; kvend = 196599; length = 327680
+14/04/30 17:48:29 INFO mapred.MapTask: Finished spill 11
+14/04/30 17:48:29 INFO mapred.JobClient:  map 88% reduce 0%
+14/04/30 17:48:30 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:30 INFO mapred.MapTask: bufstart = 93046775; bufend = 2072613; bufvoid = 99614720
+14/04/30 17:48:30 INFO mapred.MapTask: kvstart = 196599; kvend = 131062; length = 327680
+14/04/30 17:48:30 INFO mapred.MapTask: Finished spill 12
+14/04/30 17:48:31 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:31 INFO mapred.MapTask: bufstart = 2072613; bufend = 9650830; bufvoid = 99614720
+14/04/30 17:48:31 INFO mapred.MapTask: kvstart = 131062; kvend = 65525; length = 327680
+14/04/30 17:48:31 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:31 INFO mapred.MapTask: Finished spill 13
+14/04/30 17:48:32 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:48:32 INFO mapred.MapTask: Finished spill 14
+14/04/30 17:48:32 INFO mapred.JobClient:  map 97% reduce 0%
+14/04/30 17:48:32 INFO mapred.Merger: Merging 15 sorted segments
+14/04/30 17:48:32 INFO mapred.Merger: Merging 6 intermediate segments out of a total of 15
+14/04/30 17:48:34 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:34 INFO mapred.JobClient:  map 100% reduce 0%
+14/04/30 17:48:35 INFO mapred.Merger: Down to the last merge-pass, with 10 segments left of total size: 123022570 bytes
+14/04/30 17:48:37 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:40 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:41 INFO mapred.Task: Task:attempt_local_0002_m_000001_0 is done. And is in the process of commiting
+14/04/30 17:48:43 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:43 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:43 INFO mapred.Task: Task 'attempt_local_0002_m_000001_0' done.
+14/04/30 17:48:43 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@1fd0653
+14/04/30 17:48:43 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:48:43 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:48:43 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:48:44 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:44 INFO mapred.MapTask: bufstart = 0; bufend = 7157426; bufvoid = 99614720
+14/04/30 17:48:44 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:48:44 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:48:45 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:48:45 INFO mapred.MapTask: bufstart = 7157426; bufend = 14755497; bufvoid = 99614720
+14/04/30 17:48:45 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:48:46 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:48:46 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:48:46 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:48:46 INFO mapred.Merger: Merging 3 sorted segments
+14/04/30 17:48:46 INFO mapred.Merger: Down to the last merge-pass, with 3 segments left of total size: 18064132 bytes
+14/04/30 17:48:47 INFO mapred.Task: Task:attempt_local_0002_m_000002_0 is done. And is in the process of commiting
+14/04/30 17:48:49 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:49 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:49 INFO mapred.Task: Task 'attempt_local_0002_m_000002_0' done.
+14/04/30 17:48:49 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@4decad
+14/04/30 17:48:49 INFO mapred.LocalJobRunner: 
+14/04/30 17:48:49 INFO mapred.Merger: Merging 3 sorted segments
+14/04/30 17:48:49 INFO mapred.Merger: Down to the last merge-pass, with 3 segments left of total size: 260176127 bytes
+14/04/30 17:48:49 INFO mapred.LocalJobRunner: 
+Block:0 node:10327 pageRank:1.895615330001062E-6
+Block:1 node:20372 pageRank:5.173354667454309E-7
+Block:10 node:110566 pageRank:1.9904085215381644E-6
+Block:11 node:120944 pageRank:4.2928751742538174E-7
+Block:12 node:130998 pageRank:2.2429271400047138E-7
+Block:13 node:140573 pageRank:5.488014580643263E-7
+Block:14 node:150952 pageRank:2.1890460137472094E-7
+Block:15 node:161331 pageRank:2.1890460137472094E-7
+Block:16 node:171153 pageRank:5.645346484775168E-7
+14/04/30 17:48:55 INFO mapred.LocalJobRunner: reduce > reduce
+Block:17 node:181513 pageRank:3.522444425627395E-7
+14/04/30 17:48:55 INFO mapred.JobClient:  map 100% reduce 73%
+Block:18 node:191624 pageRank:5.295432822805171E-6
+Block:19 node:202003 pageRank:4.168650876995836E-6
+Block:2 node:30628 pageRank:3.0174264890692487E-7
+Block:20 node:212382 pageRank:2.6721723094128213E-7
+Block:21 node:222761 pageRank:8.837435003306648E-4
+Block:22 node:232592 pageRank:1.4308239170439838E-4
+Block:23 node:242877 pageRank:5.755916736137737E-7
+14/04/30 17:48:58 INFO mapred.LocalJobRunner: reduce > reduce
+Block:24 node:252937 pageRank:2.1890460137472094E-7
+Block:25 node:263148 pageRank:3.0396904199390153E-7
+Block:26 node:273209 pageRank:2.1890460137472094E-7
+14/04/30 17:48:59 INFO mapred.JobClient:  map 100% reduce 75%
+Block:27 node:283472 pageRank:3.398328278133687E-7
+Block:28 node:293254 pageRank:2.622198199554197E-7
+Block:29 node:303042 pageRank:4.832656925999414E-6
+14/04/30 17:49:01 INFO mapred.LocalJobRunner: reduce > reduce
+Block:3 node:40643 pageRank:2.809275717642252E-7
+14/04/30 17:49:01 INFO mapred.JobClient:  map 100% reduce 78%
+Block:30 node:313369 pageRank:8.301644835924843E-7
+Block:31 node:323521 pageRank:2.1890460137472094E-7
+Block:32 node:333882 pageRank:5.556977060988987E-7
+Block:33 node:343662 pageRank:2.54795403415875E-7
+Block:34 node:353643 pageRank:4.4357396388850365E-7
+Block:35 node:363928 pageRank:3.5623080752434995E-7
+14/04/30 17:49:04 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:49:04 INFO mapred.JobClient:  map 100% reduce 81%
+Block:36 node:374235 pageRank:3.5590537714939914E-6
+Block:37 node:384553 pageRank:4.705908768296565E-7
+Block:38 node:394928 pageRank:6.856464863169592E-7
+Block:39 node:404711 pageRank:2.467234215769444E-7
+Block:4 node:50460 pageRank:2.1890460137472094E-7
+Block:40 node:414616 pageRank:3.117103006055149E-7
+Block:41 node:424746 pageRank:9.671710179711995E-7
+14/04/30 17:49:07 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:49:07 INFO mapred.JobClient:  map 100% reduce 83%
+Block:42 node:434706 pageRank:2.750326233500215E-6
+Block:43 node:444488 pageRank:4.1717563062046E-6
+Block:44 node:454284 pageRank:4.975352392371906E-7
+Block:45 node:464397 pageRank:1.0409465991853774E-5
+Block:46 node:474195 pageRank:9.466248055903866E-7
+Block:47 node:484049 pageRank:5.849664537050016E-7
+Block:48 node:493967 pageRank:2.1890460137472094E-7
+14/04/30 17:49:10 INFO mapred.LocalJobRunner: reduce > reduce
+Block:49 node:503751 pageRank:6.718035976820384E-6
+14/04/30 17:49:10 INFO mapred.JobClient:  map 100% reduce 86%
+Block:5 node:60840 pageRank:2.1890460137472094E-7
+14/04/30 17:49:13 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:49:13 INFO mapred.JobClient:  map 100% reduce 89%
+Block:50 node:514130 pageRank:6.361480857090807E-7
+Block:51 node:524509 pageRank:9.80094869311254E-4
+Block:52 node:534708 pageRank:1.9053944738564115E-5
+Block:53 node:545087 pageRank:8.55603407761886E-4
+Block:54 node:555466 pageRank:0.0011804416969403585
+14/04/30 17:49:16 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:49:16 INFO mapred.JobClient:  map 100% reduce 92%
+Block:55 node:565845 pageRank:1.6547724301750607E-6
+Block:56 node:576224 pageRank:1.1043809676009892E-6
+Block:57 node:586603 pageRank:9.774686693799336E-7
+14/04/30 17:49:19 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:49:19 INFO mapred.JobClient:  map 100% reduce 95%
+Block:58 node:596584 pageRank:4.039345995666701E-6
+Block:59 node:606366 pageRank:3.4796067004422486E-7
+Block:6 node:70590 pageRank:2.9965468691881763E-7
+Block:60 node:616147 pageRank:5.124243981713496E-7
+Block:61 node:626447 pageRank:8.991759496439207E-6
+Block:62 node:636239 pageRank:1.0742331640364547E-6
+Block:63 node:646021 pageRank:3.1193905695897734E-7
+Block:64 node:655803 pageRank:2.1890460137472094E-7
+14/04/30 17:49:22 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:49:22 INFO mapred.JobClient:  map 100% reduce 98%
+Block:65 node:665665 pageRank:9.952582617281505E-7
+Block:66 node:675447 pageRank:1.2833380693203303E-6
+Block:67 node:685229 pageRank:3.527784799156479E-7
+Block:7 node:80117 pageRank:2.1890460137472094E-7
+Block:8 node:90496 pageRank:7.11171559429683E-4
+Block:9 node:100500 pageRank:2.6007848617946537E-7
+14/04/30 17:49:24 INFO mapred.Task: Task:attempt_local_0002_r_000000_0 is done. And is in the process of commiting
+14/04/30 17:49:24 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:49:24 INFO mapred.Task: Task attempt_local_0002_r_000000_0 is allowed to commit now
+14/04/30 17:49:24 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0002_r_000000_0' to /home/kira/blockedPageRank/runs/run2
+14/04/30 17:49:25 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:49:25 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:49:25 INFO mapred.Task: Task 'attempt_local_0002_r_000000_0' done.
+14/04/30 17:49:25 INFO mapred.JobClient:  map 100% reduce 100%
+14/04/30 17:49:25 INFO mapred.JobClient: Job complete: job_local_0002
+14/04/30 17:49:25 INFO mapred.JobClient: Counters: 21
+14/04/30 17:49:25 INFO mapred.JobClient:   com.cs5300.proj2.blockedpr.Counters
+14/04/30 17:49:25 INFO mapred.JobClient:     RESIDUAL_ERROR=34424481
+14/04/30 17:49:25 INFO mapred.JobClient:   File Output Format Counters 
+14/04/30 17:49:25 INFO mapred.JobClient:     Bytes Written=72884487
+14/04/30 17:49:25 INFO mapred.JobClient:   FileSystemCounters
+14/04/30 17:49:25 INFO mapred.JobClient:     FILE_BYTES_READ=4485143113
+14/04/30 17:49:25 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=4933037369
+14/04/30 17:49:25 INFO mapred.JobClient:   File Input Format Counters 
+14/04/30 17:49:25 INFO mapred.JobClient:     Bytes Read=72911580
+14/04/30 17:49:25 INFO mapred.JobClient:   Map-Reduce Framework
+14/04/30 17:49:25 INFO mapred.JobClient:     Reduce input groups=68
+14/04/30 17:49:25 INFO mapred.JobClient:     Map output materialized bytes=260176139
+14/04/30 17:49:25 INFO mapred.JobClient:     Combine output records=0
+14/04/30 17:49:25 INFO mapred.JobClient:     Map input records=679841
+14/04/30 17:49:25 INFO mapred.JobClient:     Reduce shuffle bytes=0
+14/04/30 17:49:25 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+14/04/30 17:49:25 INFO mapred.JobClient:     Reduce output records=679841
+0.050624236764705885
+14/04/30 17:49:25 INFO mapred.JobClient:     Spilled Records=27793879
+14/04/30 17:49:25 INFO mapred.JobClient:     Map output bytes=243543455
+14/04/30 17:49:25 INFO mapred.JobClient:     CPU time spent (ms)=0
+14/04/30 17:49:25 INFO mapred.JobClient:     Total committed heap usage (bytes)=1981808640
+14/04/30 17:49:25 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+14/04/30 17:49:25 INFO mapred.JobClient:     Combine input records=0
+14/04/30 17:49:25 INFO mapred.JobClient:     Map output records=8216053
+14/04/30 17:49:25 INFO mapred.JobClient:     SPLIT_RAW_BYTES=357
+14/04/30 17:49:25 INFO mapred.JobClient:     Reduce input records=8216053
+Residual error for iteration 1: 0.0506
+14/04/30 17:49:25 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+14/04/30 17:49:25 WARN mapred.JobClient: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+14/04/30 17:49:25 INFO input.FileInputFormat: Total input paths to process : 1
+14/04/30 17:49:25 INFO mapred.JobClient: Running job: job_local_0003
+14/04/30 17:49:25 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@7afbb9
+14/04/30 17:49:25 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:49:25 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:49:25 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:49:26 INFO mapred.JobClient:  map 0% reduce 0%
+14/04/30 17:49:26 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:26 INFO mapred.MapTask: bufstart = 0; bufend = 6278994; bufvoid = 99614720
+14/04/30 17:49:26 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:49:27 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:49:28 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:28 INFO mapred.MapTask: bufstart = 6278994; bufend = 14022677; bufvoid = 99614720
+14/04/30 17:49:28 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:49:28 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:49:29 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:29 INFO mapred.MapTask: bufstart = 14022677; bufend = 24294675; bufvoid = 99614720
+14/04/30 17:49:29 INFO mapred.MapTask: kvstart = 196607; kvend = 131070; length = 327680
+14/04/30 17:49:29 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:49:30 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:30 INFO mapred.MapTask: bufstart = 24294675; bufend = 33662167; bufvoid = 99614720
+14/04/30 17:49:30 INFO mapred.MapTask: kvstart = 131070; kvend = 65533; length = 327680
+14/04/30 17:49:31 INFO mapred.MapTask: Finished spill 3
+14/04/30 17:49:31 INFO mapred.LocalJobRunner: 
+14/04/30 17:49:31 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:31 INFO mapred.MapTask: bufstart = 33662167; bufend = 42210389; bufvoid = 99614720
+14/04/30 17:49:31 INFO mapred.MapTask: kvstart = 65533; kvend = 327677; length = 327680
+14/04/30 17:49:32 INFO mapred.MapTask: Finished spill 4
+14/04/30 17:49:32 INFO mapred.JobClient:  map 31% reduce 0%
+14/04/30 17:49:33 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:33 INFO mapred.MapTask: bufstart = 42210389; bufend = 50119231; bufvoid = 99614720
+14/04/30 17:49:33 INFO mapred.MapTask: kvstart = 327677; kvend = 262140; length = 327680
+14/04/30 17:49:33 INFO mapred.MapTask: Finished spill 5
+14/04/30 17:49:34 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:34 INFO mapred.MapTask: bufstart = 50119231; bufend = 57232980; bufvoid = 99614720
+14/04/30 17:49:34 INFO mapred.MapTask: kvstart = 262140; kvend = 196603; length = 327680
+14/04/30 17:49:34 INFO mapred.MapTask: Finished spill 6
+14/04/30 17:49:34 INFO mapred.LocalJobRunner: 
+14/04/30 17:49:35 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:35 INFO mapred.MapTask: bufstart = 57232980; bufend = 65130697; bufvoid = 99614720
+14/04/30 17:49:35 INFO mapred.MapTask: kvstart = 196603; kvend = 131066; length = 327680
+14/04/30 17:49:35 INFO mapred.MapTask: Finished spill 7
+14/04/30 17:49:35 INFO mapred.JobClient:  map 50% reduce 0%
+14/04/30 17:49:36 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:36 INFO mapred.MapTask: bufstart = 65130697; bufend = 72550032; bufvoid = 99614720
+14/04/30 17:49:36 INFO mapred.MapTask: kvstart = 131066; kvend = 65529; length = 327680
+14/04/30 17:49:36 INFO mapred.MapTask: Finished spill 8
+14/04/30 17:49:37 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:37 INFO mapred.MapTask: bufstart = 72550032; bufend = 79898043; bufvoid = 99614720
+14/04/30 17:49:37 INFO mapred.MapTask: kvstart = 65529; kvend = 327673; length = 327680
+14/04/30 17:49:37 INFO mapred.MapTask: Finished spill 9
+14/04/30 17:49:37 INFO mapred.LocalJobRunner: 
+14/04/30 17:49:38 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:38 INFO mapred.MapTask: bufstart = 79898043; bufend = 87190654; bufvoid = 99614720
+14/04/30 17:49:38 INFO mapred.MapTask: kvstart = 327673; kvend = 262136; length = 327680
+14/04/30 17:49:38 INFO mapred.JobClient:  map 71% reduce 0%
+14/04/30 17:49:38 INFO mapred.MapTask: Finished spill 10
+14/04/30 17:49:39 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:39 INFO mapred.MapTask: bufstart = 87190654; bufend = 94754343; bufvoid = 99614720
+14/04/30 17:49:39 INFO mapred.MapTask: kvstart = 262136; kvend = 196599; length = 327680
+14/04/30 17:49:39 INFO mapred.MapTask: Finished spill 11
+14/04/30 17:49:40 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:40 INFO mapred.MapTask: bufstart = 94754343; bufend = 2530074; bufvoid = 99614720
+14/04/30 17:49:40 INFO mapred.MapTask: kvstart = 196599; kvend = 131062; length = 327680
+14/04/30 17:49:40 INFO mapred.LocalJobRunner: 
+14/04/30 17:49:41 INFO mapred.MapTask: Finished spill 12
+14/04/30 17:49:41 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:41 INFO mapred.MapTask: bufstart = 2530074; bufend = 9745269; bufvoid = 99614720
+14/04/30 17:49:41 INFO mapred.MapTask: kvstart = 131062; kvend = 65525; length = 327680
+14/04/30 17:49:41 INFO mapred.JobClient:  map 92% reduce 0%
+14/04/30 17:49:41 INFO mapred.MapTask: Finished spill 13
+14/04/30 17:49:41 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:49:42 INFO mapred.MapTask: Finished spill 14
+14/04/30 17:49:42 INFO mapred.Merger: Merging 15 sorted segments
+14/04/30 17:49:42 INFO mapred.Merger: Merging 6 intermediate segments out of a total of 15
+14/04/30 17:49:43 INFO mapred.LocalJobRunner: 
+14/04/30 17:49:44 INFO mapred.JobClient:  map 100% reduce 0%
+14/04/30 17:49:44 INFO mapred.Merger: Down to the last merge-pass, with 10 segments left of total size: 119081199 bytes
+14/04/30 17:49:46 INFO mapred.LocalJobRunner: 
+14/04/30 17:49:49 INFO mapred.LocalJobRunner: 
+14/04/30 17:49:51 INFO mapred.Task: Task:attempt_local_0003_m_000000_0 is done. And is in the process of commiting
+14/04/30 17:49:52 INFO mapred.LocalJobRunner: 
+14/04/30 17:49:52 INFO mapred.LocalJobRunner: 
+14/04/30 17:49:52 INFO mapred.Task: Task 'attempt_local_0003_m_000000_0' done.
+14/04/30 17:49:52 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@18c06c2
+14/04/30 17:49:52 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:49:52 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:49:52 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:49:53 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:53 INFO mapred.MapTask: bufstart = 0; bufend = 6814802; bufvoid = 99614720
+14/04/30 17:49:53 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:49:54 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:49:55 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:55 INFO mapred.MapTask: bufstart = 6814802; bufend = 14277232; bufvoid = 99614720
+14/04/30 17:49:55 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:49:55 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:49:56 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:56 INFO mapred.MapTask: bufstart = 14277232; bufend = 21718604; bufvoid = 99614720
+14/04/30 17:49:56 INFO mapred.MapTask: kvstart = 196607; kvend = 131070; length = 327680
+14/04/30 17:49:56 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:49:57 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:57 INFO mapred.MapTask: bufstart = 21718604; bufend = 29340868; bufvoid = 99614720
+14/04/30 17:49:57 INFO mapred.MapTask: kvstart = 131070; kvend = 65533; length = 327680
+14/04/30 17:49:57 INFO mapred.MapTask: Finished spill 3
+14/04/30 17:49:58 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:58 INFO mapred.MapTask: bufstart = 29340868; bufend = 36401456; bufvoid = 99614720
+14/04/30 17:49:58 INFO mapred.MapTask: kvstart = 65533; kvend = 327677; length = 327680
+14/04/30 17:49:58 INFO mapred.MapTask: Finished spill 4
+14/04/30 17:49:58 INFO mapred.LocalJobRunner: 
+14/04/30 17:49:59 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:59 INFO mapred.MapTask: bufstart = 36401456; bufend = 43192293; bufvoid = 99614720
+14/04/30 17:49:59 INFO mapred.MapTask: kvstart = 327677; kvend = 262140; length = 327680
+14/04/30 17:49:59 INFO mapred.MapTask: Finished spill 5
+14/04/30 17:49:59 INFO mapred.JobClient:  map 68% reduce 0%
+14/04/30 17:49:59 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:49:59 INFO mapred.MapTask: bufstart = 43192293; bufend = 50290664; bufvoid = 99614720
+14/04/30 17:49:59 INFO mapred.MapTask: kvstart = 262140; kvend = 196603; length = 327680
+14/04/30 17:50:00 INFO mapred.MapTask: Finished spill 6
+14/04/30 17:50:00 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:50:00 INFO mapred.MapTask: bufstart = 50290664; bufend = 57603107; bufvoid = 99614720
+14/04/30 17:50:00 INFO mapred.MapTask: kvstart = 196603; kvend = 131066; length = 327680
+14/04/30 17:50:01 INFO mapred.MapTask: Finished spill 7
+14/04/30 17:50:01 INFO mapred.LocalJobRunner: 
+14/04/30 17:50:02 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:50:02 INFO mapred.MapTask: bufstart = 57603107; bufend = 65601152; bufvoid = 99614720
+14/04/30 17:50:02 INFO mapred.MapTask: kvstart = 131066; kvend = 65529; length = 327680
+14/04/30 17:50:02 INFO mapred.MapTask: Finished spill 8
+14/04/30 17:50:02 INFO mapred.JobClient:  map 79% reduce 0%
+14/04/30 17:50:03 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:50:03 INFO mapred.MapTask: bufstart = 65601152; bufend = 73008886; bufvoid = 99614720
+14/04/30 17:50:03 INFO mapred.MapTask: kvstart = 65529; kvend = 327673; length = 327680
+14/04/30 17:50:03 INFO mapred.MapTask: Finished spill 9
+14/04/30 17:50:04 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:50:04 INFO mapred.MapTask: bufstart = 73008886; bufend = 83113182; bufvoid = 99614720
+14/04/30 17:50:04 INFO mapred.MapTask: kvstart = 327673; kvend = 262136; length = 327680
+14/04/30 17:50:04 INFO mapred.LocalJobRunner: 
+14/04/30 17:50:04 INFO mapred.MapTask: Finished spill 10
+14/04/30 17:50:05 INFO mapred.JobClient:  map 87% reduce 0%
+14/04/30 17:50:05 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:50:05 INFO mapred.MapTask: bufstart = 83113182; bufend = 93044327; bufvoid = 99614720
+14/04/30 17:50:05 INFO mapred.MapTask: kvstart = 262136; kvend = 196599; length = 327680
+14/04/30 17:50:06 INFO mapred.MapTask: Finished spill 11
+14/04/30 17:50:07 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:50:07 INFO mapred.MapTask: bufstart = 93044327; bufend = 2071501; bufvoid = 99614720
+14/04/30 17:50:07 INFO mapred.MapTask: kvstart = 196599; kvend = 131062; length = 327680
+14/04/30 17:50:07 INFO mapred.MapTask: Finished spill 12
+14/04/30 17:50:07 INFO mapred.LocalJobRunner: 
+14/04/30 17:50:08 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:50:08 INFO mapred.MapTask: bufstart = 2071501; bufend = 9654198; bufvoid = 99614720
+14/04/30 17:50:08 INFO mapred.MapTask: kvstart = 131062; kvend = 65525; length = 327680
+14/04/30 17:50:08 INFO mapred.JobClient:  map 94% reduce 0%
+14/04/30 17:50:08 INFO mapred.MapTask: Finished spill 13
+14/04/30 17:50:09 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:50:09 INFO mapred.MapTask: Finished spill 14
+14/04/30 17:50:09 INFO mapred.Merger: Merging 15 sorted segments
+14/04/30 17:50:09 INFO mapred.Merger: Merging 6 intermediate segments out of a total of 15
+14/04/30 17:50:10 INFO mapred.LocalJobRunner: 
+14/04/30 17:50:11 INFO mapred.JobClient:  map 100% reduce 0%
+14/04/30 17:50:12 INFO mapred.Merger: Down to the last merge-pass, with 10 segments left of total size: 123204534 bytes
+14/04/30 17:50:13 INFO mapred.LocalJobRunner: 
+14/04/30 17:50:16 INFO mapred.LocalJobRunner: 
+14/04/30 17:50:18 INFO mapred.Task: Task:attempt_local_0003_m_000001_0 is done. And is in the process of commiting
+14/04/30 17:50:19 INFO mapred.LocalJobRunner: 
+14/04/30 17:50:19 INFO mapred.LocalJobRunner: 
+14/04/30 17:50:19 INFO mapred.Task: Task 'attempt_local_0003_m_000001_0' done.
+14/04/30 17:50:19 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@1008dac
+14/04/30 17:50:19 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:50:19 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:50:19 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:50:20 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:50:20 INFO mapred.MapTask: bufstart = 0; bufend = 7205062; bufvoid = 99614720
+14/04/30 17:50:20 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:50:21 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:50:22 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:50:22 INFO mapred.MapTask: bufstart = 7205062; bufend = 14862536; bufvoid = 99614720
+14/04/30 17:50:22 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:50:22 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:50:22 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:50:22 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:50:22 INFO mapred.Merger: Merging 3 sorted segments
+14/04/30 17:50:22 INFO mapred.Merger: Down to the last merge-pass, with 3 segments left of total size: 17884685 bytes
+14/04/30 17:50:23 INFO mapred.Task: Task:attempt_local_0003_m_000002_0 is done. And is in the process of commiting
+14/04/30 17:50:25 INFO mapred.LocalJobRunner: 
+14/04/30 17:50:25 INFO mapred.LocalJobRunner: 
+14/04/30 17:50:25 INFO mapred.Task: Task 'attempt_local_0003_m_000002_0' done.
+14/04/30 17:50:25 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@fe1ac8
+14/04/30 17:50:25 INFO mapred.LocalJobRunner: 
+14/04/30 17:50:25 INFO mapred.Merger: Merging 3 sorted segments
+14/04/30 17:50:25 INFO mapred.Merger: Down to the last merge-pass, with 3 segments left of total size: 260170378 bytes
+14/04/30 17:50:25 INFO mapred.LocalJobRunner: 
+Block:0 node:10327 pageRank:1.8791255973755642E-6
+Block:1 node:20372 pageRank:5.173309779918895E-7
+Block:10 node:110566 pageRank:2.027442964274658E-6
+Block:11 node:120944 pageRank:4.3016293906861703E-7
+Block:12 node:130998 pageRank:2.4094637387046603E-7
+Block:13 node:140573 pageRank:6.193367603617337E-7
+Block:14 node:150952 pageRank:2.1890460137472094E-7
+Block:15 node:161331 pageRank:2.1890460137472094E-7
+Block:16 node:171153 pageRank:5.634073499407287E-7
+Block:17 node:181513 pageRank:3.523084927301679E-7
+14/04/30 17:50:31 INFO mapred.LocalJobRunner: reduce > reduce
+Block:18 node:191624 pageRank:5.277815043822933E-6
+Block:19 node:202003 pageRank:4.143015181823215E-6
+14/04/30 17:50:32 INFO mapred.JobClient:  map 100% reduce 73%
+Block:2 node:30628 pageRank:3.018277319449758E-7
+Block:20 node:212382 pageRank:2.622198199554197E-7
+Block:21 node:222761 pageRank:0.0012548905773890797
+Block:22 node:232592 pageRank:7.260960216487433E-5
+Block:23 node:242877 pageRank:5.73397642748934E-7
+14/04/30 17:50:34 INFO mapred.LocalJobRunner: reduce > reduce
+Block:24 node:252937 pageRank:2.1890460137472094E-7
+Block:25 node:263148 pageRank:3.0396803409528057E-7
+Block:26 node:273209 pageRank:2.1890460137472094E-7
+14/04/30 17:50:35 INFO mapred.JobClient:  map 100% reduce 75%
+Block:27 node:283472 pageRank:3.3733598282555654E-7
+Block:28 node:293254 pageRank:2.6210788938318535E-7
+Block:29 node:303042 pageRank:4.9032696972065284E-6
+Block:3 node:40643 pageRank:2.809275717642252E-7
+14/04/30 17:50:37 INFO mapred.LocalJobRunner: reduce > reduce
+Block:30 node:313369 pageRank:8.188064703007889E-7
+Block:31 node:323521 pageRank:2.1890460137472094E-7
+14/04/30 17:50:38 INFO mapred.JobClient:  map 100% reduce 78%
+Block:32 node:333882 pageRank:5.380259448615938E-7
+Block:33 node:343662 pageRank:2.5413698828508456E-7
+Block:34 node:353643 pageRank:4.5500773524036655E-7
+Block:35 node:363928 pageRank:3.5620131509606765E-7
+14/04/30 17:50:40 INFO mapred.LocalJobRunner: reduce > reduce
+Block:36 node:374235 pageRank:3.7087137528215327E-6
+Block:37 node:384553 pageRank:4.269197525467775E-7
+Block:38 node:394928 pageRank:6.737422808586175E-7
+14/04/30 17:50:41 INFO mapred.JobClient:  map 100% reduce 81%
+Block:39 node:404711 pageRank:2.464121173480772E-7
+Block:4 node:50460 pageRank:2.1890460137472094E-7
+Block:40 node:414616 pageRank:3.117349754167629E-7
+Block:41 node:424746 pageRank:1.489354099479248E-6
+14/04/30 17:50:43 INFO mapred.LocalJobRunner: reduce > reduce
+Block:42 node:434706 pageRank:2.7558769553067683E-6
+Block:43 node:444488 pageRank:3.885063484380411E-6
+Block:44 node:454284 pageRank:4.975182347636884E-7
+14/04/30 17:50:44 INFO mapred.JobClient:  map 100% reduce 83%
+Block:45 node:464397 pageRank:1.1171796436930868E-5
+Block:46 node:474195 pageRank:9.448443938966983E-7
+Block:47 node:484049 pageRank:5.896519830786043E-7
+Block:48 node:493967 pageRank:2.1890460137472094E-7
+Block:49 node:503751 pageRank:6.407210348554122E-6
+14/04/30 17:50:46 INFO mapred.LocalJobRunner: reduce > reduce
+Block:5 node:60840 pageRank:2.1890460137472094E-7
+14/04/30 17:50:47 INFO mapred.JobClient:  map 100% reduce 86%
+14/04/30 17:50:49 INFO mapred.LocalJobRunner: reduce > reduce
+Block:50 node:514130 pageRank:6.357978094485762E-7
+Block:51 node:524509 pageRank:9.871668238548318E-4
+Block:52 node:534708 pageRank:2.084699402893189E-5
+14/04/30 17:50:50 INFO mapred.JobClient:  map 100% reduce 89%
+Block:53 node:545087 pageRank:0.0025845542409855806
+Block:54 node:555466 pageRank:0.0011862753746288916
+14/04/30 17:50:53 INFO mapred.LocalJobRunner: reduce > reduce
+Block:55 node:565845 pageRank:1.6302203872737583E-6
+14/04/30 17:50:54 INFO mapred.JobClient:  map 100% reduce 93%
+Block:56 node:576224 pageRank:1.0924361876743286E-6
+Block:57 node:586603 pageRank:9.703175349792664E-7
+Block:58 node:596584 pageRank:4.0201632907081844E-6
+Block:59 node:606366 pageRank:4.5457604790953677E-7
+14/04/30 17:50:56 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:50:56 INFO mapred.JobClient:  map 100% reduce 96%
+Block:6 node:70590 pageRank:2.996682205978537E-7
+Block:60 node:616147 pageRank:6.416201920544147E-7
+Block:61 node:626447 pageRank:1.5177225711585382E-5
+Block:62 node:636239 pageRank:1.0728218706162271E-6
+Block:63 node:646021 pageRank:3.1193905695897734E-7
+Block:64 node:655803 pageRank:2.1890460137472094E-7
+Block:65 node:665665 pageRank:9.962414608883198E-7
+Block:66 node:675447 pageRank:1.2869312742480702E-6
+14/04/30 17:50:59 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:50:59 INFO mapred.JobClient:  map 100% reduce 99%
+Block:67 node:685229 pageRank:3.517146120842422E-7
+Block:7 node:80117 pageRank:2.1890460137472094E-7
+Block:8 node:90496 pageRank:8.445506493117808E-4
+Block:9 node:100500 pageRank:2.628341490190331E-7
+14/04/30 17:51:00 INFO mapred.Task: Task:attempt_local_0003_r_000000_0 is done. And is in the process of commiting
+14/04/30 17:51:00 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:51:00 INFO mapred.Task: Task attempt_local_0003_r_000000_0 is allowed to commit now
+14/04/30 17:51:00 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0003_r_000000_0' to /home/kira/blockedPageRank/runs/run3
+14/04/30 17:51:02 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:51:02 INFO mapred.JobClient:  map 100% reduce 100%
+14/04/30 17:51:02 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:51:02 INFO mapred.Task: Task 'attempt_local_0003_r_000000_0' done.
+14/04/30 17:51:03 INFO mapred.JobClient: Job complete: job_local_0003
+14/04/30 17:51:03 INFO mapred.JobClient: Counters: 21
+14/04/30 17:51:03 INFO mapred.JobClient:   com.cs5300.proj2.blockedpr.Counters
+14/04/30 17:51:03 INFO mapred.JobClient:     RESIDUAL_ERROR=16294843
+14/04/30 17:51:03 INFO mapred.JobClient:   File Output Format Counters 
+14/04/30 17:51:03 INFO mapred.JobClient:     Bytes Written=72883898
+14/04/30 17:51:03 INFO mapred.JobClient:   FileSystemCounters
+14/04/30 17:51:03 INFO mapred.JobClient:     FILE_BYTES_READ=7257105152
+14/04/30 17:51:03 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=7705169688
+14/04/30 17:51:03 INFO mapred.JobClient:   File Input Format Counters 
+14/04/30 17:51:03 INFO mapred.JobClient:     Bytes Read=72913667
+14/04/30 17:51:03 INFO mapred.JobClient:   Map-Reduce Framework
+14/04/30 17:51:03 INFO mapred.JobClient:     Reduce input groups=68
+14/04/30 17:51:03 INFO mapred.JobClient:     Map output materialized bytes=260170390
+14/04/30 17:51:03 INFO mapred.JobClient:     Combine output records=0
+14/04/30 17:51:03 INFO mapred.JobClient:     Map input records=679841
+14/04/30 17:51:03 INFO mapred.JobClient:     Reduce shuffle bytes=0
+14/04/30 17:51:03 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+14/04/30 17:51:03 INFO mapred.JobClient:     Reduce output records=679841
+14/04/30 17:51:03 INFO mapred.JobClient:     Spilled Records=27793879
+14/04/30 17:51:03 INFO mapred.JobClient:     Map output bytes=243537706
+14/04/30 17:51:03 INFO mapred.JobClient:     CPU time spent (ms)=0
+14/04/30 17:51:03 INFO mapred.JobClient:     Total committed heap usage (bytes)=1832648704
+14/04/30 17:51:03 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+14/04/30 17:51:03 INFO mapred.JobClient:     Combine input records=0
+14/04/30 17:51:03 INFO mapred.JobClient:     Map output records=8216053
+14/04/30 17:51:03 INFO mapred.JobClient:     SPLIT_RAW_BYTES=357
+14/04/30 17:51:03 INFO mapred.JobClient:     Reduce input records=8216053
+0.02396300441176471
+Residual error for iteration 2: 0.0240
+14/04/30 17:51:03 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+14/04/30 17:51:03 WARN mapred.JobClient: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+14/04/30 17:51:03 INFO input.FileInputFormat: Total input paths to process : 1
+14/04/30 17:51:03 INFO mapred.JobClient: Running job: job_local_0004
+14/04/30 17:51:03 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@459fc2
+14/04/30 17:51:03 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:51:03 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:51:03 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:51:04 INFO mapred.JobClient:  map 0% reduce 0%
+14/04/30 17:51:04 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:04 INFO mapred.MapTask: bufstart = 0; bufend = 6278534; bufvoid = 99614720
+14/04/30 17:51:04 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:51:04 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:51:05 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:05 INFO mapred.MapTask: bufstart = 6278534; bufend = 14021775; bufvoid = 99614720
+14/04/30 17:51:05 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:51:05 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:51:06 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:06 INFO mapred.MapTask: bufstart = 14021775; bufend = 24291886; bufvoid = 99614720
+14/04/30 17:51:06 INFO mapred.MapTask: kvstart = 196607; kvend = 131070; length = 327680
+14/04/30 17:51:07 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:51:08 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:08 INFO mapred.MapTask: bufstart = 24291886; bufend = 33655198; bufvoid = 99614720
+14/04/30 17:51:08 INFO mapred.MapTask: kvstart = 131070; kvend = 65533; length = 327680
+14/04/30 17:51:08 INFO mapred.MapTask: Finished spill 3
+14/04/30 17:51:09 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:09 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:09 INFO mapred.MapTask: bufstart = 33655198; bufend = 42231689; bufvoid = 99614720
+14/04/30 17:51:09 INFO mapred.MapTask: kvstart = 65533; kvend = 327677; length = 327680
+14/04/30 17:51:09 INFO mapred.MapTask: Finished spill 4
+14/04/30 17:51:10 INFO mapred.JobClient:  map 31% reduce 0%
+14/04/30 17:51:10 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:10 INFO mapred.MapTask: bufstart = 42231689; bufend = 50036832; bufvoid = 99614720
+14/04/30 17:51:10 INFO mapred.MapTask: kvstart = 327677; kvend = 262140; length = 327680
+14/04/30 17:51:10 INFO mapred.MapTask: Finished spill 5
+14/04/30 17:51:11 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:11 INFO mapred.MapTask: bufstart = 50036832; bufend = 57230795; bufvoid = 99614720
+14/04/30 17:51:11 INFO mapred.MapTask: kvstart = 262140; kvend = 196603; length = 327680
+14/04/30 17:51:12 INFO mapred.MapTask: Finished spill 6
+14/04/30 17:51:12 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:12 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:12 INFO mapred.MapTask: bufstart = 57230795; bufend = 65127777; bufvoid = 99614720
+14/04/30 17:51:12 INFO mapred.MapTask: kvstart = 196603; kvend = 131066; length = 327680
+14/04/30 17:51:13 INFO mapred.JobClient:  map 50% reduce 0%
+14/04/30 17:51:13 INFO mapred.MapTask: Finished spill 7
+14/04/30 17:51:14 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:14 INFO mapred.MapTask: bufstart = 65127777; bufend = 72544496; bufvoid = 99614720
+14/04/30 17:51:14 INFO mapred.MapTask: kvstart = 131066; kvend = 65529; length = 327680
+14/04/30 17:51:14 INFO mapred.MapTask: Finished spill 8
+14/04/30 17:51:15 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:15 INFO mapred.MapTask: bufstart = 72544496; bufend = 79941589; bufvoid = 99614720
+14/04/30 17:51:15 INFO mapred.MapTask: kvstart = 65529; kvend = 327673; length = 327680
+14/04/30 17:51:15 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:15 INFO mapred.MapTask: Finished spill 9
+14/04/30 17:51:16 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:16 INFO mapred.MapTask: bufstart = 79941589; bufend = 87184897; bufvoid = 99614720
+14/04/30 17:51:16 INFO mapred.JobClient:  map 70% reduce 0%
+14/04/30 17:51:16 INFO mapred.MapTask: kvstart = 327673; kvend = 262136; length = 327680
+14/04/30 17:51:16 INFO mapred.MapTask: Finished spill 10
+14/04/30 17:51:17 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:17 INFO mapred.MapTask: bufstart = 87184897; bufend = 94749212; bufvoid = 99614720
+14/04/30 17:51:17 INFO mapred.MapTask: kvstart = 262136; kvend = 196599; length = 327680
+14/04/30 17:51:17 INFO mapred.MapTask: Finished spill 11
+14/04/30 17:51:18 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:18 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:18 INFO mapred.MapTask: bufstart = 94749212; bufend = 2524230; bufvoid = 99614720
+14/04/30 17:51:18 INFO mapred.MapTask: kvstart = 196599; kvend = 131062; length = 327680
+14/04/30 17:51:18 INFO mapred.MapTask: Finished spill 12
+14/04/30 17:51:19 INFO mapred.JobClient:  map 88% reduce 0%
+14/04/30 17:51:19 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:19 INFO mapred.MapTask: bufstart = 2524230; bufend = 9739484; bufvoid = 99614720
+14/04/30 17:51:19 INFO mapred.MapTask: kvstart = 131062; kvend = 65525; length = 327680
+14/04/30 17:51:19 INFO mapred.MapTask: Finished spill 13
+14/04/30 17:51:19 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:51:20 INFO mapred.MapTask: Finished spill 14
+14/04/30 17:51:20 INFO mapred.Merger: Merging 15 sorted segments
+14/04/30 17:51:20 INFO mapred.Merger: Merging 6 intermediate segments out of a total of 15
+14/04/30 17:51:21 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:22 INFO mapred.JobClient:  map 100% reduce 0%
+14/04/30 17:51:22 INFO mapred.Merger: Down to the last merge-pass, with 10 segments left of total size: 119083205 bytes
+14/04/30 17:51:24 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:27 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:29 INFO mapred.Task: Task:attempt_local_0004_m_000000_0 is done. And is in the process of commiting
+14/04/30 17:51:30 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:30 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:30 INFO mapred.Task: Task 'attempt_local_0004_m_000000_0' done.
+14/04/30 17:51:30 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@181af25
+14/04/30 17:51:30 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:51:30 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:51:30 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:51:31 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:31 INFO mapred.MapTask: bufstart = 0; bufend = 6815517; bufvoid = 99614720
+14/04/30 17:51:31 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:51:31 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:51:32 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:32 INFO mapred.MapTask: bufstart = 6815517; bufend = 14281467; bufvoid = 99614720
+14/04/30 17:51:32 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:51:33 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:51:33 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:33 INFO mapred.MapTask: bufstart = 14281467; bufend = 21719178; bufvoid = 99614720
+14/04/30 17:51:33 INFO mapred.MapTask: kvstart = 196607; kvend = 131070; length = 327680
+14/04/30 17:51:34 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:51:35 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:35 INFO mapred.MapTask: bufstart = 21719178; bufend = 29342356; bufvoid = 99614720
+14/04/30 17:51:35 INFO mapred.MapTask: kvstart = 131070; kvend = 65533; length = 327680
+14/04/30 17:51:35 INFO mapred.MapTask: Finished spill 3
+14/04/30 17:51:36 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:36 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:36 INFO mapred.MapTask: bufstart = 29342356; bufend = 36400738; bufvoid = 99614720
+14/04/30 17:51:36 INFO mapred.MapTask: kvstart = 65533; kvend = 327677; length = 327680
+14/04/30 17:51:36 INFO mapred.MapTask: Finished spill 4
+14/04/30 17:51:37 INFO mapred.JobClient:  map 66% reduce 0%
+14/04/30 17:51:37 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:37 INFO mapred.MapTask: bufstart = 36400738; bufend = 43193958; bufvoid = 99614720
+14/04/30 17:51:37 INFO mapred.MapTask: kvstart = 327677; kvend = 262140; length = 327680
+14/04/30 17:51:37 INFO mapred.MapTask: Finished spill 5
+14/04/30 17:51:38 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:38 INFO mapred.MapTask: bufstart = 43193958; bufend = 50356574; bufvoid = 99614720
+14/04/30 17:51:38 INFO mapred.MapTask: kvstart = 262140; kvend = 196603; length = 327680
+14/04/30 17:51:38 INFO mapred.MapTask: Finished spill 6
+14/04/30 17:51:39 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:39 INFO mapred.MapTask: bufstart = 50356574; bufend = 57592900; bufvoid = 99614720
+14/04/30 17:51:39 INFO mapred.MapTask: kvstart = 196603; kvend = 131066; length = 327680
+14/04/30 17:51:39 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:39 INFO mapred.MapTask: Finished spill 7
+14/04/30 17:51:40 INFO mapred.JobClient:  map 76% reduce 0%
+14/04/30 17:51:40 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:40 INFO mapred.MapTask: bufstart = 57592900; bufend = 65602809; bufvoid = 99614720
+14/04/30 17:51:40 INFO mapred.MapTask: kvstart = 131066; kvend = 65529; length = 327680
+14/04/30 17:51:41 INFO mapred.MapTask: Finished spill 8
+14/04/30 17:51:41 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:41 INFO mapred.MapTask: bufstart = 65602809; bufend = 73008862; bufvoid = 99614720
+14/04/30 17:51:41 INFO mapred.MapTask: kvstart = 65529; kvend = 327673; length = 327680
+14/04/30 17:51:41 INFO mapred.MapTask: Finished spill 9
+14/04/30 17:51:42 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:43 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:43 INFO mapred.MapTask: bufstart = 73008862; bufend = 83091638; bufvoid = 99614720
+14/04/30 17:51:43 INFO mapred.MapTask: kvstart = 327673; kvend = 262136; length = 327680
+14/04/30 17:51:43 INFO mapred.JobClient:  map 84% reduce 0%
+14/04/30 17:51:43 INFO mapred.MapTask: Finished spill 10
+14/04/30 17:51:44 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:44 INFO mapred.MapTask: bufstart = 83091638; bufend = 93050922; bufvoid = 99614720
+14/04/30 17:51:44 INFO mapred.MapTask: kvstart = 262136; kvend = 196599; length = 327680
+14/04/30 17:51:45 INFO mapred.MapTask: Finished spill 11
+14/04/30 17:51:45 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:45 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:45 INFO mapred.MapTask: bufstart = 93050922; bufend = 2062417; bufvoid = 99614719
+14/04/30 17:51:45 INFO mapred.MapTask: kvstart = 196599; kvend = 131062; length = 327680
+14/04/30 17:51:46 INFO mapred.JobClient:  map 90% reduce 0%
+14/04/30 17:51:46 INFO mapred.MapTask: Finished spill 12
+14/04/30 17:51:47 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:51:47 INFO mapred.MapTask: bufstart = 2062417; bufend = 9652001; bufvoid = 99614720
+14/04/30 17:51:47 INFO mapred.MapTask: kvstart = 131062; kvend = 65525; length = 327680
+14/04/30 17:51:47 INFO mapred.MapTask: Finished spill 13
+14/04/30 17:51:47 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:51:48 INFO mapred.MapTask: Finished spill 14
+14/04/30 17:51:48 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:48 INFO mapred.Merger: Merging 15 sorted segments
+14/04/30 17:51:48 INFO mapred.Merger: Merging 6 intermediate segments out of a total of 15
+14/04/30 17:51:49 INFO mapred.JobClient:  map 100% reduce 0%
+14/04/30 17:51:50 INFO mapred.Merger: Down to the last merge-pass, with 10 segments left of total size: 123151667 bytes
+14/04/30 17:51:51 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:54 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:57 INFO mapred.LocalJobRunner: 
+14/04/30 17:51:57 INFO mapred.Task: Task:attempt_local_0004_m_000001_0 is done. And is in the process of commiting
+14/04/30 17:52:00 INFO mapred.LocalJobRunner: 
+14/04/30 17:52:00 INFO mapred.LocalJobRunner: 
+14/04/30 17:52:00 INFO mapred.Task: Task 'attempt_local_0004_m_000001_0' done.
+14/04/30 17:52:00 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@182e0fc
+14/04/30 17:52:00 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:52:00 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:52:00 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:52:01 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:52:01 INFO mapred.MapTask: bufstart = 0; bufend = 7220084; bufvoid = 99614720
+14/04/30 17:52:01 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:52:01 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:52:02 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:52:02 INFO mapred.MapTask: bufstart = 7220084; bufend = 14820040; bufvoid = 99614720
+14/04/30 17:52:02 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:52:02 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:52:02 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:52:02 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:52:02 INFO mapred.Merger: Merging 3 sorted segments
+14/04/30 17:52:02 INFO mapred.Merger: Down to the last merge-pass, with 3 segments left of total size: 17932500 bytes
+14/04/30 17:52:03 INFO mapred.Task: Task:attempt_local_0004_m_000002_0 is done. And is in the process of commiting
+14/04/30 17:52:06 INFO mapred.LocalJobRunner: 
+14/04/30 17:52:06 INFO mapred.LocalJobRunner: 
+14/04/30 17:52:06 INFO mapred.Task: Task 'attempt_local_0004_m_000002_0' done.
+14/04/30 17:52:06 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@3edc45
+14/04/30 17:52:06 INFO mapred.LocalJobRunner: 
+14/04/30 17:52:06 INFO mapred.Merger: Merging 3 sorted segments
+14/04/30 17:52:06 INFO mapred.Merger: Down to the last merge-pass, with 3 segments left of total size: 260167332 bytes
+14/04/30 17:52:06 INFO mapred.LocalJobRunner: 
+Block:0 node:10327 pageRank:1.8752376839319623E-6
+Block:1 node:20372 pageRank:5.173234307195725E-7
+Block:10 node:110566 pageRank:2.0316122245211993E-6
+Block:11 node:120944 pageRank:5.080191538586538E-7
+Block:12 node:130998 pageRank:2.330417406616486E-7
+Block:13 node:140573 pageRank:6.021279179693326E-7
+Block:14 node:150952 pageRank:2.1890460137472094E-7
+Block:15 node:161331 pageRank:2.1890460137472094E-7
+Block:16 node:171153 pageRank:5.628255833744221E-7
+Block:17 node:181513 pageRank:3.522220574337397E-7
+14/04/30 17:52:12 INFO mapred.LocalJobRunner: reduce > reduce
+Block:18 node:191624 pageRank:5.277709130963212E-6
+Block:19 node:202003 pageRank:4.111192827055218E-6
+14/04/30 17:52:13 INFO mapred.JobClient:  map 100% reduce 73%
+Block:2 node:30628 pageRank:3.09397611844771E-7
+Block:20 node:212382 pageRank:2.6210788938318535E-7
+Block:21 node:222761 pageRank:0.0010667567813184254
+Block:22 node:232592 pageRank:1.702666062327707E-4
+Block:23 node:242877 pageRank:5.729140734376337E-7
+14/04/30 17:52:15 INFO mapred.LocalJobRunner: reduce > reduce
+Block:24 node:252937 pageRank:2.1890460137472094E-7
+14/04/30 17:52:16 INFO mapred.JobClient:  map 100% reduce 75%
+Block:25 node:263148 pageRank:3.039680052131989E-7
+Block:26 node:273209 pageRank:2.1890460137472094E-7
+Block:27 node:283472 pageRank:3.3704957512653175E-7
+Block:28 node:293254 pageRank:2.6210395020812286E-7
+Block:29 node:303042 pageRank:4.8951592054231585E-6
+14/04/30 17:52:18 INFO mapred.LocalJobRunner: reduce > reduce
+Block:3 node:40643 pageRank:2.809275717642252E-7
+Block:30 node:313369 pageRank:8.294921393156088E-7
+Block:31 node:323521 pageRank:2.1890460137472094E-7
+14/04/30 17:52:19 INFO mapred.JobClient:  map 100% reduce 78%
+Block:32 node:333882 pageRank:5.373459658200389E-7
+Block:33 node:343662 pageRank:2.5411381666707E-7
+Block:34 node:353643 pageRank:4.651160923612631E-7
+Block:35 node:363928 pageRank:3.561080741112182E-7
+14/04/30 17:52:21 INFO mapred.LocalJobRunner: reduce > reduce
+Block:36 node:374235 pageRank:3.7607927320956016E-6
+Block:37 node:384553 pageRank:4.2063867974388865E-7
+Block:38 node:394928 pageRank:6.729519372058699E-7
+14/04/30 17:52:22 INFO mapred.JobClient:  map 100% reduce 81%
+Block:39 node:404711 pageRank:2.4635947673149214E-7
+Block:4 node:50460 pageRank:2.1890460137472094E-7
+Block:40 node:414616 pageRank:3.117365785470843E-7
+Block:41 node:424746 pageRank:1.5781227484590005E-6
+Block:42 node:434706 pageRank:2.7560672670352837E-6
+Block:43 node:444488 pageRank:3.834699612148476E-6
+14/04/30 17:52:24 INFO mapred.LocalJobRunner: reduce > reduce
+Block:44 node:454284 pageRank:4.975167835172878E-7
+Block:45 node:464397 pageRank:1.1215402686686534E-5
+14/04/30 17:52:25 INFO mapred.JobClient:  map 100% reduce 84%
+Block:46 node:474195 pageRank:9.429960113325103E-7
+Block:47 node:484049 pageRank:5.884073245430166E-7
+Block:48 node:493967 pageRank:2.1890460137472094E-7
+Block:49 node:503751 pageRank:6.875503827209699E-6
+Block:5 node:60840 pageRank:2.1890460137472094E-7
+14/04/30 17:52:27 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:52:28 INFO mapred.JobClient:  map 100% reduce 87%
+Block:50 node:514130 pageRank:6.357888002127549E-7
+Block:51 node:524509 pageRank:9.806667811001653E-4
+Block:52 node:534708 pageRank:2.4519390668944277E-5
+14/04/30 17:52:30 INFO mapred.LocalJobRunner: reduce > reduce
+Block:53 node:545087 pageRank:0.0021689787096561557
+Block:54 node:555466 pageRank:0.0011754166754648508
+14/04/30 17:52:31 INFO mapred.JobClient:  map 100% reduce 90%
+Block:55 node:565845 pageRank:1.6171305268941823E-6
+14/04/30 17:52:33 INFO mapred.LocalJobRunner: reduce > reduce
+Block:56 node:576224 pageRank:1.0897667215529755E-6
+Block:57 node:586603 pageRank:9.697443132984516E-7
+14/04/30 17:52:34 INFO mapred.JobClient:  map 100% reduce 94%
+Block:58 node:596584 pageRank:4.01774423366146E-6
+Block:59 node:606366 pageRank:4.3025258779699944E-7
+Block:6 node:70590 pageRank:2.9965329443796574E-7
+Block:60 node:616147 pageRank:5.797321194564918E-7
+Block:61 node:626447 pageRank:1.5456123521901043E-5
+Block:62 node:636239 pageRank:1.0725772758868737E-6
+Block:63 node:646021 pageRank:3.1193905695897734E-7
+14/04/30 17:52:36 INFO mapred.LocalJobRunner: reduce > reduce
+Block:64 node:655803 pageRank:2.1890460137472094E-7
+14/04/30 17:52:37 INFO mapred.JobClient:  map 100% reduce 97%
+Block:65 node:665665 pageRank:9.968870553501159E-7
+Block:66 node:675447 pageRank:1.2879925355696037E-6
+Block:67 node:685229 pageRank:3.516469255002537E-7
+Block:7 node:80117 pageRank:2.1890460137472094E-7
+Block:8 node:90496 pageRank:8.762635580258795E-4
+Block:9 node:100500 pageRank:2.6218906455989215E-7
+14/04/30 17:52:39 INFO mapred.Task: Task:attempt_local_0004_r_000000_0 is done. And is in the process of commiting
+14/04/30 17:52:39 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:52:39 INFO mapred.Task: Task attempt_local_0004_r_000000_0 is allowed to commit now
+14/04/30 17:52:39 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0004_r_000000_0' to /home/kira/blockedPageRank/runs/run4
+14/04/30 17:52:39 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:52:39 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:52:39 INFO mapred.Task: Task 'attempt_local_0004_r_000000_0' done.
+14/04/30 17:52:40 INFO mapred.JobClient:  map 100% reduce 100%
+14/04/30 17:52:40 INFO mapred.JobClient: Job complete: job_local_0004
+14/04/30 17:52:40 INFO mapred.JobClient: Counters: 21
+14/04/30 17:52:40 INFO mapred.JobClient:   com.cs5300.proj2.blockedpr.Counters
+14/04/30 17:52:40 INFO mapred.JobClient:     RESIDUAL_ERROR=6586452
+14/04/30 17:52:40 INFO mapred.JobClient:   File Output Format Counters 
+14/04/30 17:52:40 INFO mapred.JobClient:     Bytes Written=72883481
+14/04/30 17:52:40 INFO mapred.JobClient:   FileSystemCounters
+14/04/30 17:52:40 INFO mapred.JobClient:     FILE_BYTES_READ=10028472077
+14/04/30 17:52:40 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=10476490137
+14/04/30 17:52:40 INFO mapred.JobClient:   File Input Format Counters 
+14/04/30 17:52:40 INFO mapred.JobClient:     Bytes Read=72913078
+14/04/30 17:52:40 INFO mapred.JobClient:   Map-Reduce Framework
+14/04/30 17:52:40 INFO mapred.JobClient:     Reduce input groups=68
+14/04/30 17:52:40 INFO mapred.JobClient:     Map output materialized bytes=260167344
+14/04/30 17:52:40 INFO mapred.JobClient:     Combine output records=0
+14/04/30 17:52:40 INFO mapred.JobClient:     Map input records=679841
+14/04/30 17:52:40 INFO mapred.JobClient:     Reduce shuffle bytes=0
+14/04/30 17:52:40 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+14/04/30 17:52:40 INFO mapred.JobClient:     Reduce output records=679841
+14/04/30 17:52:40 INFO mapred.JobClient:     Spilled Records=27793879
+14/04/30 17:52:40 INFO mapred.JobClient:     Map output bytes=243534657
+14/04/30 17:52:40 INFO mapred.JobClient:     CPU time spent (ms)=0
+14/04/30 17:52:40 INFO mapred.JobClient:     Total committed heap usage (bytes)=1901854720
+14/04/30 17:52:40 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+14/04/30 17:52:40 INFO mapred.JobClient:     Combine input records=0
+14/04/30 17:52:40 INFO mapred.JobClient:     Map output records=8216053
+14/04/30 17:52:40 INFO mapred.JobClient:     SPLIT_RAW_BYTES=357
+14/04/30 17:52:40 INFO mapred.JobClient:     Reduce input records=8216053
+0.009685958823529413
+Residual error for iteration 3: 0.0097
+14/04/30 17:52:40 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+14/04/30 17:52:40 WARN mapred.JobClient: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+14/04/30 17:52:40 INFO input.FileInputFormat: Total input paths to process : 1
+14/04/30 17:52:40 INFO mapred.JobClient: Running job: job_local_0005
+14/04/30 17:52:40 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@15d950b
+14/04/30 17:52:40 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:52:40 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:52:40 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:52:41 INFO mapred.JobClient:  map 0% reduce 0%
+14/04/30 17:52:41 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:52:41 INFO mapred.MapTask: bufstart = 0; bufend = 6278691; bufvoid = 99614720
+14/04/30 17:52:41 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:52:42 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:52:42 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:52:42 INFO mapred.MapTask: bufstart = 6278691; bufend = 14022030; bufvoid = 99614720
+14/04/30 17:52:42 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:52:43 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:52:44 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:52:44 INFO mapred.MapTask: bufstart = 14022030; bufend = 24292866; bufvoid = 99614720
+14/04/30 17:52:44 INFO mapred.MapTask: kvstart = 196607; kvend = 131070; length = 327680
+14/04/30 17:52:44 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:52:45 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:52:45 INFO mapred.MapTask: bufstart = 24292866; bufend = 33662422; bufvoid = 99614720
+14/04/30 17:52:45 INFO mapred.MapTask: kvstart = 131070; kvend = 65533; length = 327680
+14/04/30 17:52:45 INFO mapred.MapTask: Finished spill 3
+14/04/30 17:52:46 INFO mapred.LocalJobRunner: 
+14/04/30 17:52:46 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:52:46 INFO mapred.MapTask: bufstart = 33662422; bufend = 42234511; bufvoid = 99614720
+14/04/30 17:52:46 INFO mapred.MapTask: kvstart = 65533; kvend = 327677; length = 327680
+14/04/30 17:52:47 INFO mapred.MapTask: Finished spill 4
+14/04/30 17:52:47 INFO mapred.JobClient:  map 31% reduce 0%
+14/04/30 17:52:47 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:52:47 INFO mapred.MapTask: bufstart = 42234511; bufend = 50097070; bufvoid = 99614720
+14/04/30 17:52:47 INFO mapred.MapTask: kvstart = 327677; kvend = 262140; length = 327680
+14/04/30 17:52:48 INFO mapred.MapTask: Finished spill 5
+14/04/30 17:52:48 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:52:48 INFO mapred.MapTask: bufstart = 50097070; bufend = 57230994; bufvoid = 99614720
+14/04/30 17:52:48 INFO mapred.MapTask: kvstart = 262140; kvend = 196603; length = 327680
+14/04/30 17:52:49 INFO mapred.MapTask: Finished spill 6
+14/04/30 17:52:49 INFO mapred.LocalJobRunner: 
+14/04/30 17:52:50 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:52:50 INFO mapred.MapTask: bufstart = 57230994; bufend = 65127520; bufvoid = 99614720
+14/04/30 17:52:50 INFO mapred.MapTask: kvstart = 196603; kvend = 131066; length = 327680
+14/04/30 17:52:50 INFO mapred.JobClient:  map 49% reduce 0%
+14/04/30 17:52:50 INFO mapred.MapTask: Finished spill 7
+14/04/30 17:52:51 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:52:51 INFO mapred.MapTask: bufstart = 65127520; bufend = 72552338; bufvoid = 99614720
+14/04/30 17:52:51 INFO mapred.MapTask: kvstart = 131066; kvend = 65529; length = 327680
+14/04/30 17:52:51 INFO mapred.MapTask: Finished spill 8
+14/04/30 17:52:52 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:52:52 INFO mapred.MapTask: bufstart = 72552338; bufend = 79907294; bufvoid = 99614720
+14/04/30 17:52:52 INFO mapred.MapTask: kvstart = 65529; kvend = 327673; length = 327680
+14/04/30 17:52:52 INFO mapred.LocalJobRunner: 
+14/04/30 17:52:52 INFO mapred.MapTask: Finished spill 9
+14/04/30 17:52:53 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:52:53 INFO mapred.MapTask: bufstart = 79907294; bufend = 87204398; bufvoid = 99614720
+14/04/30 17:52:53 INFO mapred.MapTask: kvstart = 327673; kvend = 262136; length = 327680
+14/04/30 17:52:53 INFO mapred.JobClient:  map 70% reduce 0%
+14/04/30 17:52:53 INFO mapred.MapTask: Finished spill 10
+14/04/30 17:52:54 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:52:54 INFO mapred.MapTask: bufstart = 87204398; bufend = 94754082; bufvoid = 99614720
+14/04/30 17:52:54 INFO mapred.MapTask: kvstart = 262136; kvend = 196599; length = 327680
+14/04/30 17:52:54 INFO mapred.MapTask: Finished spill 11
+14/04/30 17:52:55 INFO mapred.LocalJobRunner: 
+14/04/30 17:52:55 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:52:55 INFO mapred.MapTask: bufstart = 94754082; bufend = 2522266; bufvoid = 99614720
+14/04/30 17:52:55 INFO mapred.MapTask: kvstart = 196599; kvend = 131062; length = 327680
+14/04/30 17:52:55 INFO mapred.MapTask: Finished spill 12
+14/04/30 17:52:56 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:52:56 INFO mapred.MapTask: bufstart = 2522266; bufend = 9744105; bufvoid = 99614720
+14/04/30 17:52:56 INFO mapred.MapTask: kvstart = 131062; kvend = 65525; length = 327680
+14/04/30 17:52:56 INFO mapred.JobClient:  map 90% reduce 0%
+14/04/30 17:52:56 INFO mapred.MapTask: Finished spill 13
+14/04/30 17:52:56 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:52:56 INFO mapred.MapTask: Finished spill 14
+14/04/30 17:52:56 INFO mapred.Merger: Merging 15 sorted segments
+14/04/30 17:52:56 INFO mapred.Merger: Merging 6 intermediate segments out of a total of 15
+14/04/30 17:52:58 INFO mapred.LocalJobRunner: 
+14/04/30 17:52:59 INFO mapred.JobClient:  map 100% reduce 0%
+14/04/30 17:52:59 INFO mapred.Merger: Down to the last merge-pass, with 10 segments left of total size: 119085658 bytes
+14/04/30 17:53:01 INFO mapred.LocalJobRunner: 
+14/04/30 17:53:04 INFO mapred.LocalJobRunner: 
+14/04/30 17:53:05 INFO mapred.Task: Task:attempt_local_0005_m_000000_0 is done. And is in the process of commiting
+14/04/30 17:53:07 INFO mapred.LocalJobRunner: 
+14/04/30 17:53:07 INFO mapred.LocalJobRunner: 
+14/04/30 17:53:07 INFO mapred.Task: Task 'attempt_local_0005_m_000000_0' done.
+14/04/30 17:53:07 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@1cbaf63
+14/04/30 17:53:07 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:53:07 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:53:07 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:53:08 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:53:08 INFO mapred.MapTask: bufstart = 0; bufend = 6815467; bufvoid = 99614720
+14/04/30 17:53:08 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:53:08 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:53:09 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:53:09 INFO mapred.MapTask: bufstart = 6815467; bufend = 14281121; bufvoid = 99614720
+14/04/30 17:53:09 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:53:09 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:53:10 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:53:10 INFO mapred.MapTask: bufstart = 14281121; bufend = 21719354; bufvoid = 99614720
+14/04/30 17:53:10 INFO mapred.MapTask: kvstart = 196607; kvend = 131070; length = 327680
+14/04/30 17:53:11 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:53:11 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:53:11 INFO mapred.MapTask: bufstart = 21719354; bufend = 29341733; bufvoid = 99614720
+14/04/30 17:53:11 INFO mapred.MapTask: kvstart = 131070; kvend = 65533; length = 327680
+14/04/30 17:53:12 INFO mapred.MapTask: Finished spill 3
+14/04/30 17:53:12 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:53:12 INFO mapred.MapTask: bufstart = 29341733; bufend = 36400373; bufvoid = 99614720
+14/04/30 17:53:12 INFO mapred.MapTask: kvstart = 65533; kvend = 327677; length = 327680
+14/04/30 17:53:13 INFO mapred.MapTask: Finished spill 4
+14/04/30 17:53:13 INFO mapred.LocalJobRunner: 
+14/04/30 17:53:13 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:53:13 INFO mapred.MapTask: bufstart = 36400373; bufend = 43255578; bufvoid = 99614720
+14/04/30 17:53:13 INFO mapred.MapTask: kvstart = 327677; kvend = 262140; length = 327680
+14/04/30 17:53:14 INFO mapred.MapTask: Finished spill 5
+14/04/30 17:53:14 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:53:14 INFO mapred.MapTask: bufstart = 43255578; bufend = 50356248; bufvoid = 99614720
+14/04/30 17:53:14 INFO mapred.MapTask: kvstart = 262140; kvend = 196603; length = 327680
+14/04/30 17:53:14 INFO mapred.JobClient:  map 69% reduce 0%
+14/04/30 17:53:14 INFO mapred.MapTask: Finished spill 6
+14/04/30 17:53:15 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:53:15 INFO mapred.MapTask: bufstart = 50356248; bufend = 57592662; bufvoid = 99614720
+14/04/30 17:53:15 INFO mapred.MapTask: kvstart = 196603; kvend = 131066; length = 327680
+14/04/30 17:53:15 INFO mapred.MapTask: Finished spill 7
+14/04/30 17:53:16 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:53:16 INFO mapred.MapTask: bufstart = 57592662; bufend = 65602302; bufvoid = 99614720
+14/04/30 17:53:16 INFO mapred.MapTask: kvstart = 131066; kvend = 65529; length = 327680
+14/04/30 17:53:16 INFO mapred.LocalJobRunner: 
+14/04/30 17:53:16 INFO mapred.MapTask: Finished spill 8
+14/04/30 17:53:17 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:53:17 INFO mapred.MapTask: bufstart = 65602302; bufend = 73012733; bufvoid = 99614720
+14/04/30 17:53:17 INFO mapred.MapTask: kvstart = 65529; kvend = 327673; length = 327680
+14/04/30 17:53:17 INFO mapred.JobClient:  map 80% reduce 0%
+14/04/30 17:53:17 INFO mapred.MapTask: Finished spill 9
+14/04/30 17:53:18 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:53:18 INFO mapred.MapTask: bufstart = 73012733; bufend = 83091766; bufvoid = 99614720
+14/04/30 17:53:18 INFO mapred.MapTask: kvstart = 327673; kvend = 262136; length = 327680
+14/04/30 17:53:19 INFO mapred.MapTask: Finished spill 10
+14/04/30 17:53:19 INFO mapred.LocalJobRunner: 
+14/04/30 17:53:20 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:53:20 INFO mapred.MapTask: bufstart = 83091766; bufend = 93045116; bufvoid = 99614720
+14/04/30 17:53:20 INFO mapred.MapTask: kvstart = 262136; kvend = 196599; length = 327680
+14/04/30 17:53:20 INFO mapred.JobClient:  map 87% reduce 0%
+14/04/30 17:53:20 INFO mapred.MapTask: Finished spill 11
+14/04/30 17:53:21 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:53:21 INFO mapred.MapTask: bufstart = 93045116; bufend = 2061178; bufvoid = 99614720
+14/04/30 17:53:21 INFO mapred.MapTask: kvstart = 196599; kvend = 131062; length = 327680
+14/04/30 17:53:21 INFO mapred.MapTask: Finished spill 12
+14/04/30 17:53:22 INFO mapred.LocalJobRunner: 
+14/04/30 17:53:22 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:53:22 INFO mapred.MapTask: bufstart = 2061178; bufend = 9650177; bufvoid = 99614720
+14/04/30 17:53:22 INFO mapred.MapTask: kvstart = 131062; kvend = 65525; length = 327680
+14/04/30 17:53:23 INFO mapred.MapTask: Finished spill 13
+14/04/30 17:53:23 INFO mapred.JobClient:  map 95% reduce 0%
+14/04/30 17:53:23 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:53:23 INFO mapred.MapTask: Finished spill 14
+14/04/30 17:53:23 INFO mapred.Merger: Merging 15 sorted segments
+14/04/30 17:53:23 INFO mapred.Merger: Merging 6 intermediate segments out of a total of 15
+14/04/30 17:53:25 INFO mapred.LocalJobRunner: 
+14/04/30 17:53:26 INFO mapred.JobClient:  map 100% reduce 0%
+14/04/30 17:53:26 INFO mapred.Merger: Down to the last merge-pass, with 10 segments left of total size: 123013343 bytes
+14/04/30 17:53:28 INFO mapred.LocalJobRunner: 
+14/04/30 17:53:31 INFO mapred.LocalJobRunner: 
+14/04/30 17:53:32 INFO mapred.Task: Task:attempt_local_0005_m_000001_0 is done. And is in the process of commiting
+14/04/30 17:53:34 INFO mapred.LocalJobRunner: 
+14/04/30 17:53:34 INFO mapred.LocalJobRunner: 
+14/04/30 17:53:34 INFO mapred.Task: Task 'attempt_local_0005_m_000001_0' done.
+14/04/30 17:53:34 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@1cf1c23
+14/04/30 17:53:34 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:53:34 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:53:34 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:53:35 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:53:35 INFO mapred.MapTask: bufstart = 0; bufend = 7150095; bufvoid = 99614720
+14/04/30 17:53:35 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:53:35 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:53:36 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:53:36 INFO mapred.MapTask: bufstart = 7150095; bufend = 14753672; bufvoid = 99614720
+14/04/30 17:53:36 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:53:37 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:53:37 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:53:37 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:53:37 INFO mapred.Merger: Merging 3 sorted segments
+14/04/30 17:53:37 INFO mapred.Merger: Down to the last merge-pass, with 3 segments left of total size: 18070666 bytes
+14/04/30 17:53:38 INFO mapred.Task: Task:attempt_local_0005_m_000002_0 is done. And is in the process of commiting
+14/04/30 17:53:40 INFO mapred.LocalJobRunner: 
+14/04/30 17:53:40 INFO mapred.LocalJobRunner: 
+14/04/30 17:53:40 INFO mapred.Task: Task 'attempt_local_0005_m_000002_0' done.
+14/04/30 17:53:40 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@11fdfe5
+14/04/30 17:53:40 INFO mapred.LocalJobRunner: 
+14/04/30 17:53:40 INFO mapred.Merger: Merging 3 sorted segments
+14/04/30 17:53:40 INFO mapred.Merger: Down to the last merge-pass, with 3 segments left of total size: 260169627 bytes
+14/04/30 17:53:40 INFO mapred.LocalJobRunner: 
+Block:0 node:10327 pageRank:1.8745802114983058E-6
+Block:1 node:20372 pageRank:5.17320036763538E-7
+Block:10 node:110566 pageRank:2.0321082216781105E-6
+Block:11 node:120944 pageRank:4.710647546651217E-7
+Block:12 node:130998 pageRank:2.356815313390947E-7
+Block:13 node:140573 pageRank:6.180707147211968E-7
+Block:14 node:150952 pageRank:2.1890460137472094E-7
+Block:15 node:161331 pageRank:2.1890460137472094E-7
+Block:16 node:171153 pageRank:5.628255833744221E-7
+Block:17 node:181513 pageRank:3.522127019707873E-7
+Block:18 node:191624 pageRank:5.277606462644697E-6
+14/04/30 17:53:46 INFO mapred.LocalJobRunner: reduce > reduce
+Block:19 node:202003 pageRank:4.113200120568847E-6
+Block:2 node:30628 pageRank:3.058045622435037E-7
+14/04/30 17:53:47 INFO mapred.JobClient:  map 100% reduce 73%
+Block:20 node:212382 pageRank:2.6210395020812286E-7
+Block:21 node:222761 pageRank:0.0012200092409586
+Block:22 node:232592 pageRank:1.2170979355186354E-4
+Block:23 node:242877 pageRank:5.726010889050511E-7
+Block:24 node:252937 pageRank:2.1890460137472094E-7
+Block:25 node:263148 pageRank:3.0396800284564693E-7
+14/04/30 17:53:49 INFO mapred.LocalJobRunner: reduce > reduce
+Block:26 node:273209 pageRank:2.1890460137472094E-7
+Block:27 node:283472 pageRank:3.3674759835410304E-7
+14/04/30 17:53:50 INFO mapred.JobClient:  map 100% reduce 76%
+Block:28 node:293254 pageRank:2.621038357571989E-7
+Block:29 node:303042 pageRank:4.896276162036846E-6
+Block:3 node:40643 pageRank:2.809275717642252E-7
+Block:30 node:313369 pageRank:8.327965782522618E-7
+Block:31 node:323521 pageRank:2.1890460137472094E-7
+14/04/30 17:53:52 INFO mapred.LocalJobRunner: reduce > reduce
+Block:32 node:333882 pageRank:5.373054269508367E-7
+Block:33 node:343662 pageRank:2.541131434263408E-7
+Block:34 node:353643 pageRank:4.671140708746053E-7
+14/04/30 17:53:53 INFO mapred.JobClient:  map 100% reduce 79%
+Block:35 node:363928 pageRank:3.560533760431584E-7
+Block:36 node:374235 pageRank:3.7965089842435893E-6
+Block:37 node:384553 pageRank:4.199143619354185E-7
+Block:38 node:394928 pageRank:6.723327174603067E-7
+Block:39 node:404711 pageRank:2.46321306976109E-7
+14/04/30 17:53:55 INFO mapred.LocalJobRunner: reduce > reduce
+Block:4 node:50460 pageRank:2.1890460137472094E-7
+Block:40 node:414616 pageRank:3.117314745887873E-7
+Block:41 node:424746 pageRank:1.6576350340154688E-6
+14/04/30 17:53:56 INFO mapred.JobClient:  map 100% reduce 82%
+Block:42 node:434706 pageRank:2.7577668752241926E-6
+Block:43 node:444488 pageRank:3.820141131241607E-6
+Block:44 node:454284 pageRank:4.975162931249243E-7
+Block:45 node:464397 pageRank:1.1199142360970611E-5
+Block:46 node:474195 pageRank:9.435050893759675E-7
+Block:47 node:484049 pageRank:5.890170043429763E-7
+14/04/30 17:53:58 INFO mapred.LocalJobRunner: reduce > reduce
+Block:48 node:493967 pageRank:2.1890460137472094E-7
+Block:49 node:503751 pageRank:6.976489383985503E-6
+14/04/30 17:53:59 INFO mapred.JobClient:  map 100% reduce 85%
+Block:5 node:60840 pageRank:2.1890460137472094E-7
+14/04/30 17:54:01 INFO mapred.LocalJobRunner: reduce > reduce
+Block:50 node:514130 pageRank:6.357877013179736E-7
+Block:51 node:524509 pageRank:9.826747273650358E-4
+Block:52 node:534708 pageRank:2.431745112757265E-5
+14/04/30 17:54:02 INFO mapred.JobClient:  map 100% reduce 89%
+Block:53 node:545087 pageRank:0.00259333165022088
+Block:54 node:555466 pageRank:0.0011777947920752784
+14/04/30 17:54:04 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:54:04 INFO mapred.JobClient:  map 100% reduce 93%
+Block:55 node:565845 pageRank:1.6157569798300035E-6
+Block:56 node:576224 pageRank:1.0885741855165826E-6
+Block:57 node:586603 pageRank:9.694966183102966E-7
+Block:58 node:596584 pageRank:4.006177284147994E-6
+Block:59 node:606366 pageRank:4.2834389987105246E-7
+Block:6 node:70590 pageRank:2.9965438743701415E-7
+14/04/30 17:54:07 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:54:07 INFO mapred.JobClient:  map 100% reduce 96%
+Block:60 node:616147 pageRank:6.085675992995639E-7
+Block:61 node:626447 pageRank:1.5153116473831184E-5
+Block:62 node:636239 pageRank:1.0723996375945089E-6
+Block:63 node:646021 pageRank:3.1193905695897734E-7
+Block:64 node:655803 pageRank:2.1890460137472094E-7
+Block:65 node:665665 pageRank:9.972996063662202E-7
+Block:66 node:675447 pageRank:1.2881833697970198E-6
+Block:67 node:685229 pageRank:3.569162305576747E-7
+Block:7 node:80117 pageRank:2.1890460137472094E-7
+14/04/30 17:54:10 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:54:10 INFO mapred.JobClient:  map 100% reduce 99%
+Block:8 node:90496 pageRank:8.597944282115269E-4
+Block:9 node:100500 pageRank:2.622709800080115E-7
+14/04/30 17:54:10 INFO mapred.Task: Task:attempt_local_0005_r_000000_0 is done. And is in the process of commiting
+14/04/30 17:54:10 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:54:10 INFO mapred.Task: Task attempt_local_0005_r_000000_0 is allowed to commit now
+14/04/30 17:54:10 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0005_r_000000_0' to /home/kira/blockedPageRank/runs/run5
+14/04/30 17:54:13 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:54:13 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:54:13 INFO mapred.Task: Task 'attempt_local_0005_r_000000_0' done.
+14/04/30 17:54:13 INFO mapred.JobClient:  map 100% reduce 100%
+14/04/30 17:54:13 INFO mapred.JobClient: Job complete: job_local_0005
+14/04/30 17:54:13 INFO mapred.JobClient: Counters: 21
+14/04/30 17:54:13 INFO mapred.JobClient:   com.cs5300.proj2.blockedpr.Counters
+14/04/30 17:54:13 INFO mapred.JobClient:     RESIDUAL_ERROR=3073290
+14/04/30 17:54:13 INFO mapred.JobClient:   File Output Format Counters 
+14/04/30 17:54:13 INFO mapred.JobClient:     Bytes Written=72885051
+14/04/30 17:54:13 INFO mapred.JobClient:   FileSystemCounters
+14/04/30 17:54:13 INFO mapred.JobClient:     FILE_BYTES_READ=12800171979
+14/04/30 17:54:13 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=13248066672
+14/04/30 17:54:13 INFO mapred.JobClient:   File Input Format Counters 
+14/04/30 17:54:13 INFO mapred.JobClient:     Bytes Read=72912661
+14/04/30 17:54:13 INFO mapred.JobClient:   Map-Reduce Framework
+14/04/30 17:54:13 INFO mapred.JobClient:     Reduce input groups=68
+14/04/30 17:54:13 INFO mapred.JobClient:     Map output materialized bytes=260169639
+14/04/30 17:54:13 INFO mapred.JobClient:     Combine output records=0
+14/04/30 17:54:13 INFO mapred.JobClient:     Map input records=679841
+14/04/30 17:54:13 INFO mapred.JobClient:     Reduce shuffle bytes=0
+14/04/30 17:54:13 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+14/04/30 17:54:13 INFO mapred.JobClient:     Reduce output records=679841
+14/04/30 17:54:13 INFO mapred.JobClient:     Spilled Records=27793879
+14/04/30 17:54:13 INFO mapred.JobClient:     Map output bytes=243536939
+14/04/30 17:54:13 INFO mapred.JobClient:     CPU time spent (ms)=0
+14/04/30 17:54:13 INFO mapred.JobClient:     Total committed heap usage (bytes)=1856765952
+14/04/30 17:54:13 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+14/04/30 17:54:13 INFO mapred.JobClient:     Combine input records=0
+14/04/30 17:54:13 INFO mapred.JobClient:     Map output records=8216053
+0.00451954411764705914/04/30 17:54:13 INFO mapred.JobClient:     SPLIT_RAW_BYTES=357
+14/04/30 17:54:13 INFO mapred.JobClient:     Reduce input records=8216053
+
+Residual error for iteration 4: 0.0045
+14/04/30 17:54:13 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+14/04/30 17:54:13 WARN mapred.JobClient: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+14/04/30 17:54:13 INFO input.FileInputFormat: Total input paths to process : 1
+14/04/30 17:54:13 INFO mapred.JobClient: Running job: job_local_0006
+14/04/30 17:54:13 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@1480096
+14/04/30 17:54:13 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:54:13 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:54:13 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:54:14 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:14 INFO mapred.MapTask: bufstart = 0; bufend = 6279380; bufvoid = 99614720
+14/04/30 17:54:14 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:54:14 INFO mapred.JobClient:  map 0% reduce 0%
+14/04/30 17:54:14 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:54:15 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:15 INFO mapred.MapTask: bufstart = 6279380; bufend = 14023531; bufvoid = 99614720
+14/04/30 17:54:15 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:54:16 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:54:17 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:17 INFO mapred.MapTask: bufstart = 14023531; bufend = 24294831; bufvoid = 99614720
+14/04/30 17:54:17 INFO mapred.MapTask: kvstart = 196607; kvend = 131070; length = 327680
+14/04/30 17:54:17 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:54:18 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:18 INFO mapred.MapTask: bufstart = 24294831; bufend = 33661885; bufvoid = 99614720
+14/04/30 17:54:18 INFO mapred.MapTask: kvstart = 131070; kvend = 65533; length = 327680
+14/04/30 17:54:18 INFO mapred.MapTask: Finished spill 3
+14/04/30 17:54:19 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:19 INFO mapred.MapTask: bufstart = 33661885; bufend = 42224128; bufvoid = 99614720
+14/04/30 17:54:19 INFO mapred.MapTask: kvstart = 65533; kvend = 327677; length = 327680
+14/04/30 17:54:19 INFO mapred.LocalJobRunner: 
+14/04/30 17:54:20 INFO mapred.MapTask: Finished spill 4
+14/04/30 17:54:20 INFO mapred.JobClient:  map 32% reduce 0%
+14/04/30 17:54:20 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:20 INFO mapred.MapTask: bufstart = 42224128; bufend = 50118291; bufvoid = 99614720
+14/04/30 17:54:20 INFO mapred.MapTask: kvstart = 327677; kvend = 262140; length = 327680
+14/04/30 17:54:21 INFO mapred.MapTask: Finished spill 5
+14/04/30 17:54:21 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:21 INFO mapred.MapTask: bufstart = 50118291; bufend = 57235202; bufvoid = 99614720
+14/04/30 17:54:21 INFO mapred.MapTask: kvstart = 262140; kvend = 196603; length = 327680
+14/04/30 17:54:22 INFO mapred.MapTask: Finished spill 6
+14/04/30 17:54:22 INFO mapred.LocalJobRunner: 
+14/04/30 17:54:23 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:23 INFO mapred.MapTask: bufstart = 57235202; bufend = 65132173; bufvoid = 99614720
+14/04/30 17:54:23 INFO mapred.MapTask: kvstart = 196603; kvend = 131066; length = 327680
+14/04/30 17:54:23 INFO mapred.MapTask: Finished spill 7
+14/04/30 17:54:23 INFO mapred.JobClient:  map 51% reduce 0%
+14/04/30 17:54:24 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:24 INFO mapred.MapTask: bufstart = 65132173; bufend = 72554894; bufvoid = 99614720
+14/04/30 17:54:24 INFO mapred.MapTask: kvstart = 131066; kvend = 65529; length = 327680
+14/04/30 17:54:24 INFO mapred.MapTask: Finished spill 8
+14/04/30 17:54:25 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:25 INFO mapred.MapTask: bufstart = 72554894; bufend = 79943607; bufvoid = 99614720
+14/04/30 17:54:25 INFO mapred.MapTask: kvstart = 65529; kvend = 327673; length = 327680
+14/04/30 17:54:25 INFO mapred.MapTask: Finished spill 9
+14/04/30 17:54:25 INFO mapred.LocalJobRunner: 
+14/04/30 17:54:26 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:26 INFO mapred.MapTask: bufstart = 79943607; bufend = 87191284; bufvoid = 99614720
+14/04/30 17:54:26 INFO mapred.MapTask: kvstart = 327673; kvend = 262136; length = 327680
+14/04/30 17:54:26 INFO mapred.MapTask: Finished spill 10
+14/04/30 17:54:26 INFO mapred.JobClient:  map 72% reduce 0%
+14/04/30 17:54:27 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:27 INFO mapred.MapTask: bufstart = 87191284; bufend = 94756657; bufvoid = 99614720
+14/04/30 17:54:27 INFO mapred.MapTask: kvstart = 262136; kvend = 196599; length = 327680
+14/04/30 17:54:27 INFO mapred.MapTask: Finished spill 11
+14/04/30 17:54:28 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:28 INFO mapred.MapTask: bufstart = 94756657; bufend = 2525189; bufvoid = 99614720
+14/04/30 17:54:28 INFO mapred.MapTask: kvstart = 196599; kvend = 131062; length = 327680
+14/04/30 17:54:28 INFO mapred.LocalJobRunner: 
+14/04/30 17:54:28 INFO mapred.MapTask: Finished spill 12
+14/04/30 17:54:29 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:29 INFO mapred.MapTask: bufstart = 2525189; bufend = 9746985; bufvoid = 99614720
+14/04/30 17:54:29 INFO mapred.MapTask: kvstart = 131062; kvend = 65525; length = 327680
+14/04/30 17:54:29 INFO mapred.JobClient:  map 92% reduce 0%
+14/04/30 17:54:29 INFO mapred.MapTask: Finished spill 13
+14/04/30 17:54:29 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:54:29 INFO mapred.MapTask: Finished spill 14
+14/04/30 17:54:29 INFO mapred.Merger: Merging 15 sorted segments
+14/04/30 17:54:29 INFO mapred.Merger: Merging 6 intermediate segments out of a total of 15
+14/04/30 17:54:31 INFO mapred.LocalJobRunner: 
+14/04/30 17:54:32 INFO mapred.Merger: Down to the last merge-pass, with 10 segments left of total size: 119088360 bytes
+14/04/30 17:54:32 INFO mapred.JobClient:  map 100% reduce 0%
+14/04/30 17:54:34 INFO mapred.LocalJobRunner: 
+14/04/30 17:54:37 INFO mapred.LocalJobRunner: 
+14/04/30 17:54:38 INFO mapred.Task: Task:attempt_local_0006_m_000000_0 is done. And is in the process of commiting
+14/04/30 17:54:40 INFO mapred.LocalJobRunner: 
+14/04/30 17:54:40 INFO mapred.LocalJobRunner: 
+14/04/30 17:54:40 INFO mapred.Task: Task 'attempt_local_0006_m_000000_0' done.
+14/04/30 17:54:40 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@10a900b
+14/04/30 17:54:40 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:54:40 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:54:40 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:54:41 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:41 INFO mapred.MapTask: bufstart = 0; bufend = 6815419; bufvoid = 99614720
+14/04/30 17:54:41 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:54:42 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:54:42 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:42 INFO mapred.MapTask: bufstart = 6815419; bufend = 14281195; bufvoid = 99614720
+14/04/30 17:54:42 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:54:43 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:54:43 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:43 INFO mapred.MapTask: bufstart = 14281195; bufend = 21719571; bufvoid = 99614720
+14/04/30 17:54:43 INFO mapred.MapTask: kvstart = 196607; kvend = 131070; length = 327680
+14/04/30 17:54:44 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:54:44 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:44 INFO mapred.MapTask: bufstart = 21719571; bufend = 29342170; bufvoid = 99614720
+14/04/30 17:54:44 INFO mapred.MapTask: kvstart = 131070; kvend = 65533; length = 327680
+14/04/30 17:54:45 INFO mapred.MapTask: Finished spill 3
+14/04/30 17:54:45 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:45 INFO mapred.MapTask: bufstart = 29342170; bufend = 36401069; bufvoid = 99614720
+14/04/30 17:54:45 INFO mapred.MapTask: kvstart = 65533; kvend = 327677; length = 327680
+14/04/30 17:54:46 INFO mapred.MapTask: Finished spill 4
+14/04/30 17:54:46 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:46 INFO mapred.MapTask: bufstart = 36401069; bufend = 43195384; bufvoid = 99614720
+14/04/30 17:54:46 INFO mapred.MapTask: kvstart = 327677; kvend = 262140; length = 327680
+14/04/30 17:54:46 INFO mapred.LocalJobRunner: 
+14/04/30 17:54:46 INFO mapred.MapTask: Finished spill 5
+14/04/30 17:54:47 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:47 INFO mapred.MapTask: bufstart = 43195384; bufend = 50356833; bufvoid = 99614720
+14/04/30 17:54:47 INFO mapred.MapTask: kvstart = 262140; kvend = 196603; length = 327680
+14/04/30 17:54:47 INFO mapred.JobClient:  map 70% reduce 0%
+14/04/30 17:54:47 INFO mapred.MapTask: Finished spill 6
+14/04/30 17:54:48 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:48 INFO mapred.MapTask: bufstart = 50356833; bufend = 57593379; bufvoid = 99614720
+14/04/30 17:54:48 INFO mapred.MapTask: kvstart = 196603; kvend = 131066; length = 327680
+14/04/30 17:54:48 INFO mapred.MapTask: Finished spill 7
+14/04/30 17:54:49 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:49 INFO mapred.MapTask: bufstart = 57593379; bufend = 65603388; bufvoid = 99614720
+14/04/30 17:54:49 INFO mapred.MapTask: kvstart = 131066; kvend = 65529; length = 327680
+14/04/30 17:54:49 INFO mapred.LocalJobRunner: 
+14/04/30 17:54:49 INFO mapred.MapTask: Finished spill 8
+14/04/30 17:54:50 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:50 INFO mapred.MapTask: bufstart = 65603388; bufend = 73004641; bufvoid = 99614720
+14/04/30 17:54:50 INFO mapred.MapTask: kvstart = 65529; kvend = 327673; length = 327680
+14/04/30 17:54:50 INFO mapred.JobClient:  map 81% reduce 0%
+14/04/30 17:54:50 INFO mapred.MapTask: Finished spill 9
+14/04/30 17:54:51 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:51 INFO mapred.MapTask: bufstart = 73004641; bufend = 83096262; bufvoid = 99614720
+14/04/30 17:54:51 INFO mapred.MapTask: kvstart = 327673; kvend = 262136; length = 327680
+14/04/30 17:54:52 INFO mapred.MapTask: Finished spill 10
+14/04/30 17:54:52 INFO mapred.LocalJobRunner: 
+14/04/30 17:54:53 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:53 INFO mapred.MapTask: bufstart = 83096262; bufend = 93057556; bufvoid = 99614720
+14/04/30 17:54:53 INFO mapred.MapTask: kvstart = 262136; kvend = 196599; length = 327680
+14/04/30 17:54:53 INFO mapred.MapTask: Finished spill 11
+14/04/30 17:54:53 INFO mapred.JobClient:  map 88% reduce 0%
+14/04/30 17:54:54 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:54 INFO mapred.MapTask: bufstart = 93057556; bufend = 2061436; bufvoid = 99614720
+14/04/30 17:54:54 INFO mapred.MapTask: kvstart = 196599; kvend = 131062; length = 327680
+14/04/30 17:54:54 INFO mapred.MapTask: Finished spill 12
+14/04/30 17:54:55 INFO mapred.LocalJobRunner: 
+14/04/30 17:54:55 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:54:55 INFO mapred.MapTask: bufstart = 2061436; bufend = 9653109; bufvoid = 99614720
+14/04/30 17:54:55 INFO mapred.MapTask: kvstart = 131062; kvend = 65525; length = 327680
+14/04/30 17:54:56 INFO mapred.MapTask: Finished spill 13
+14/04/30 17:54:56 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:54:56 INFO mapred.JobClient:  map 96% reduce 0%
+14/04/30 17:54:56 INFO mapred.MapTask: Finished spill 14
+14/04/30 17:54:57 INFO mapred.Merger: Merging 15 sorted segments
+14/04/30 17:54:57 INFO mapred.Merger: Merging 6 intermediate segments out of a total of 15
+14/04/30 17:54:58 INFO mapred.LocalJobRunner: 
+14/04/30 17:54:59 INFO mapred.Merger: Down to the last merge-pass, with 10 segments left of total size: 123197210 bytes
+14/04/30 17:54:59 INFO mapred.JobClient:  map 100% reduce 0%
+14/04/30 17:55:01 INFO mapred.LocalJobRunner: 
+14/04/30 17:55:04 INFO mapred.LocalJobRunner: 
+14/04/30 17:55:05 INFO mapred.Task: Task:attempt_local_0006_m_000001_0 is done. And is in the process of commiting
+14/04/30 17:55:07 INFO mapred.LocalJobRunner: 
+14/04/30 17:55:07 INFO mapred.LocalJobRunner: 
+14/04/30 17:55:07 INFO mapred.Task: Task 'attempt_local_0006_m_000001_0' done.
+14/04/30 17:55:07 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@bdcad4
+14/04/30 17:55:07 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:55:07 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:55:07 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:55:08 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:55:08 INFO mapred.MapTask: bufstart = 0; bufend = 7220984; bufvoid = 99614720
+14/04/30 17:55:08 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:55:09 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:55:10 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:55:10 INFO mapred.MapTask: bufstart = 7220984; bufend = 14845062; bufvoid = 99614720
+14/04/30 17:55:10 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:55:10 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:55:10 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:55:10 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:55:10 INFO mapred.Merger: Merging 3 sorted segments
+14/04/30 17:55:10 INFO mapred.Merger: Down to the last merge-pass, with 3 segments left of total size: 17887771 bytes
+14/04/30 17:55:11 INFO mapred.Task: Task:attempt_local_0006_m_000002_0 is done. And is in the process of commiting
+14/04/30 17:55:13 INFO mapred.LocalJobRunner: 
+14/04/30 17:55:13 INFO mapred.LocalJobRunner: 
+14/04/30 17:55:13 INFO mapred.Task: Task 'attempt_local_0006_m_000002_0' done.
+14/04/30 17:55:13 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@5fbf68
+14/04/30 17:55:13 INFO mapred.LocalJobRunner: 
+14/04/30 17:55:13 INFO mapred.Merger: Merging 3 sorted segments
+14/04/30 17:55:13 INFO mapred.Merger: Down to the last merge-pass, with 3 segments left of total size: 260173301 bytes
+14/04/30 17:55:13 INFO mapred.LocalJobRunner: 
+Block:0 node:10327 pageRank:1.8741038168982635E-6
+Block:1 node:20372 pageRank:5.173186016640289E-7
+Block:10 node:110566 pageRank:2.0321633332751227E-6
+Block:11 node:120944 pageRank:4.834056601266811E-7
+Block:12 node:130998 pageRank:2.3571693887454723E-7
+Block:13 node:140573 pageRank:6.187466071518809E-7
+Block:14 node:150952 pageRank:2.1890460137472094E-7
+Block:15 node:161331 pageRank:2.1890460137472094E-7
+Block:16 node:171153 pageRank:5.624323852356409E-7
+Block:17 node:181513 pageRank:3.522112555776316E-7
+Block:18 node:191624 pageRank:5.277568893713438E-6
+Block:19 node:202003 pageRank:4.109360631601704E-6
+Block:2 node:30628 pageRank:3.070203093433927E-7
+14/04/30 17:55:19 INFO mapred.LocalJobRunner: reduce > reduce
+Block:20 node:212382 pageRank:2.621038357571989E-7
+Block:21 node:222761 pageRank:0.0011508875081685695
+14/04/30 17:55:20 INFO mapred.JobClient:  map 100% reduce 74%
+Block:22 node:232592 pageRank:1.7231441392852244E-4
+Block:23 node:242877 pageRank:5.727503766494254E-7
+Block:24 node:252937 pageRank:2.1890460137472094E-7
+Block:25 node:263148 pageRank:3.0396800271889766E-7
+Block:26 node:273209 pageRank:2.1890460137472094E-7
+Block:27 node:283472 pageRank:3.3673063793161803E-7
+Block:28 node:293254 pageRank:2.6210382588078896E-7
+14/04/30 17:55:22 INFO mapred.LocalJobRunner: reduce > reduce
+Block:29 node:303042 pageRank:4.896158920141466E-6
+Block:3 node:40643 pageRank:2.809275717642252E-7
+Block:30 node:313369 pageRank:8.35422066537149E-7
+14/04/30 17:55:23 INFO mapred.JobClient:  map 100% reduce 77%
+Block:31 node:323521 pageRank:2.1890460137472094E-7
+Block:32 node:333882 pageRank:5.373027573942507E-7
+Block:33 node:343662 pageRank:2.5411308532981204E-7
+Block:34 node:353643 pageRank:4.686457791732372E-7
+Block:35 node:363928 pageRank:3.5602188905720967E-7
+14/04/30 17:55:25 INFO mapred.LocalJobRunner: reduce > reduce
+Block:36 node:374235 pageRank:3.8212508547034956E-6
+Block:37 node:384553 pageRank:4.1967829179989557E-7
+Block:38 node:394928 pageRank:6.719118258251916E-7
+14/04/30 17:55:26 INFO mapred.JobClient:  map 100% reduce 80%
+Block:39 node:404711 pageRank:2.4629362860156576E-7
+Block:4 node:50460 pageRank:2.1890460137472094E-7
+Block:40 node:414616 pageRank:3.1172291155176384E-7
+Block:41 node:424746 pageRank:1.673219389766792E-6
+Block:42 node:434706 pageRank:2.7590136804157045E-6
+Block:43 node:444488 pageRank:3.815729277544515E-6
+14/04/30 17:55:28 INFO mapred.LocalJobRunner: reduce > reduce
+Block:44 node:454284 pageRank:4.97516127415933E-7
+Block:45 node:464397 pageRank:1.119932455824096E-5
+Block:46 node:474195 pageRank:9.43517640609687E-7
+14/04/30 17:55:29 INFO mapred.JobClient:  map 100% reduce 84%
+Block:47 node:484049 pageRank:5.890545874476594E-7
+Block:48 node:493967 pageRank:2.1890460137472094E-7
+Block:49 node:503751 pageRank:7.0828550715244275E-6
+Block:5 node:60840 pageRank:2.1890460137472094E-7
+14/04/30 17:55:31 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:55:32 INFO mapred.JobClient:  map 100% reduce 87%
+Block:50 node:514130 pageRank:6.357872450147001E-7
+Block:51 node:524509 pageRank:9.824984902694757E-4
+Block:52 node:534708 pageRank:2.5630813058141064E-5
+Block:53 node:545087 pageRank:0.002440486084797773
+Block:54 node:555466 pageRank:0.0011763703538345946
+14/04/30 17:55:34 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:55:35 INFO mapred.JobClient:  map 100% reduce 91%
+Block:55 node:565845 pageRank:1.61544275794563E-6
+Block:56 node:576224 pageRank:1.0883662808122797E-6
+14/04/30 17:55:37 INFO mapred.LocalJobRunner: reduce > reduce
+Block:57 node:586603 pageRank:9.694983632599488E-7
+Block:58 node:596584 pageRank:4.003629128943189E-6
+Block:59 node:606366 pageRank:4.2831691144441985E-7
+14/04/30 17:55:38 INFO mapred.JobClient:  map 100% reduce 95%
+Block:6 node:70590 pageRank:2.9964982816888045E-7
+Block:60 node:616147 pageRank:5.994538863584324E-7
+Block:61 node:626447 pageRank:1.568078836942688E-5
+Block:62 node:636239 pageRank:1.072270895714999E-6
+Block:63 node:646021 pageRank:3.1193905695897734E-7
+Block:64 node:655803 pageRank:2.1890460137472094E-7
+14/04/30 17:55:40 INFO mapred.LocalJobRunner: reduce > reduce
+Block:65 node:665665 pageRank:9.97553880183952E-7
+Block:66 node:675447 pageRank:1.2883241105537406E-6
+Block:67 node:685229 pageRank:3.587887692698389E-7
+Block:7 node:80117 pageRank:2.1890460137472094E-7
+14/04/30 17:55:41 INFO mapred.JobClient:  map 100% reduce 98%
+Block:8 node:90496 pageRank:8.677236489255901E-4
+Block:9 node:100500 pageRank:2.622709800080115E-7
+14/04/30 17:55:42 INFO mapred.Task: Task:attempt_local_0006_r_000000_0 is done. And is in the process of commiting
+14/04/30 17:55:42 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:55:42 INFO mapred.Task: Task attempt_local_0006_r_000000_0 is allowed to commit now
+14/04/30 17:55:42 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0006_r_000000_0' to /home/kira/blockedPageRank/runs/run6
+14/04/30 17:55:43 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:55:43 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:55:43 INFO mapred.Task: Task 'attempt_local_0006_r_000000_0' done.
+14/04/30 17:55:44 INFO mapred.JobClient:  map 100% reduce 100%
+14/04/30 17:55:44 INFO mapred.JobClient: Job complete: job_local_0006
+14/04/30 17:55:44 INFO mapred.JobClient: Counters: 21
+14/04/30 17:55:44 INFO mapred.JobClient:   com.cs5300.proj2.blockedpr.Counters
+14/04/30 17:55:44 INFO mapred.JobClient:     RESIDUAL_ERROR=1222867
+14/04/30 17:55:44 INFO mapred.JobClient:   File Output Format Counters 
+14/04/30 17:55:44 INFO mapred.JobClient:     Bytes Written=72884119
+14/04/30 17:55:44 INFO mapred.JobClient:   FileSystemCounters
+14/04/30 17:55:44 INFO mapred.JobClient:     FILE_BYTES_READ=15572185799
+14/04/30 17:55:44 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=16020282665
+14/04/30 17:55:44 INFO mapred.JobClient:   File Input Format Counters 
+14/04/30 17:55:44 INFO mapred.JobClient:     Bytes Read=72914231
+14/04/30 17:55:44 INFO mapred.JobClient:   Map-Reduce Framework
+14/04/30 17:55:44 INFO mapred.JobClient:     Reduce input groups=68
+14/04/30 17:55:44 INFO mapred.JobClient:     Map output materialized bytes=260173313
+14/04/30 17:55:44 INFO mapred.JobClient:     Combine output records=0
+14/04/30 17:55:44 INFO mapred.JobClient:     Map input records=679841
+14/04/30 17:55:44 INFO mapred.JobClient:     Reduce shuffle bytes=0
+14/04/30 17:55:44 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+14/04/30 17:55:44 INFO mapred.JobClient:     Reduce output records=679841
+14/04/30 17:55:44 INFO mapred.JobClient:     Spilled Records=27793879
+14/04/30 17:55:44 INFO mapred.JobClient:     Map output bytes=243540648
+14/04/30 17:55:44 INFO mapred.JobClient:     CPU time spent (ms)=0
+14/04/30 17:55:44 INFO mapred.JobClient:     Total committed heap usage (bytes)=2304770048
+14/04/30 17:55:44 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+14/04/30 17:55:44 INFO mapred.JobClient:     Combine input records=0
+14/04/30 17:55:44 INFO mapred.JobClient:     Map output records=8216053
+14/04/30 17:55:44 INFO mapred.JobClient:     SPLIT_RAW_BYTES=357
+0.001798333823529411814/04/30 17:55:44 INFO mapred.JobClient:     Reduce input records=8216053
+
+Residual error for iteration 5: 0.0018
+14/04/30 17:55:44 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+14/04/30 17:55:44 WARN mapred.JobClient: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+14/04/30 17:55:44 INFO input.FileInputFormat: Total input paths to process : 1
+14/04/30 17:55:44 INFO mapred.JobClient: Running job: job_local_0007
+14/04/30 17:55:44 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@1b9238a
+14/04/30 17:55:44 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:55:44 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:55:44 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:55:45 INFO mapred.JobClient:  map 0% reduce 0%
+14/04/30 17:55:45 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:55:45 INFO mapred.MapTask: bufstart = 0; bufend = 6279186; bufvoid = 99614720
+14/04/30 17:55:45 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:55:46 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:55:46 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:55:46 INFO mapred.MapTask: bufstart = 6279186; bufend = 14022459; bufvoid = 99614720
+14/04/30 17:55:46 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:55:47 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:55:48 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:55:48 INFO mapred.MapTask: bufstart = 14022459; bufend = 24287965; bufvoid = 99614720
+14/04/30 17:55:48 INFO mapred.MapTask: kvstart = 196607; kvend = 131070; length = 327680
+14/04/30 17:55:48 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:55:49 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:55:49 INFO mapred.MapTask: bufstart = 24287965; bufend = 33654690; bufvoid = 99614720
+14/04/30 17:55:49 INFO mapred.MapTask: kvstart = 131070; kvend = 65533; length = 327680
+14/04/30 17:55:50 INFO mapred.MapTask: Finished spill 3
+14/04/30 17:55:50 INFO mapred.LocalJobRunner: 
+14/04/30 17:55:50 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:55:50 INFO mapred.MapTask: bufstart = 33654690; bufend = 42211123; bufvoid = 99614720
+14/04/30 17:55:50 INFO mapred.MapTask: kvstart = 65533; kvend = 327677; length = 327680
+14/04/30 17:55:51 INFO mapred.MapTask: Finished spill 4
+14/04/30 17:55:51 INFO mapred.JobClient:  map 32% reduce 0%
+14/04/30 17:55:52 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:55:52 INFO mapred.MapTask: bufstart = 42211123; bufend = 50105794; bufvoid = 99614720
+14/04/30 17:55:52 INFO mapred.MapTask: kvstart = 327677; kvend = 262140; length = 327680
+14/04/30 17:55:52 INFO mapred.MapTask: Finished spill 5
+14/04/30 17:55:53 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:55:53 INFO mapred.MapTask: bufstart = 50105794; bufend = 57228983; bufvoid = 99614720
+14/04/30 17:55:53 INFO mapred.MapTask: kvstart = 262140; kvend = 196603; length = 327680
+14/04/30 17:55:53 INFO mapred.MapTask: Finished spill 6
+14/04/30 17:55:53 INFO mapred.LocalJobRunner: 
+14/04/30 17:55:54 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:55:54 INFO mapred.MapTask: bufstart = 57228983; bufend = 65122539; bufvoid = 99614720
+14/04/30 17:55:54 INFO mapred.MapTask: kvstart = 196603; kvend = 131066; length = 327680
+14/04/30 17:55:54 INFO mapred.JobClient:  map 49% reduce 0%
+14/04/30 17:55:55 INFO mapred.MapTask: Finished spill 7
+14/04/30 17:55:55 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:55:55 INFO mapred.MapTask: bufstart = 65122539; bufend = 72545034; bufvoid = 99614720
+14/04/30 17:55:55 INFO mapred.MapTask: kvstart = 131066; kvend = 65529; length = 327680
+14/04/30 17:55:56 INFO mapred.MapTask: Finished spill 8
+14/04/30 17:55:56 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:55:56 INFO mapred.MapTask: bufstart = 72545034; bufend = 79899095; bufvoid = 99614720
+14/04/30 17:55:56 INFO mapred.MapTask: kvstart = 65529; kvend = 327673; length = 327680
+14/04/30 17:55:56 INFO mapred.LocalJobRunner: 
+14/04/30 17:55:57 INFO mapred.MapTask: Finished spill 9
+14/04/30 17:55:57 INFO mapred.JobClient:  map 69% reduce 0%
+14/04/30 17:55:57 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:55:57 INFO mapred.MapTask: bufstart = 79899095; bufend = 87188037; bufvoid = 99614720
+14/04/30 17:55:57 INFO mapred.MapTask: kvstart = 327673; kvend = 262136; length = 327680
+14/04/30 17:55:58 INFO mapred.MapTask: Finished spill 10
+14/04/30 17:55:58 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:55:58 INFO mapred.MapTask: bufstart = 87188037; bufend = 94748133; bufvoid = 99614720
+14/04/30 17:55:58 INFO mapred.MapTask: kvstart = 262136; kvend = 196599; length = 327680
+14/04/30 17:55:59 INFO mapred.MapTask: Finished spill 11
+14/04/30 17:55:59 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:00 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:00 INFO mapred.MapTask: bufstart = 94748133; bufend = 2516949; bufvoid = 99614720
+14/04/30 17:56:00 INFO mapred.MapTask: kvstart = 196599; kvend = 131062; length = 327680
+14/04/30 17:56:00 INFO mapred.MapTask: Finished spill 12
+14/04/30 17:56:00 INFO mapred.JobClient:  map 88% reduce 0%
+14/04/30 17:56:01 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:01 INFO mapred.MapTask: bufstart = 2516949; bufend = 9739074; bufvoid = 99614720
+14/04/30 17:56:01 INFO mapred.MapTask: kvstart = 131062; kvend = 65525; length = 327680
+14/04/30 17:56:01 INFO mapred.MapTask: Finished spill 13
+14/04/30 17:56:01 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:56:01 INFO mapred.MapTask: Finished spill 14
+14/04/30 17:56:01 INFO mapred.Merger: Merging 15 sorted segments
+14/04/30 17:56:01 INFO mapred.Merger: Merging 6 intermediate segments out of a total of 15
+14/04/30 17:56:02 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:03 INFO mapred.JobClient:  map 100% reduce 0%
+14/04/30 17:56:04 INFO mapred.Merger: Down to the last merge-pass, with 10 segments left of total size: 119081080 bytes
+14/04/30 17:56:05 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:08 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:10 INFO mapred.Task: Task:attempt_local_0007_m_000000_0 is done. And is in the process of commiting
+14/04/30 17:56:11 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:11 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:11 INFO mapred.Task: Task 'attempt_local_0007_m_000000_0' done.
+14/04/30 17:56:11 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@c11fc2
+14/04/30 17:56:11 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:56:11 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:56:11 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:56:12 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:12 INFO mapred.MapTask: bufstart = 0; bufend = 6815056; bufvoid = 99614720
+14/04/30 17:56:12 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:56:13 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:56:13 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:13 INFO mapred.MapTask: bufstart = 6815056; bufend = 14274770; bufvoid = 99614720
+14/04/30 17:56:13 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:56:14 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:56:15 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:15 INFO mapred.MapTask: bufstart = 14274770; bufend = 21718463; bufvoid = 99614720
+14/04/30 17:56:15 INFO mapred.MapTask: kvstart = 196607; kvend = 131070; length = 327680
+14/04/30 17:56:15 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:56:16 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:16 INFO mapred.MapTask: bufstart = 21718463; bufend = 29341112; bufvoid = 99614720
+14/04/30 17:56:16 INFO mapred.MapTask: kvstart = 131070; kvend = 65533; length = 327680
+14/04/30 17:56:16 INFO mapred.MapTask: Finished spill 3
+14/04/30 17:56:17 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:17 INFO mapred.MapTask: bufstart = 29341112; bufend = 36400265; bufvoid = 99614720
+14/04/30 17:56:17 INFO mapred.MapTask: kvstart = 65533; kvend = 327677; length = 327680
+14/04/30 17:56:17 INFO mapred.MapTask: Finished spill 4
+14/04/30 17:56:17 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:17 INFO mapred.MapTask: bufstart = 36400265; bufend = 43192175; bufvoid = 99614720
+14/04/30 17:56:17 INFO mapred.MapTask: kvstart = 327677; kvend = 262140; length = 327680
+14/04/30 17:56:17 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:18 INFO mapred.MapTask: Finished spill 5
+14/04/30 17:56:18 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:18 INFO mapred.MapTask: bufstart = 43192175; bufend = 50299117; bufvoid = 99614720
+14/04/30 17:56:18 INFO mapred.MapTask: kvstart = 262140; kvend = 196603; length = 327680
+14/04/30 17:56:18 INFO mapred.JobClient:  map 70% reduce 0%
+14/04/30 17:56:19 INFO mapred.MapTask: Finished spill 6
+14/04/30 17:56:19 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:19 INFO mapred.MapTask: bufstart = 50299117; bufend = 57592123; bufvoid = 99614720
+14/04/30 17:56:19 INFO mapred.MapTask: kvstart = 196603; kvend = 131066; length = 327680
+14/04/30 17:56:20 INFO mapred.MapTask: Finished spill 7
+14/04/30 17:56:20 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:20 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:20 INFO mapred.MapTask: bufstart = 57592123; bufend = 65603093; bufvoid = 99614720
+14/04/30 17:56:20 INFO mapred.MapTask: kvstart = 131066; kvend = 65529; length = 327680
+14/04/30 17:56:21 INFO mapred.MapTask: Finished spill 8
+14/04/30 17:56:21 INFO mapred.JobClient:  map 79% reduce 0%
+14/04/30 17:56:21 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:21 INFO mapred.MapTask: bufstart = 65603093; bufend = 73003330; bufvoid = 99614720
+14/04/30 17:56:21 INFO mapred.MapTask: kvstart = 65529; kvend = 327673; length = 327680
+14/04/30 17:56:22 INFO mapred.MapTask: Finished spill 9
+14/04/30 17:56:23 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:23 INFO mapred.MapTask: bufstart = 73003330; bufend = 83094041; bufvoid = 99614720
+14/04/30 17:56:23 INFO mapred.MapTask: kvstart = 327673; kvend = 262136; length = 327680
+14/04/30 17:56:23 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:23 INFO mapred.MapTask: Finished spill 10
+14/04/30 17:56:24 INFO mapred.JobClient:  map 87% reduce 0%
+14/04/30 17:56:24 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:24 INFO mapred.MapTask: bufstart = 83094041; bufend = 93055532; bufvoid = 99614720
+14/04/30 17:56:24 INFO mapred.MapTask: kvstart = 262136; kvend = 196599; length = 327680
+14/04/30 17:56:25 INFO mapred.MapTask: Finished spill 11
+14/04/30 17:56:26 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:26 INFO mapred.MapTask: bufstart = 93055532; bufend = 2069107; bufvoid = 99614720
+14/04/30 17:56:26 INFO mapred.MapTask: kvstart = 196599; kvend = 131062; length = 327680
+14/04/30 17:56:26 INFO mapred.MapTask: Finished spill 12
+14/04/30 17:56:26 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:27 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:27 INFO mapred.MapTask: bufstart = 2069107; bufend = 9651715; bufvoid = 99614720
+14/04/30 17:56:27 INFO mapred.MapTask: kvstart = 131062; kvend = 65525; length = 327680
+14/04/30 17:56:27 INFO mapred.JobClient:  map 94% reduce 0%
+14/04/30 17:56:28 INFO mapred.MapTask: Finished spill 13
+14/04/30 17:56:28 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:56:28 INFO mapred.MapTask: Finished spill 14
+14/04/30 17:56:28 INFO mapred.Merger: Merging 15 sorted segments
+14/04/30 17:56:28 INFO mapred.Merger: Merging 6 intermediate segments out of a total of 15
+14/04/30 17:56:29 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:30 INFO mapred.JobClient:  map 100% reduce 0%
+14/04/30 17:56:31 INFO mapred.Merger: Down to the last merge-pass, with 10 segments left of total size: 123150406 bytes
+14/04/30 17:56:32 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:35 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:37 INFO mapred.Task: Task:attempt_local_0007_m_000001_0 is done. And is in the process of commiting
+14/04/30 17:56:38 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:38 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:38 INFO mapred.Task: Task 'attempt_local_0007_m_000001_0' done.
+14/04/30 17:56:38 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@d0e678
+14/04/30 17:56:38 INFO mapred.MapTask: io.sort.mb = 100
+14/04/30 17:56:38 INFO mapred.MapTask: data buffer = 79691776/99614720
+14/04/30 17:56:38 INFO mapred.MapTask: record buffer = 262144/327680
+14/04/30 17:56:39 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:39 INFO mapred.MapTask: bufstart = 0; bufend = 7202325; bufvoid = 99614720
+14/04/30 17:56:39 INFO mapred.MapTask: kvstart = 0; kvend = 262144; length = 327680
+14/04/30 17:56:40 INFO mapred.MapTask: Finished spill 0
+14/04/30 17:56:41 INFO mapred.MapTask: Spilling map output: record full = true
+14/04/30 17:56:41 INFO mapred.MapTask: bufstart = 7202325; bufend = 14835215; bufvoid = 99614720
+14/04/30 17:56:41 INFO mapred.MapTask: kvstart = 262144; kvend = 196607; length = 327680
+14/04/30 17:56:41 INFO mapred.MapTask: Starting flush of map output
+14/04/30 17:56:41 INFO mapred.MapTask: Finished spill 1
+14/04/30 17:56:41 INFO mapred.MapTask: Finished spill 2
+14/04/30 17:56:41 INFO mapred.Merger: Merging 3 sorted segments
+14/04/30 17:56:41 INFO mapred.Merger: Down to the last merge-pass, with 3 segments left of total size: 17933055 bytes
+14/04/30 17:56:42 INFO mapred.Task: Task:attempt_local_0007_m_000002_0 is done. And is in the process of commiting
+14/04/30 17:56:44 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:44 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:44 INFO mapred.Task: Task 'attempt_local_0007_m_000002_0' done.
+14/04/30 17:56:44 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@72f4f1
+14/04/30 17:56:44 INFO mapred.LocalJobRunner: 
+14/04/30 17:56:44 INFO mapred.Merger: Merging 3 sorted segments
+14/04/30 17:56:44 INFO mapred.Merger: Down to the last merge-pass, with 3 segments left of total size: 260164501 bytes
+14/04/30 17:56:44 INFO mapred.LocalJobRunner: 
+Block:0 node:10327 pageRank:1.8737586285628572E-6
+Block:1 node:20372 pageRank:5.173186986583229E-7
+Block:10 node:110566 pageRank:2.0321772328858404E-6
+Block:11 node:120944 pageRank:4.835685976319785E-7
+Block:12 node:130998 pageRank:2.3446402303351556E-7
+Block:13 node:140573 pageRank:6.177504542189955E-7
+Block:14 node:150952 pageRank:2.1890460137472094E-7
+14/04/30 17:56:48 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:56:48 INFO mapred.JobClient:  map 100% reduce 70%
+Block:15 node:161331 pageRank:2.1890460137472094E-7
+Block:16 node:171153 pageRank:5.624323852356409E-7
+Block:17 node:181513 pageRank:3.522089612734091E-7
+Block:18 node:191624 pageRank:5.27755553064703E-6
+Block:19 node:202003 pageRank:4.109058771618356E-6
+14/04/30 17:56:51 INFO mapred.LocalJobRunner: reduce > reduce
+Block:2 node:30628 pageRank:3.0645105423071595E-7
+14/04/30 17:56:51 INFO mapred.JobClient:  map 100% reduce 74%
+Block:20 node:212382 pageRank:2.6210382588078896E-7
+Block:21 node:222761 pageRank:0.001211572557155019
+Block:22 node:232592 pageRank:1.4860641546952122E-4
+Block:23 node:242877 pageRank:5.731794378382121E-7
+Block:24 node:252937 pageRank:2.1890460137472094E-7
+Block:25 node:263148 pageRank:3.0396800277482497E-7
+Block:26 node:273209 pageRank:2.1890460137472094E-7
+Block:27 node:283472 pageRank:3.366715095044514E-7
+14/04/30 17:56:54 INFO mapred.LocalJobRunner: reduce > reduce
+Block:28 node:293254 pageRank:2.6210382507286114E-7
+14/04/30 17:56:54 INFO mapred.JobClient:  map 100% reduce 77%
+Block:29 node:303042 pageRank:4.896171108751204E-6
+Block:3 node:40643 pageRank:2.809275717642252E-7
+Block:30 node:313369 pageRank:8.370379303379969E-7
+Block:31 node:323521 pageRank:2.1890460137472094E-7
+Block:32 node:333882 pageRank:5.373026033101238E-7
+Block:33 node:343662 pageRank:2.5411308057729546E-7
+Block:34 node:353643 pageRank:4.6974958090558007E-7
+Block:35 node:363928 pageRank:3.5600420062304954E-7
+14/04/30 17:56:57 INFO mapred.LocalJobRunner: reduce > reduce
+Block:36 node:374235 pageRank:3.838507758423041E-6
+14/04/30 17:56:57 INFO mapred.JobClient:  map 100% reduce 80%
+Block:37 node:384553 pageRank:4.1960769872763407E-7
+Block:38 node:394928 pageRank:6.716054510863965E-7
+Block:39 node:404711 pageRank:2.462735578268226E-7
+Block:4 node:50460 pageRank:2.1890460137472094E-7
+Block:40 node:414616 pageRank:3.117369542077276E-7
+Block:41 node:424746 pageRank:1.6851847080122746E-6
+Block:42 node:434706 pageRank:2.759425438923927E-6
+Block:43 node:444488 pageRank:3.8125325467204244E-6
+14/04/30 17:57:00 INFO mapred.LocalJobRunner: reduce > reduce
+Block:44 node:454284 pageRank:4.97516127415933E-7
+14/04/30 17:57:00 INFO mapred.JobClient:  map 100% reduce 84%
+Block:45 node:464397 pageRank:1.1235213391575904E-5
+Block:46 node:474195 pageRank:9.435229713207874E-7
+Block:47 node:484049 pageRank:5.891879645660061E-7
+Block:48 node:493967 pageRank:2.1890460137472094E-7
+Block:49 node:503751 pageRank:7.110800422788464E-6
+Block:5 node:60840 pageRank:2.1890460137472094E-7
+14/04/30 17:57:03 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:57:03 INFO mapred.JobClient:  map 100% reduce 88%
+Block:50 node:514130 pageRank:6.357870555960651E-7
+Block:51 node:524509 pageRank:9.830715209041038E-4
+Block:52 node:534708 pageRank:2.5816553040190562E-5
+Block:53 node:545087 pageRank:0.002600432577950254
+Block:54 node:555466 pageRank:0.0011781828398157595
+14/04/30 17:57:06 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:57:06 INFO mapred.JobClient:  map 100% reduce 92%
+Block:55 node:565845 pageRank:1.6152600918545544E-6
+Block:56 node:576224 pageRank:1.0881890724832285E-6
+Block:57 node:586603 pageRank:9.69497359396168E-7
+14/04/30 17:57:09 INFO mapred.LocalJobRunner: reduce > reduce
+Block:58 node:596584 pageRank:4.001709620661729E-6
+Block:59 node:606366 pageRank:4.2849324047810525E-7
+14/04/30 17:57:09 INFO mapred.JobClient:  map 100% reduce 95%
+Block:6 node:70590 pageRank:2.9965422852875126E-7
+Block:60 node:616147 pageRank:6.027567277573657E-7
+Block:61 node:626447 pageRank:1.5998875596651128E-5
+Block:62 node:636239 pageRank:1.0721777070815979E-6
+Block:63 node:646021 pageRank:3.1193905695897734E-7
+Block:64 node:655803 pageRank:2.1890460137472094E-7
+Block:65 node:665665 pageRank:9.97704312070571E-7
+14/04/30 17:57:12 INFO mapred.LocalJobRunner: reduce > reduce
+Block:66 node:675447 pageRank:1.2884274997069444E-6
+Block:67 node:685229 pageRank:3.5919469423169444E-7
+14/04/30 17:57:12 INFO mapred.JobClient:  map 100% reduce 98%
+Block:7 node:80117 pageRank:2.1890460137472094E-7
+Block:8 node:90496 pageRank:8.654338562573311E-4
+Block:9 node:100500 pageRank:2.622589876612911E-7
+14/04/30 17:57:13 INFO mapred.Task: Task:attempt_local_0007_r_000000_0 is done. And is in the process of commiting
+14/04/30 17:57:13 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:57:13 INFO mapred.Task: Task attempt_local_0007_r_000000_0 is allowed to commit now
+14/04/30 17:57:13 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0007_r_000000_0' to /home/kira/blockedPageRank/runs/run7
+14/04/30 17:57:15 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:57:15 INFO mapred.LocalJobRunner: reduce > reduce
+14/04/30 17:57:15 INFO mapred.Task: Task 'attempt_local_0007_r_000000_0' done.
+14/04/30 17:57:15 INFO mapred.JobClient:  map 100% reduce 100%
+14/04/30 17:57:15 INFO mapred.JobClient: Job complete: job_local_0007
+14/04/30 17:57:15 INFO mapred.JobClient: Counters: 21
+14/04/30 17:57:15 INFO mapred.JobClient:   com.cs5300.proj2.blockedpr.Counters
+14/04/30 17:57:15 INFO mapred.JobClient:     RESIDUAL_ERROR=490730
+14/04/30 17:57:15 INFO mapred.JobClient:   File Output Format Counters 
+14/04/30 17:57:15 INFO mapred.JobClient:     Bytes Written=72883434
+14/04/30 17:57:15 INFO mapred.JobClient:   FileSystemCounters
+14/04/30 17:57:15 INFO mapred.JobClient:     FILE_BYTES_READ=18343821620
+14/04/30 17:57:15 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=18791852793
+14/04/30 17:57:15 INFO mapred.JobClient:   File Input Format Counters 
+14/04/30 17:57:15 INFO mapred.JobClient:     Bytes Read=72913299
+14/04/30 17:57:15 INFO mapred.JobClient:   Map-Reduce Framework
+14/04/30 17:57:15 INFO mapred.JobClient:     Reduce input groups=68
+14/04/30 17:57:15 INFO mapred.JobClient:     Map output materialized bytes=260164513
+14/04/30 17:57:15 INFO mapred.JobClient:     Combine output records=0
+14/04/30 17:57:15 INFO mapred.JobClient:     Map input records=679841
+14/04/30 17:57:15 INFO mapred.JobClient:     Reduce shuffle bytes=0
+14/04/30 17:57:15 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+14/04/30 17:57:15 INFO mapred.JobClient:     Reduce output records=679841
+14/04/30 17:57:15 INFO mapred.JobClient:     Spilled Records=27793879
+7.216617647058823E-4
+14/04/30 17:57:15 INFO mapred.JobClient:     Map output bytes=243531841
+14/04/30 17:57:15 INFO mapred.JobClient:     CPU time spent (ms)=0
+14/04/30 17:57:15 INFO mapred.JobClient:     Total committed heap usage (bytes)=1963720704
+14/04/30 17:57:15 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+14/04/30 17:57:15 INFO mapred.JobClient:     Combine input records=0
+14/04/30 17:57:15 INFO mapred.JobClient:     Map output records=8216053
+14/04/30 17:57:15 INFO mapred.JobClient:     SPLIT_RAW_BYTES=357
+14/04/30 17:57:15 INFO mapred.JobClient:     Reduce input records=8216053
+Residual error for iteration 6: 0.0007
