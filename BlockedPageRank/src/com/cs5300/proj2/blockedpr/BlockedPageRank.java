@@ -19,11 +19,20 @@ public class BlockedPageRank {
 
 	
 	public static void main(String[] args) {
+		
+		//Uncomment for running in AWS EMR
 		/*
 		if (args.length != 2) {
 			System.err.println("Usage (no trailing slashes): project2.PageRankBlock s3n://<in filename> s3n://<out bucket>");
 			System.exit(2);
 		}*/
+		
+		//Settings for local run
+		
+		/*
+		 * S3 location of preprocessed input file : 
+		 * 				s3n://edu-cornell-cs-cs5300s14-kt466-proj2/preprocessedInputKT466.txt
+		 * */
 		String inputFile = "/home/kira/blockedPageRank/preprocessedInputKT466.txt";
 		String outputPath = "/home/kira/blockedPageRank/runs";
 

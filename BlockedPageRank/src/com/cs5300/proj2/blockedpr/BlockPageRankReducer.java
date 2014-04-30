@@ -22,7 +22,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 	private HashMap<String, Double> newPR = new HashMap<String, Double>();
 	private HashMap<String, ArrayList<String>> BE = new HashMap<String, ArrayList<String>>();
 	private HashMap<String, Double> BC = new HashMap<String, Double>();
-	private HashMap<String, NodeData> nodeDataMap = new HashMap<String, NodeData>();
+	private HashMap<String, Node> nodeDataMap = new HashMap<String, Node>();
 	private ArrayList<String> vList = new ArrayList<String>();
 	private double dampingFactor =  0.85;
 	private double randomJumpFactor = (1 - dampingFactor) /(double) Constants.TOTAL_NODES;
@@ -58,7 +58,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 				
 				pageRankOld = Double.valueOf(inputTokens[2]);
 				newPR.put(nodeID, pageRankOld);
-				NodeData node = new NodeData();
+				Node node = new Node();
 				node.setNodeID(nodeID);
 				node.setPageRank(pageRankOld);
 				if (inputTokens.length == 4) {
@@ -108,7 +108,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		// compute the ultimate residual error for each node in this block
 		residualError = 0.0;
 		for (String v : vList) {
-			NodeData node = nodeDataMap.get(v);
+			Node node = nodeDataMap.get(v);
 			residualError += Math.abs(node.getPageRank() - newPR.get(v)) /(double) newPR.get(v);
 		}
 		residualError = residualError /(double) vList.size();
@@ -122,7 +122,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		//	key:nodeID (for this node)
 		//	value:<pageRankNew> <degrees> <comma-separated outgoing edgeList>
 		for (String v : vList) {
-			NodeData node = nodeDataMap.get(v);
+			Node node = nodeDataMap.get(v);
 			output = newPR.get(v) + " " + node.getDegrees() + " " + node.getEdgeList();
 			Text outputText = new Text(output);
 			Text outputKey = new Text(v);
@@ -162,7 +162,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 				uList = BE.get(v);
 				for (String u : uList) {
 					// npr += PR[u] / deg(u);
-					NodeData uNode = nodeDataMap.get(u);
+					Node uNode = nodeDataMap.get(u);
 					npr += (newPR.get(u) /(double) uNode.getDegrees());
 				}
 			}
