@@ -99,13 +99,14 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		
 		int i = 0;
 		do {
+		
 			i++;
 			residualError = IterateBlockOnce();
-			//System.out.println("Block " + key + " pass " + i + " resError:" + residualError);
+
 		} while (i < maxIterations && residualError > Constants.TERMINATION_RESIDUAL);
 
 				
-		// compute the ultimate residual error for each node in this block
+		// compute the sum residual error for all node in this block
 		residualError = 0.0;
 		for (String v : vList) {
 			Node node = nodeDataMap.get(v);

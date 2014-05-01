@@ -6,6 +6,8 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
+import com.cs5300.proj2.preprocess.Constants;
+
 /**
  * <p><b>Map task for each block.
  * 
@@ -75,8 +77,6 @@ public class BlockPageRankMapper extends Mapper<LongWritable, Text, Text, Text>{
 	 */
 	public static int lookupBlockID(int nodeID) {
 	
-		int partitionSize = 10000;
-		
 		int[] blockBoundaries = { 0, 10328, 20373, 30629, 40645,
 				50462, 60841, 70591, 80118, 90497, 100501, 110567, 120945,
 				130999, 140574, 150953, 161332, 171154, 181514, 191625, 202004,
@@ -87,7 +87,7 @@ public class BlockPageRankMapper extends Mapper<LongWritable, Text, Text, Text>{
 				534709, 545088, 555467, 565846, 576225, 586604, 596585, 606367,
 				616148, 626448, 636240, 646022, 655804, 665666, 675448, 685230 };
 
-		int blockID = (int) Math.floor(nodeID / partitionSize);
+		int blockID = (int) Math.floor(nodeID / Constants.BLOCK_SIZE);
 		int testBoundary = blockBoundaries[blockID];
 		if (nodeID < testBoundary) {
 			blockID--;

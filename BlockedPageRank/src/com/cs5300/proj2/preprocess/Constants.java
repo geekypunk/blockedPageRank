@@ -41,6 +41,14 @@ public final class Constants {
 	 */
 	public static final int RESIDUAL_OFFSET = 10000000;
 	
+	/**
+	 * Initial pagerank for all the nodes in the graph
+	 */
 	public static final double INIT_PR = 1/(double)TOTAL_NODES;
+	
+	/**
+	 * Number of nodes in each block
+	 */
+	public static final int BLOCK_SIZE = 10000;
 
 }
