@@ -33,8 +33,8 @@ public class BlockedPageRank {
 		 * S3 location of preprocessed input file : 
 		 * 				s3n://edu-cornell-cs-cs5300s14-kt466-proj2/preprocessedInputKT466.txt
 		 * */
-		String inputFile = "/home/kira/blockedPageRank/preprocessedInputKT466.txt";
-		String outputPath = "/home/kira/blockedPageRank/runs";
+		String inputFile = "/home/kt466/preprocessedInputKT466.txt";
+		String outputPath = "/home/kt466/blockedPageRank/runs";
 
 		int i = 0;
 		double residualErrorAvg = 0.0f;

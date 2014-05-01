@@ -13,16 +13,25 @@ import com.cs5300.proj2.preprocess.Constants;
 
 
 /**
- * Run reducer for every block
+ * Run reducer for every block, Receives all messages mapped to a single blockID
  * @author kt466
  *
  */
 public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 
-	private HashMap<String, Double> newPR = new HashMap<String, Double>();
+	//New PageRank map <nodeID, pageRank>
+	private HashMap<String, Double> NPR = new HashMap<String, Double>();
+	
+	// <nodeID, {List of vertices to which there is an in-block edge from nodeID}>
 	private HashMap<String, ArrayList<String>> BE = new HashMap<String, ArrayList<String>>();
+	
+	//< nodeIDOfOutsideEdge , flowOfPRFromIt>
 	private HashMap<String, Double> BC = new HashMap<String, Double>();
+	
+	//Map<nodeID, Node> for all nodes in this graph
 	private HashMap<String, Node> nodeDataMap = new HashMap<String, Node>();
+	
+	//List of all nodes in this graph
 	private ArrayList<String> vList = new ArrayList<String>();
 	private double dampingFactor =  0.85;
 	private double randomJumpFactor = (1 - dampingFactor) /(double) Constants.TOTAL_NODES;
@@ -33,7 +42,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		
 		Iterator<Text> itr = values.iterator();
 		Text input = new Text();
-		String[] inputTokens = null;
+		String[] tuple = null;
 		
 		double pageRankOld =  0.0;
 		double residualError =  0.0;
@@ -44,26 +53,28 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		ArrayList<String> temp = new ArrayList<String>();
 		double tempBC = 0.0;
 		vList.clear();
-		newPR.clear();
+		NPR.clear();
 		BE.clear();
 		BC.clear();
 		nodeDataMap.clear();	
 		
 		while (itr.hasNext()) {
+			
 			input = itr.next();
-			inputTokens = input.toString().split(" ");			
+			tuple = input.toString().split(" ");			
+			
 			// if first element is PR, it is the node ID, previous pagerank and outgoing edgelist for this node
-			if (inputTokens[0].equals("PR")) {
-				String nodeID = inputTokens[1];
+			if (tuple[0].equals(Constants.PR_DELIMITER)) {
+				String nodeID = tuple[1];
 				
-				pageRankOld = Double.valueOf(inputTokens[2]);
-				newPR.put(nodeID, pageRankOld);
+				pageRankOld = Double.valueOf(tuple[2]);
+				NPR.put(nodeID, pageRankOld);
 				Node node = new Node();
 				node.setNodeID(nodeID);
 				node.setPageRank(pageRankOld);
-				if (inputTokens.length == 4) {
-					node.setEdgeList(inputTokens[3]);
-					node.setDegrees(inputTokens[3].split(",").length);
+				if (tuple.length == 4) {
+					node.setEdgeList(tuple[3]);
+					node.setDegrees(tuple[3].split(",").length);
 				}
 				vList.add(nodeID);
 				nodeDataMap.put(nodeID, node);
@@ -73,27 +84,27 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 				}
 				
 			// if BE, it is an in-block edge
-			} else if (inputTokens[0].equals("BE")) {			
+			} else if (tuple[0].equals(Constants.BE_DELIMITER)) {			
 				
-				if (BE.containsKey(inputTokens[2])) {
+				if (BE.containsKey(tuple[2])) {
 					//Initialize BC for this v
-					temp = BE.get(inputTokens[2]);
+					temp = BE.get(tuple[2]);
 				} else {
 					temp = new ArrayList<String>();
 				}
-				temp.add(inputTokens[1]);
-				BE.put(inputTokens[2], temp);
+				temp.add(tuple[1]);
+				BE.put(tuple[2], temp);
 				
 			// if BC, it is an incoming node from outside of the block
-			} else if (inputTokens[0].equals("BC")) {
-				if (BC.containsKey(inputTokens[2])) {
+			} else if (tuple[0].equals(Constants.BC_DELIMITER)) {
+				if (BC.containsKey(tuple[2])) {
 					//Initialize BC for this v
-					tempBC = BC.get(inputTokens[2]);
+					tempBC = BC.get(tuple[2]);
 				} else {
 					tempBC = 0.0;
 				}
-				tempBC += Double.valueOf(inputTokens[3]);
-				BC.put(inputTokens[2], tempBC);
+				tempBC += Double.valueOf(tuple[3]);
+				BC.put(tuple[2], tempBC);
 			}		
 		}
 		
@@ -110,7 +121,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		residualError = 0.0;
 		for (String v : vList) {
 			Node node = nodeDataMap.get(v);
-			residualError += Math.abs(node.getPageRank() - newPR.get(v)) /(double) newPR.get(v);
+			residualError += Math.abs(node.getPageRank() - NPR.get(v)) /(double) NPR.get(v);
 		}
 		residualError = residualError /(double) vList.size();
 		//System.out.println("Block " + key + " overall resError for iteration: " + residualError);
@@ -124,12 +135,12 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		//	value:<pageRankNew> <degrees> <comma-separated outgoing edgeList>
 		for (String v : vList) {
 			Node node = nodeDataMap.get(v);
-			output = newPR.get(v) + " " + node.getDegrees() + " " + node.getEdgeList();
+			output = NPR.get(v) + " " + node.getDegrees() + " " + node.getEdgeList();
 			Text outputText = new Text(output);
 			Text outputKey = new Text(v);
 			context.write(outputKey, outputText);
 			if (v.equals(maxNode.toString())) {
-				System.out.println("Block:" + key + " node:" + v + " pageRank:" + newPR.get(v));
+				System.out.println("Block:" + key + " node:" + v + " pageRank:" + NPR.get(v));
 			}
 		}
 			
@@ -156,7 +167,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		
 		for (String v : vList) {
 			npr = 0.0;
-			double prevPR = newPR.get(v);
+			double prevPR = NPR.get(v);
 
 			// calculate newPR using PR data from any BE nodes for this node
 			if (BE.containsKey(v)) {
@@ -164,7 +175,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 				for (String u : uList) {
 					// npr += PR[u] / deg(u);
 					Node uNode = nodeDataMap.get(u);
-					npr += (newPR.get(u) /(double) uNode.getDegrees());
+					npr += (NPR.get(u) /(double) uNode.getDegrees());
 				}
 			}
 			
@@ -177,7 +188,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 	        //NPR[v] = d*NPR[v] + (1-d)/N;
 			npr = (dampingFactor * npr) + randomJumpFactor;
 			// update the global newPR map
-			newPR.put(v, npr);
+			NPR.put(v, npr);
 			// track the sum of the residual errors
 			resErr += Math.abs(prevPR - npr) /(double) npr;
 		}

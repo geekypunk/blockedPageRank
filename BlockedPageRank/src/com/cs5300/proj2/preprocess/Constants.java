@@ -50,5 +50,11 @@ public final class Constants {
 	 * Number of nodes in each block
 	 */
 	public static final int BLOCK_SIZE = 10000;
+	
+	public static final String PR_DELIMITER = "PR";
+	
+	public static final String BE_DELIMITER = "BE";
+
+	public static final String BC_DELIMITER = "BC";
 
 }
