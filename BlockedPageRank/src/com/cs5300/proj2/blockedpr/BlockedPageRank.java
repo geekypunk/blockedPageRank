@@ -17,25 +17,34 @@ import com.cs5300.proj2.preprocess.Constants;
  */
 public class BlockedPageRank {
 
-	
-	public static void main(String[] args) {
+	/*
+	 * S3 location of preprocessed input file : 
+	 * 				s3n://edu-cornell-cs-cs5300s14-kt466-proj2/preprocessedInputKT466.txt
+	 * */
+	public static String intermediateFilteredEdge="/home/kira/blockedPageRank/preprocessedEdgesKt466.txt";
+	public static String preprocessedFileOut="/home/kira/blockedPageRank/preprocessedInputKT466.txt";
+	public static void  main(String[] args) {
 		
-		//Uncomment for running in AWS EMR
-		/*
+		
 		if (args.length != 2) {
-			System.err.println("Usage (no trailing slashes): project2.PageRankBlock s3n://<in filename> s3n://<out bucket>");
+			System.err.println("Program args: s3n://<bucketname><filename> "
+					+ "	s3n://<bucketname>");
 			System.exit(2);
-		}*/
+		}
 		
-		//Settings for local run
 		
-		/*
-		 * S3 location of preprocessed input file : 
-		 * 				s3n://edu-cornell-cs-cs5300s14-kt466-proj2/preprocessedInputKT466.txt
-		 * */
-		String inputFile = "/home/kt466/preprocessedInputKT466.txt";
-		String outputPath = "/home/kt466/blockedPageRank/runs";
-
+		String inputFile = args[0];
+		String outputPath = args[1];
+		try{
+		
+			//PreprocessInput.createFilteredEdgesFileLocally(inputFile,intermediateFilteredEdge);
+			//PreprocessInput.createPreprocessedInputFile(intermediateFilteredEdge, preprocessedFileOut);
+		
+		}catch(Exception e){
+			e.printStackTrace();
+			return;
+		}
+		boolean success = false;
 		int i = 0;
 		double residualErrorAvg = 0.0f;
 		double residualError = 0.0f;
@@ -69,14 +78,23 @@ public class BlockedPageRank {
 	            FileOutputFormat.setOutputPath(job, new Path(outputPath + "/run"+(i+1)));
 	            
 	            // execute the job and wait for completion before starting the next pass
-	            job.waitForCompletion(true);
+	           
+	            try{
+	            
+	            	success = job.waitForCompletion(true);
+	          
+	            }catch(Exception e){
+	            	e.printStackTrace();
+	            }
 	            
 	            // before starting the next pass, compute the avg residual error for this pass and print it out
 	            residualError = job.getCounters().findCounter(Counters.RESIDUAL_ERROR).getValue() / (double)Constants.RESIDUAL_OFFSET;
 	            residualErrorAvg =   residualError /(double) Constants.TOTAL_BLOCKS;
 	            System.out.println(residualErrorAvg);
 	            String residualErrorString = String.format("%.4f", residualErrorAvg);
-	            System.out.println("Residual error for iteration " + i + ": " + residualErrorString);
+	            
+	            //Print average residual error over all blocks
+	            System.out.println("Average Residual Error for iteration " + i + ": " + residualErrorString);
 	            
 	            // reset the counter for the next round
 	            job.getCounters().findCounter(Counters.RESIDUAL_ERROR).setValue(0L);
@@ -87,6 +105,7 @@ public class BlockedPageRank {
 			}
 			
 		}while(residualErrorAvg > Constants.TERMINATION_RESIDUAL);
+
 	}
 
 }

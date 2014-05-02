@@ -56,5 +56,10 @@ public final class Constants {
 	public static final String BE_DELIMITER = "BE";
 
 	public static final String BC_DELIMITER = "BC";
+	
+	public static final String TUPLE_DELIMITER=" ";
+	
+	public static final String OUT_NODE_LIST_DELIMITER=",";
+	
 
 }

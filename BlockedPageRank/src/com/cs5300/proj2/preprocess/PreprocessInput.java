@@ -15,8 +15,14 @@ import java.util.List;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.s3.AmazonS3Client;
+import com.amazonaws.services.s3.model.AbortMultipartUploadRequest;
+import com.amazonaws.services.s3.model.CompleteMultipartUploadRequest;
 import com.amazonaws.services.s3.model.GetObjectRequest;
+import com.amazonaws.services.s3.model.InitiateMultipartUploadRequest;
+import com.amazonaws.services.s3.model.InitiateMultipartUploadResult;
+import com.amazonaws.services.s3.model.PartETag;
 import com.amazonaws.services.s3.model.S3Object;
+import com.amazonaws.services.s3.model.UploadPartRequest;
 
 
 /**
@@ -39,9 +45,12 @@ public class PreprocessInput {
 	public static void main(String[] args) throws IOException {
 		
 		try{
-		
-			//createFilteredEdgesFile();
-			createPreprocessedInputFile();
+			AWSCredentials myCredentials = new BasicAWSCredentials(
+				       String.valueOf(Constants.AWSAccessKeyId), String.valueOf(Constants.AWSSecretKey));
+			AmazonS3Client s3Client = new AmazonS3Client(myCredentials); 
+			uploadToS3(s3Client,"/home/kira/blockedPageRank/dummy.txt",
+					"edu-cornell-cs-cs5300s14-kt466-proj2",
+					"preprocessedInputV2.txt");
 			
 		}catch(Exception e){
 		
@@ -51,25 +60,25 @@ public class PreprocessInput {
 		
 	}
 
-	private static void createFilteredEdgesFile() throws NumberFormatException, IOException{
+	public static void createFilteredEdgesFile(String outPath) throws NumberFormatException, IOException{
 		
-		AWSCredentials myCredentials = new BasicAWSCredentials(
-			       String.valueOf(Constants.AWSAccessKeyId), String.valueOf(Constants.AWSSecretKey)); 
+		 
 			
-		
+		AWSCredentials myCredentials = new BasicAWSCredentials(
+			       String.valueOf(Constants.AWSAccessKeyId), String.valueOf(Constants.AWSSecretKey));
 		AmazonS3Client s3Client = new AmazonS3Client(myCredentials);  
 		S3Object object = s3Client.getObject(new GetObjectRequest("edu-cornell-cs-cs5300s14-project2", "edges.txt"));
 		BufferedReader reader = new BufferedReader(new InputStreamReader(
 			       object.getObjectContent()));
-		File file = new File("preprocessed-edges-kt466.txt");      
+		File file = new File(outPath);      
 		Writer writer = new OutputStreamWriter(new FileOutputStream(file));
 		String line;
 		String[] parts;
 		double randVal;
 		int edgeCount = 0;
 		while ((line = reader.readLine()) != null) {          
-		     parts = line.split("\\s+");
-		     randVal = Double.parseDouble(parts[3]);
+			  parts = line.trim().split("\\s+");
+		     randVal = Double.parseDouble(parts[2]);
 		     if (selectInputLine(randVal)){
 		          System.out.println(line); 
 		          edgeCount++;
@@ -79,15 +88,41 @@ public class PreprocessInput {
 		writer.close();
 		System.out.println("Edge count:"+edgeCount);
 	}
+	
+
+	public static void createFilteredEdgesFileLocally(String inPath,String outPath) throws NumberFormatException, IOException{
+		
+	
+		BufferedReader reader = new BufferedReader(new FileReader(
+				inPath));
+		File file = new File(outPath);      
+		Writer writer = new OutputStreamWriter(new FileOutputStream(file));
+		String line;
+		String[] parts;
+		double randVal;
+		int edgeCount = 0;
+		while ((line = reader.readLine()) != null) {          
+		     parts = line.trim().split("\\s+");
+		     randVal = Double.parseDouble(parts[2]);
+		     if (selectInputLine(randVal)){
+		          System.out.println(line); 
+		          edgeCount++;
+		          writer.write(line + "\n");
+		     }
+		}
+		writer.close();
+		reader.close();
+		System.out.println("Edge count:"+edgeCount);
+	}
 	private static boolean selectInputLine(double x) {
 		return ( ((x >= Constants.REJECT_MIN) && (x < Constants.REJECT_LIMIT)) ? false : true );
 	}
 	
-	private static void createPreprocessedInputFile() throws IOException{
+	public static void createPreprocessedInputFile(String inPath,String outPath) throws IOException{
 		
-		File inFile = new File("/home/kira/preprocessedEdgesKt466.txt"); 
+		File inFile = new File(inPath); 
 		//File inFile = new File("test"); 
-		File outFile = new File("/home/kira/preprocessedInputKT466.txt");      
+		File outFile = new File(outPath);      
 		BufferedReader reader = new BufferedReader(new FileReader(inFile));
 		FileWriter fw = new FileWriter(outFile);
 		BufferedWriter bw = new BufferedWriter(fw);
@@ -126,8 +161,61 @@ public class PreprocessInput {
 		sb.append(outNodes.get(outNodes.size()-1));
 		bw.write(oldnode+" "+Constants.INIT_PR+" "+outNodes.size()+" "+sb.toString()+"\n");
 		bw.close();
+		reader.close();
 	}
 	
+	
+	private static void uploadToS3(AmazonS3Client s3Client,String localFile, String bucketName, String keyName){
+		
+		//Create a list of UploadPartResponse objects. You get one of these for
+		//each part upload.
+		List<PartETag> partETags = new ArrayList<PartETag>();
+		
+		//Step 1: Initialize.
+		InitiateMultipartUploadRequest initRequest = new InitiateMultipartUploadRequest(
+				bucketName, keyName);
+		InitiateMultipartUploadResult initResponse = 
+		                          s3Client.initiateMultipartUpload(initRequest);
+		
+		File file = new File(localFile);
+		long contentLength = file.length();
+		long partSize = 5 * 1024 * 1024; // Set part size to 5 MB.
+		
+		try {
+		// Step 2: Upload parts.
+		long filePosition = 0;
+		for (int i = 1; filePosition < contentLength; i++) {
+		    // Last part can be less than 5 MB. Adjust part size.
+		partSize = Math.min(partSize, (contentLength - filePosition));
+		
+		// Create request to upload a part.
+		UploadPartRequest uploadRequest = new UploadPartRequest()
+		    .withBucketName(bucketName).withKey(keyName)
+		    .withUploadId(initResponse.getUploadId()).withPartNumber(i)
+		    .withFileOffset(filePosition)
+		    .withFile(file)
+		    .withPartSize(partSize);
+		
+		// Upload part and add response to our list.
+		    partETags.add(s3Client.uploadPart(uploadRequest).getPartETag());
+		
+		    filePosition += partSize;
+		}
+		
+		// Step 3: Complete.
+		CompleteMultipartUploadRequest compRequest = new 
+		            CompleteMultipartUploadRequest(bucketName, 
+		                                           keyName, 
+		                                           initResponse.getUploadId(), 
+		                                           partETags);
+		
+		s3Client.completeMultipartUpload(compRequest);
+		} catch (Exception e) {
+		s3Client.abortMultipartUpload(new AbortMultipartUploadRequest(
+				bucketName, keyName, initResponse.getUploadId()));
+		}
+				
+	}
 	
 	
 }

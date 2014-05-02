@@ -33,13 +33,16 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 	
 	//List of all nodes in this graph
 	private ArrayList<String> vList = new ArrayList<String>();
+	
 	private double dampingFactor =  0.85;
 	private double randomJumpFactor = (1 - dampingFactor) /(double) Constants.TOTAL_NODES;
 	private int maxIterations = 5;
 	
+	
 	protected void reduce(Text key, Iterable<Text> values, Context context)
 			throws IOException, InterruptedException {
 		
+		int blockId = Integer.parseInt(key.toString());
 		Iterator<Text> itr = values.iterator();
 		Text input = new Text();
 		String[] tuple = null;
@@ -47,8 +50,8 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		double pageRankOld =  0.0;
 		double residualError =  0.0;
 		
-		String output = "";
-		Integer maxNode = 0;
+		
+		int maxNodeID = 0;
 		
 		ArrayList<String> temp = new ArrayList<String>();
 		double tempBC = 0.0;
@@ -61,7 +64,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		while (itr.hasNext()) {
 			
 			input = itr.next();
-			tuple = input.toString().split(" ");			
+			tuple = input.toString().split(Constants.TUPLE_DELIMITER);			
 			
 			// if first element is PR, it is the node ID, previous pagerank and outgoing edgelist for this node
 			if (tuple[0].equals(Constants.PR_DELIMITER)) {
@@ -74,13 +77,13 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 				node.setPageRank(pageRankOld);
 				if (tuple.length == 4) {
 					node.setEdgeList(tuple[3]);
-					node.setDegrees(tuple[3].split(",").length);
+					node.setDegrees(tuple[3].split(Constants.OUT_NODE_LIST_DELIMITER).length);
 				}
 				vList.add(nodeID);
 				nodeDataMap.put(nodeID, node);
 				// keep track of the max nodeID for this block
-				if (Integer.parseInt(nodeID) > maxNode) {
-					maxNode = Integer.parseInt(nodeID);
+				if (Integer.parseInt(nodeID) > maxNodeID) {
+					maxNodeID = Integer.parseInt(nodeID);
 				}
 				
 			// if BE, it is an in-block edge
@@ -114,6 +117,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 			i++;
 			residualError = IterateBlockOnce();
 
+		//Stop whichever happens earlier	
 		} while (i < maxIterations && residualError > Constants.TERMINATION_RESIDUAL);
 
 				
@@ -133,14 +137,16 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		// output should be 
 		//	key:nodeID (for this node)
 		//	value:<pageRankNew> <degrees> <comma-separated outgoing edgeList>
+		String output = "";
 		for (String v : vList) {
 			Node node = nodeDataMap.get(v);
-			output = NPR.get(v) + " " + node.getDegrees() + " " + node.getEdgeList();
+			output = NPR.get(v) + Constants.TUPLE_DELIMITER  + node.getDegrees() 
+						+ Constants.TUPLE_DELIMITER  + node.getEdgeList();
 			Text outputText = new Text(output);
 			Text outputKey = new Text(v);
 			context.write(outputKey, outputText);
-			if (v.equals(maxNode.toString())) {
-				System.out.println("Block:" + key + " node:" + v + " pageRank:" + NPR.get(v));
+			if (v.equals(String.valueOf(maxNodeID))) {
+				System.out.println("Block:" + blockId + " node:" + v + " pageRank:" + NPR.get(v));
 			}
 		}
 			

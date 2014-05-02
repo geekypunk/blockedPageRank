@@ -27,14 +27,14 @@ public class BlockPageRankMapper extends Mapper<LongWritable, Text, Text, Text>{
 		int nodeID = Integer.parseInt(tuple[0]);
 		double pageRank = Double.valueOf(tuple[1]);
 		int degree = Integer.parseInt(tuple[2]);
-		String[] outNodes = tuple[3].split(",");
+		String[] outNodes = tuple[3].split(Constants.OUT_NODE_LIST_DELIMITER);
 		
 		int blockID = new Integer(lookupBlockID(nodeID));
 		
 	
 		Text mapperKey = new Text(String.valueOf(blockID));
-		Text mapperValue = new Text(Constants.PR_DELIMITER+" " + nodeID + " " + String.valueOf(pageRank) + " "
-				+ tuple[3]);
+		Text mapperValue = new Text(Constants.PR_DELIMITER+Constants.TUPLE_DELIMITER + nodeID + Constants.TUPLE_DELIMITER  + String.valueOf(pageRank) 
+				+ Constants.TUPLE_DELIMITER + tuple[3]);
 	
 		//Output tuple ( key , value )
 		//= < blockID , PR nodeID pageRank {outGoingEdgeList}>
@@ -50,7 +50,8 @@ public class BlockPageRankMapper extends Mapper<LongWritable, Text, Text, Text>{
 			if (blockIDOut == blockID) {
 				
 				// Output key:blockID value:BE node nodeOut
-				mapperValue = new Text(Constants.BE_DELIMITER+" " + String.valueOf(nodeID) + " " + outNodes[i]);
+				mapperValue = new Text(Constants.BE_DELIMITER+Constants.TUPLE_DELIMITER  + String.valueOf(nodeID) 
+						+ Constants.TUPLE_DELIMITER  + outNodes[i]);
 			
 			} else {
 				
@@ -61,7 +62,8 @@ public class BlockPageRankMapper extends Mapper<LongWritable, Text, Text, Text>{
 				
 				String pageRankFactorString = String.valueOf(pageRankFactor);
 				// map key:blockID value:BC node nodeOut pageRankFactor 
-				mapperValue = new Text(Constants.BC_DELIMITER+" " +  String.valueOf(nodeID) + " " + outNodes[i] + " " + pageRankFactorString);
+				mapperValue = new Text(Constants.BC_DELIMITER+ Constants.TUPLE_DELIMITER  +  String.valueOf(nodeID)
+						+ Constants.TUPLE_DELIMITER  + outNodes[i] + Constants.TUPLE_DELIMITER  + pageRankFactorString);
 			}
 			context.write(mapperKey, mapperValue);
 		}
