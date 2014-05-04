@@ -21,6 +21,7 @@ import org.apache.hadoop.util.*;
 import com.cs5300.proj2.blockedpr.BlockPageRankMapper;
 import com.cs5300.proj2.blockedpr.BlockPageRankReducer;
 import com.cs5300.proj2.blockedpr.BlockedPageRank;
+import com.cs5300.proj2.preprocess.Constants;
 
 //import com.sun.xml.internal.bind.CycleRecoverable.Context;
 
@@ -36,7 +37,7 @@ public class SimplePageRank {
 	};
 	
     public static void main(String[] args) throws Exception {
-    	String inputFile = "preprocessedInputKT466.txt";
+    	String inputFile = "s3n://edu-cornell-cs-cs5300s14-kt466-proj2/preprocessedInputKT466v2.txt";
 		String outputPath = "simpleageRank/runs";
 	
 		
@@ -56,8 +57,9 @@ public class SimplePageRank {
 	    	
 	    	conf.setInputFormat(TextInputFormat.class);
 	    	conf.setOutputFormat(TextOutputFormat.class);
-	      
-	      
+	       
+	      conf.setStrings("fs.s3n.awsAccessKeyId", Constants.AWSAccessKeyId);
+	      conf.setStrings("fs.s3n.awsSecretAccessKey", Constants.AWSSecretKey);
     	  
 	    	//FileInputFormat.setInputPaths(conf, new Path("/home/ben/Documents/5300/hadoop_io_3/temp/file" + i));
 	    	//FileOutputFormat.setOutputPath(conf, new Path("/home/ben/Documents/5300/hadoop_io_3/temp/file" + (i+1)));
