@@ -1,7 +1,9 @@
 package com.cs5300.proj2.simplePR;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 import org.apache.hadoop.fs.Path;
@@ -18,6 +20,11 @@ import org.apache.hadoop.mapred.FileInputFormat;
 import org.apache.hadoop.mapred.TextOutputFormat;
 import org.apache.hadoop.util.*;
 
+import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.services.s3.AmazonS3Client;
+import com.amazonaws.services.s3.model.GetObjectRequest;
+import com.amazonaws.services.s3.model.S3Object;
 import com.cs5300.proj2.blockedpr.BlockPageRankMapper;
 import com.cs5300.proj2.blockedpr.BlockPageRankReducer;
 import com.cs5300.proj2.blockedpr.BlockedPageRank;
@@ -37,16 +44,33 @@ public class SimplePageRank {
 	};
 	
     public static void main(String[] args) throws Exception {
-    	String inputFile = "s3n://edu-cornell-cs-cs5300s14-kt466-proj2/preprocessedInputV2.txt";
+//    	String inputFile = "s3n://edu-cornell-cs-cs5300s14-kt466-proj2/preprocessedInputKT466v2.txt";
+    	String inputFile = "preprocessedInputKT466v2.txt";
 		String outputPath = "simpleageRank/runs";
 	
-		
-    	for (int i = 0; i < 5; i++){
+//		AWSCredentials myCredentials = new BasicAWSCredentials(
+//			       String.valueOf(Constants.AWSAccessKeyId), String.valueOf(Constants.AWSSecretKey));
+//		AmazonS3Client s3Client = new AmazonS3Client(myCredentials);  
+//		S3Object object = s3Client.getObject(new GetObjectRequest("edu-cornell-cs-cs5300s14-project2", "edges.txt"));
+//		BufferedReader reader = new BufferedReader(new InputStreamReader(
+//			       object.getObjectContent()));
+//		
+//    	String line = reader.readLine();
+//    	while(line != null){
+//    		System.out.println(line);
+//    		line = reader.readLine();
+//    	}
+//		
+		for (int i = 0; i < 5; i++){
     		
     		//Create job config and set name
     		JobConf conf = new JobConf(SimplePageRank.class);
 	    	conf.setJobName("simplePageRank" + i);
-	
+
+		       
+	 	   
+	    	conf.set("fs.s3n.awsAccessKeyId", Constants.AWSAccessKeyId);
+            conf.set("fs.s3n.awsSecretAccessKey", Constants.AWSSecretKey);
 	    	conf.setOutputKeyClass(IntWritable.class);
 	    	conf.setOutputValueClass(Text.class);
 	
@@ -57,9 +81,6 @@ public class SimplePageRank {
 	    	
 	    	conf.setInputFormat(TextInputFormat.class);
 	    	conf.setOutputFormat(TextOutputFormat.class);
-	       
-	      conf.setStrings("fs.s3n.awsAccessKeyId", Constants.AWSAccessKeyId);
-	      conf.setStrings("fs.s3n.awsSecretAccessKey", Constants.AWSSecretKey);
     	  
 	    	//FileInputFormat.setInputPaths(conf, new Path("/home/ben/Documents/5300/hadoop_io_3/temp/file" + i));
 	    	//FileOutputFormat.setOutputPath(conf, new Path("/home/ben/Documents/5300/hadoop_io_3/temp/file" + (i+1)));

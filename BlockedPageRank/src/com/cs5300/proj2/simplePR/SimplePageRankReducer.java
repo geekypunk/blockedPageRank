@@ -56,7 +56,7 @@ public class SimplePageRankReducer extends MapReduceBase implements Reducer<IntW
 			outNodes.append(entry.toNode).append(",");
 		}
 				
-			output.collect(key, new Text(key.get() + " " + newPR + " " +outSet.size() + " " + outNodes));
+			output.collect(null, new Text(key.get() + " " + newPR + " " +outSet.size() + " " + outNodes));
 //			oldPR = entry.fromNodePR;
 //		}
 		System.out.println("reducer has computed new pageRank " + newPR + " for node " + key.toString());
