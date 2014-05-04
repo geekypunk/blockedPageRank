@@ -37,7 +37,7 @@ public class SimplePageRank {
 	};
 	
     public static void main(String[] args) throws Exception {
-    	String inputFile = "s3n://edu-cornell-cs-cs5300s14-kt466-proj2/preprocessedInputKT466v2.txt";
+    	String inputFile = "s3n://edu-cornell-cs-cs5300s14-kt466-proj2/preprocessedInputV2.txt";
 		String outputPath = "simpleageRank/runs";
 	
 		
