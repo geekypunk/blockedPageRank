@@ -12,7 +12,7 @@ import org.apache.hadoop.mapred.OutputCollector;
 import org.apache.hadoop.mapred.Reducer;
 import org.apache.hadoop.mapred.Reporter;
 
-import com.cs5300.proj2.preprocess.Constants;
+import com.cs5300.proj2.common.Constants;
 import com.cs5300.proj2.simplePR.SimplePageRank.COUNTERS;
 
 
@@ -21,7 +21,7 @@ import com.cs5300.proj2.simplePR.SimplePageRank.COUNTERS;
 public class SimplePageRankReducer extends MapReduceBase implements Reducer<IntWritable, Text, IntWritable, Text> {
 	//reduce gets <a, a b PR(a) PR(b) deg(a)>
 	public void reduce(IntWritable key, Iterator<Text> values, OutputCollector<IntWritable, Text> output, Reporter reporter) throws IOException {
-		System.out.println("reducer got key " + key);
+		//System.out.println("reducer got key " + key);
 		Set<Edge> inSet = new HashSet<Edge>();
 		Set<Edge> outSet = new HashSet<Edge>();
 		while (values.hasNext()){
@@ -45,7 +45,7 @@ public class SimplePageRankReducer extends MapReduceBase implements Reducer<IntW
 			//System.out.println("incremented new pagerank by " + (entry.fromNodePR / entry.fromNodeDegree));
 			//System.out.println("fromNodePR is " + entry.fromNodePR + " and fromNodeDegree is " + entry.fromNodeDegree);
 		}
-		System.out.println("got NUM_NODES counter: " + Constants.TOTAL_NODES);
+		//System.out.println("got NUM_NODES counter: " + Constants.TOTAL_NODES);
 		
 		//add damping factor
 		newPR = (float) (((1- Constants.DAMPING_FACTOR)/ Constants.TOTAL_NODES) + (Constants.DAMPING_FACTOR * newPR));
@@ -59,9 +59,9 @@ public class SimplePageRankReducer extends MapReduceBase implements Reducer<IntW
 			output.collect(null, new Text(key.get() + " " + newPR + " " +outSet.size() + " " + outNodes));
 //			oldPR = entry.fromNodePR;
 //		}
-		System.out.println("reducer has computed new pageRank " + newPR + " for node " + key.toString());
+		//System.out.println("reducer has computed new pageRank " + newPR + " for node " + key.toString());
 		float residual = Math.abs((oldPR - newPR)/newPR);
-		System.out.println("reducer has computed residual " + residual);
+		//System.out.println("reducer has computed residual " + residual);
 		reporter.incrCounter(COUNTERS.RESIDUAL_SUM, (int)(residual * Constants.RESIDUAL_OFFSET));
 		reporter.incrCounter(COUNTERS.NUM_RESIDUALS, 1);
 		//System.out.println("size of inSet is " + inSet.size() + " and size of outSet is " + outSet.size());

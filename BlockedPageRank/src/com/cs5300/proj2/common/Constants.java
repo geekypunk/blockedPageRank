@@ -1,4 +1,4 @@
-package com.cs5300.proj2.preprocess;
+package com.cs5300.proj2.common;
 
 public final class Constants {
 

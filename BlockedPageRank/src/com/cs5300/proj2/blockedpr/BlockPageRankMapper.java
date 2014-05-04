@@ -6,7 +6,7 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
-import com.cs5300.proj2.preprocess.Constants;
+import com.cs5300.proj2.common.Constants;
 
 /**
  * <p><b>Map task for each block.
@@ -27,7 +27,11 @@ public class BlockPageRankMapper extends Mapper<LongWritable, Text, Text, Text>{
 		int nodeID = Integer.parseInt(tuple[0]);
 		double pageRank = Double.valueOf(tuple[1]);
 		int degree = Integer.parseInt(tuple[2]);
-		String[] outNodes = tuple[3].split(Constants.OUT_NODE_LIST_DELIMITER);
+		String edgeList = "";
+		if (tuple.length == 4) {
+			edgeList = tuple[3];
+		}
+	
 		
 		int blockID = new Integer(lookupBlockID(nodeID));
 		
@@ -41,31 +45,34 @@ public class BlockPageRankMapper extends Mapper<LongWritable, Text, Text, Text>{
 		context.write(mapperKey, mapperValue);
 		
 	
-		for (int i = 0; i < outNodes.length; i++) {
-			int out = (int) Double.valueOf(outNodes[i]).longValue();
-			int blockIDOut = lookupBlockID(out);
-			mapperKey = new Text(String.valueOf(blockIDOut));
-			
-			//Check if both the nodes are in the same block.
-			if (blockIDOut == blockID) {
+		if (edgeList != "") {
+			String[] outNodes = tuple[3].split(Constants.OUT_NODE_LIST_DELIMITER);
+			for (int i = 0; i < outNodes.length; i++) {
+				int out = (int) Double.valueOf(outNodes[i]).longValue();
+				int blockIDOut = lookupBlockID(out);
+				mapperKey = new Text(String.valueOf(blockIDOut));
 				
-				// Output key:blockID value:BE node nodeOut
-				mapperValue = new Text(Constants.BE_DELIMITER+Constants.TUPLE_DELIMITER  + String.valueOf(nodeID) 
-						+ Constants.TUPLE_DELIMITER  + outNodes[i]);
-			
-			} else {
+				//Check if both the nodes are in the same block.
+				if (blockIDOut == blockID) {
+					
+					// Output key:blockID value:BE node nodeOut
+					mapperValue = new Text(Constants.BE_DELIMITER+Constants.TUPLE_DELIMITER  + String.valueOf(nodeID) 
+							+ Constants.TUPLE_DELIMITER  + outNodes[i]);
 				
-				// the pageRankFactor is used by the reducer to calculate the new
-				// pageRank for the outgoing edges
-				
-				double pageRankFactor = (pageRank / (double)degree);
-				
-				String pageRankFactorString = String.valueOf(pageRankFactor);
-				// map key:blockID value:BC node nodeOut pageRankFactor 
-				mapperValue = new Text(Constants.BC_DELIMITER+ Constants.TUPLE_DELIMITER  +  String.valueOf(nodeID)
-						+ Constants.TUPLE_DELIMITER  + outNodes[i] + Constants.TUPLE_DELIMITER  + pageRankFactorString);
+				} else {
+					
+					// the pageRankFactor is used by the reducer to calculate the new
+					// pageRank for the outgoing edges
+					
+					double pageRankFactor = (pageRank / (double)degree);
+					
+					String pageRankFactorString = String.valueOf(pageRankFactor);
+					// map key:blockID value:BC node nodeOut pageRankFactor 
+					mapperValue = new Text(Constants.BC_DELIMITER+ Constants.TUPLE_DELIMITER  +  String.valueOf(nodeID)
+							+ Constants.TUPLE_DELIMITER  + outNodes[i] + Constants.TUPLE_DELIMITER  + pageRankFactorString);
+				}
+				context.write(mapperKey, mapperValue);
 			}
-			context.write(mapperKey, mapperValue);
 		}
 	
 	}

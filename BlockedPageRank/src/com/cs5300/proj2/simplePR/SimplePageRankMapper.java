@@ -10,7 +10,8 @@ import org.apache.hadoop.mapred.Mapper;
 import org.apache.hadoop.mapred.OutputCollector;
 import org.apache.hadoop.mapred.Reporter;
 
-import com.cs5300.proj2.preprocess.Constants;
+import com.cs5300.proj2.common.Constants;
+
 
 public class SimplePageRankMapper extends MapReduceBase implements
 		Mapper<LongWritable, Text, IntWritable, Text> {
@@ -19,7 +20,7 @@ public class SimplePageRankMapper extends MapReduceBase implements
 	public void map(LongWritable key, Text value,
 			OutputCollector<IntWritable, Text> output, Reporter reporter)
 			throws IOException {
-		System.out.println("mapper got key " + key + " and value " + value);
+		//System.out.println("mapper got key " + key + " and value " + value);
 		String line = value.toString();
 		line = line.trim();
 		String[] tuple = line.split("\\s+");

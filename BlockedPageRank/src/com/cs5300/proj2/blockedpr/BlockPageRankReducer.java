@@ -8,7 +8,9 @@ import java.util.Iterator;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
-import com.cs5300.proj2.preprocess.Constants;
+import com.cs5300.proj2.common.Constants;
+import com.cs5300.proj2.common.Counters;
+import com.cs5300.proj2.common.Node;
 
 
 

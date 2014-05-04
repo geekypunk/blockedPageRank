@@ -6,7 +6,8 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-import com.cs5300.proj2.preprocess.Constants;
+import com.cs5300.proj2.common.Constants;
+import com.cs5300.proj2.common.Counters;
 
 
 

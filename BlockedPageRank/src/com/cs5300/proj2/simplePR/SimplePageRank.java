@@ -1,36 +1,19 @@
 package com.cs5300.proj2.simplePR;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.*;
-
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.*;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.Counters;
+import org.apache.hadoop.mapred.FileInputFormat;
 import org.apache.hadoop.mapred.FileOutputFormat;
 import org.apache.hadoop.mapred.JobClient;
 import org.apache.hadoop.mapred.JobConf;
-import org.apache.hadoop.conf.*;
 import org.apache.hadoop.mapred.RunningJob;
 import org.apache.hadoop.mapred.TextInputFormat;
-import org.apache.hadoop.mapreduce.Job;
-import org.apache.hadoop.mapred.FileInputFormat;
 import org.apache.hadoop.mapred.TextOutputFormat;
-import org.apache.hadoop.util.*;
 
-import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.BasicAWSCredentials;
-import com.amazonaws.services.s3.AmazonS3Client;
-import com.amazonaws.services.s3.model.GetObjectRequest;
-import com.amazonaws.services.s3.model.S3Object;
-import com.cs5300.proj2.blockedpr.BlockPageRankMapper;
-import com.cs5300.proj2.blockedpr.BlockPageRankReducer;
-import com.cs5300.proj2.blockedpr.BlockedPageRank;
-import com.cs5300.proj2.preprocess.Constants;
+import com.cs5300.proj2.common.Constants;
 
-//import com.sun.xml.internal.bind.CycleRecoverable.Context;
 
 public class SimplePageRank {
 	
@@ -45,8 +28,8 @@ public class SimplePageRank {
 	
     public static void main(String[] args) throws Exception {
 //    	String inputFile = "s3n://edu-cornell-cs-cs5300s14-kt466-proj2/preprocessedInputKT466v2.txt";
-    	String inputFile = "preprocessedInputKT466v2.txt";
-		String outputPath = "simpleageRank/runs";
+    	String inputFile = args[0];
+		String outputPath = args[1];
 	
 //		AWSCredentials myCredentials = new BasicAWSCredentials(
 //			       String.valueOf(Constants.AWSAccessKeyId), String.valueOf(Constants.AWSSecretKey));

@@ -23,6 +23,7 @@ import com.amazonaws.services.s3.model.InitiateMultipartUploadResult;
 import com.amazonaws.services.s3.model.PartETag;
 import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.UploadPartRequest;
+import com.cs5300.proj2.common.Constants;
 
 
 /**
@@ -50,7 +51,7 @@ public class PreprocessInput {
 			AmazonS3Client s3Client = new AmazonS3Client(myCredentials); 
 			uploadToS3(s3Client,"/home/kira/blockedPageRank/dummy.txt",
 					"edu-cornell-cs-cs5300s14-kt466-proj2",
-					"preprocessedInputV2.txt");
+					"preprocessedInputKt466v2.txt");
 			
 		}catch(Exception e){
 		

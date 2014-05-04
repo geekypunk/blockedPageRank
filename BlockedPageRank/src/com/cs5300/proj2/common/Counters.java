@@ -1,4 +1,4 @@
-package com.cs5300.proj2.blockedpr;
+package com.cs5300.proj2.common;
 
 /**
  * Hadoop Counters
