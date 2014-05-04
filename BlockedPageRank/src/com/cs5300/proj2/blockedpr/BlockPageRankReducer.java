@@ -36,8 +36,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 	//List of all nodes in this graph
 	private ArrayList<String> vList = new ArrayList<String>();
 	
-	private double dampingFactor =  0.85;
-	private double randomJumpFactor = (1 - dampingFactor) /(double) Constants.TOTAL_NODES;
+	private double randomJumpFactor = (1 - Constants.DAMPING_FACTOR) /(double) Constants.TOTAL_NODES;
 	private int maxIterations = 5;
 	
 	
@@ -194,7 +193,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 			}
 	
 	        //NPR[v] = d*NPR[v] + (1-d)/N;
-			npr = (dampingFactor * npr) + randomJumpFactor;
+			npr = (Constants.DAMPING_FACTOR * npr) + randomJumpFactor;
 			// update the global newPR map
 			NPR.put(v, npr);
 			// track the sum of the residual errors

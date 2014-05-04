@@ -29,7 +29,7 @@ public class SimpleMain {
 			
 			Job job = new Job();
 			
-			job.setJobName("pagerank_" + (i + 1));
+			job.setJobName("simplePR_" + (i + 1));
 			job.setJarByClass(SimpleMain.class);
 
 			
@@ -58,9 +58,10 @@ public class SimpleMain {
 			float residualErrorAvg = job.getCounters()
 					.findCounter(Counters.RESIDUAL_ERROR).getValue();
 			residualErrorAvg = (residualErrorAvg / Constants.RESIDUAL_OFFSET) / Constants.TOTAL_NODES;
+			System.out.println(residualErrorAvg);
 			String residualErrorString = String
 					.format("%.4f", residualErrorAvg);
-			LOG.info("Residual error for iteration " + i + ": "
+			System.out.println("Residual error for iteration " + i + ": "
 					+ residualErrorString);
 
 			job.getCounters().findCounter(Counters.RESIDUAL_ERROR)

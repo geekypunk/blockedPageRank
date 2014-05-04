@@ -17,6 +17,7 @@ import com.cs5300.proj2.common.Constants;
  */
 public class BlockPageRankMapper extends Mapper<LongWritable, Text, Text, Text>{
 	
+	public static boolean use_random_blocking = false;
 	
 	protected void map(LongWritable key, Text value, Context context)
 			throws IOException, InterruptedException {
@@ -49,7 +50,12 @@ public class BlockPageRankMapper extends Mapper<LongWritable, Text, Text, Text>{
 			String[] outNodes = tuple[3].split(Constants.OUT_NODE_LIST_DELIMITER);
 			for (int i = 0; i < outNodes.length; i++) {
 				int out = (int) Double.valueOf(outNodes[i]).longValue();
-				int blockIDOut = lookupBlockID(out);
+				int blockIDOut;
+				if(!use_random_blocking){
+					blockIDOut = lookupBlockID(out);
+				}else{
+					blockIDOut = randomBlockId(out);
+				}
 				mapperKey = new Text(String.valueOf(blockIDOut));
 				
 				//Check if both the nodes are in the same block.
@@ -84,7 +90,7 @@ public class BlockPageRankMapper extends Mapper<LongWritable, Text, Text, Text>{
 	 * @param nodeID
 	 * @return
 	 */
-	public static int lookupBlockID(int nodeID) {
+	private int lookupBlockID(int nodeID) {
 	
 		int[] blockBoundaries = { 0, 10328, 20373, 30629, 40645,
 				50462, 60841, 70591, 80118, 90497, 100501, 110567, 120945,
@@ -104,4 +110,9 @@ public class BlockPageRankMapper extends Mapper<LongWritable, Text, Text, Text>{
 		return blockID;
 		
 	}
+   
+	private int randomBlockId(int nodeID) {
+        return nodeID%68;
+    }
+
 }

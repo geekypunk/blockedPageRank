@@ -7,6 +7,8 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
+import com.cs5300.proj2.common.Constants;
+
 public class SimpleMapper extends Mapper<LongWritable, Text, Text, Text> {
 
 	private static Logger LOG = Logger.getLogger(SimpleMapper.class.getName());
@@ -27,12 +29,12 @@ public class SimpleMapper extends Mapper<LongWritable, Text, Text, Text> {
 				edgeList = temp[3];
 			}
 			mapperKey = new Text(node);
-			mapperValue = new Text("PR " + String.valueOf(pageRank) + " " + edgeList);
+			mapperValue = new Text(Constants.PR_DELIMITER+Constants.TUPLE_DELIMITER + String.valueOf(pageRank) + Constants.TUPLE_DELIMITER + edgeList);
 			context.write(mapperKey, mapperValue);
 	
 			double pageRankFactor = pageRank/(double)degree;
 			if(edgeList.length()>0){
-				String[] outNodes = edgeList.split(",");
+				String[] outNodes = edgeList.split(Constants.OUT_NODE_LIST_DELIMITER);
 				mapperValue = new Text(String.valueOf(pageRankFactor));
 				for (int i = 0; i < outNodes.length; i++) {
 					mapperKey = new Text(outNodes[i]);
@@ -40,8 +42,8 @@ public class SimpleMapper extends Mapper<LongWritable, Text, Text, Text> {
 				}
 			}
 		}catch(Exception e){
-			LOG.info("Mapper:"+value);
-			LOG.info(mapperKey+":"+mapperValue);
+			System.out.println("Mapper:"+value);
+			System.out.println(mapperKey+":"+mapperValue);
 			e.printStackTrace();
 		}
 		

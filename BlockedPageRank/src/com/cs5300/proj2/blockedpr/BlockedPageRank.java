@@ -60,6 +60,9 @@ public class BlockedPageRank {
 	            
 	            // Set Mapper and Reducer class
 	           
+	            //True for random partitioning
+	            BlockPageRankMapper.use_random_blocking = false;
+	            
 	            job.setMapperClass(BlockPageRankMapper.class);
 	            job.setReducerClass(BlockPageRankReducer.class);
 	
