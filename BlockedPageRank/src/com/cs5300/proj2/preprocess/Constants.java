@@ -61,5 +61,11 @@ public final class Constants {
 	
 	public static final String OUT_NODE_LIST_DELIMITER=",";
 	
+	public static final String OUT_EDGE = "OUT";
+	
+	public static final String IN_EDGE = "IN";
+	
+	public static final double DAMPING_FACTOR = 0.85;
+	
 
 }
