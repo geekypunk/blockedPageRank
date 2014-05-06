@@ -80,7 +80,7 @@ public class SimplePageRankMain {
 			//System.out.println(residualErrorAvg);
 			String residualErrorString = String
 					.format("%.4f", residualErrorAvg);
-			System.out.println("Residual error for iteration " + i + ": "
+			System.out.println("Average Residual error for iteration " + i + ": "
 					+ residualErrorString);
 
 			//Reset counters
