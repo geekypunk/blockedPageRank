@@ -34,8 +34,13 @@ public class BlockPageRankMapper extends Mapper<LongWritable, Text, Text, Text>{
 		}
 	
 		
-		int blockID = new Integer(lookupBlockID(nodeID));
+		int blockID = 0;
 		
+		if(!use_random_blocking){
+			blockID = lookupBlockID(nodeID);
+		}else{
+			blockID = randomBlockId(nodeID);
+		}
 	
 		Text mapperKey = new Text(String.valueOf(blockID));
 		Text mapperValue = new Text(Constants.PR_DELIMITER+Constants.TUPLE_DELIMITER + nodeID + Constants.TUPLE_DELIMITER  + String.valueOf(pageRank) 
@@ -112,7 +117,7 @@ public class BlockPageRankMapper extends Mapper<LongWritable, Text, Text, Text>{
 	}
    
 	private int randomBlockId(int nodeID) {
-        return nodeID%68;
+        return nodeID % 68;
     }
 
 }

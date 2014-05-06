@@ -1,65 +1,63 @@
 package com.cs5300.proj2.simplePR;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
-import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mapred.MapReduceBase;
-import org.apache.hadoop.mapred.Mapper;
-import org.apache.hadoop.mapred.OutputCollector;
-import org.apache.hadoop.mapred.Reporter;
+import org.apache.hadoop.mapreduce.Mapper;
 
 import com.cs5300.proj2.common.Constants;
 
+/**
+ * Mapper class for Simple PageRank Computation
+ * @author dr472
+ *
+ */
+public class SimplePageRankMapper extends Mapper<LongWritable, Text, Text, Text> {
 
-public class SimplePageRankMapper extends MapReduceBase implements
-		Mapper<LongWritable, Text, IntWritable, Text> {
-
-	// mapper gets <a b PR(a)>
-	public void map(LongWritable key, Text value,
-			OutputCollector<IntWritable, Text> output, Reporter reporter)
-			throws IOException {
-		//System.out.println("mapper got key " + key + " and value " + value);
-		String line = value.toString();
-		line = line.trim();
-		String[] tuple = line.split("\\s+");
-		int nodeID = Integer.parseInt(tuple[0]);
-		double pageRank = Double.valueOf(tuple[1]);
-		int degree = Integer.parseInt(tuple[2]);
-		String[] outNodes = null;
-		if (tuple.length >= 4)
-			outNodes = tuple[3].split(",");
-
-		try {
-
-			// Write page rank for node ID
-			// output.collect(new IntWritable(nodeID), new
-			// Text(Constants.PR_DELIMITER + " " + pageRank));
-			if (outNodes != null) {
-				for (String outNode : outNodes) {
-					output.collect(
-							new IntWritable(Integer.parseInt(outNode)),
-							new Text(Constants.IN_EDGE + " "
-									+ String.valueOf(nodeID) + " " + pageRank
-									+ " " + pageRank + " " + degree));
-					output.collect(new IntWritable(nodeID), new Text(
-							Constants.OUT_EDGE + " " + String.valueOf(outNode)
-									+ " " + pageRank + " " + pageRank + " "
-									+ degree));
+	private static Logger LOG = Logger.getLogger(SimplePageRankMapper.class.getName());
+	protected void map(LongWritable key, Text value, Context context)
+			throws IOException, InterruptedException {
+		
+		//Input format <key: node ID, value: node_ID page_rank degree out_nodes_separated_by_comma>
+		Text mapperKey = null;
+		Text mapperValue = null;
+		try{
+			String line = value.toString();
+			line = line.trim();
+			String[] temp = line.trim().split("\\s+");
+			
+			Text node = new Text(temp[0]);
+			double pageRank = Double.valueOf(temp[1]);
+			int degree = Integer.valueOf(temp[2]);
+			String edgeList = "";
+			if (temp.length == 4) {
+				edgeList = temp[3];
+			}
+			
+			//Emit the page rank, and out nodes for this node
+			//<key: node_ID, value:PR_Delimiter page_rank out_nodes>
+			mapperKey = new Text(node);
+			mapperValue = new Text(Constants.PR_DELIMITER+Constants.TUPLE_DELIMITER + String.valueOf(pageRank) + Constants.TUPLE_DELIMITER + edgeList);
+			context.write(mapperKey, mapperValue);
+	
+			//Emit the page rank factor for the out nodes
+			//<key: out_node_ID, value:page_rank_factor>
+			double pageRankFactor = pageRank/(double)degree;
+			if(edgeList.length()>0){
+				String[] outNodes = edgeList.split(Constants.OUT_NODE_LIST_DELIMITER);
+				mapperValue = new Text(String.valueOf(pageRankFactor));
+				for (int i = 0; i < outNodes.length; i++) {
+					mapperKey = new Text(outNodes[i]);
+					context.write(mapperKey, mapperValue);
 				}
 			}
-
-			// IntWritable firstKey = new
-			// IntWritable(Integer.parseInt(inputs[0].trim()));
-			// IntWritable secondKey = new
-			// IntWritable(Integer.parseInt(inputs[1].trim()));
-			// output.collect(firstKey, value);
-			// output.collect(secondKey, value);
-		} catch (Exception e) {
-			System.out.println("mapper got invalid format");
+		}catch(Exception e){
+			System.out.println("Mapper:"+value);
+			System.out.println(mapperKey+":"+mapperValue);
 			e.printStackTrace();
 		}
-		// reporter.incrCounter(COUNTERS.NUM_NODES, 1);
+		
 	}
 }

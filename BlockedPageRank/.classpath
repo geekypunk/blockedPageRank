@@ -49,5 +49,6 @@
 	<classpathentry kind="lib" path="lib/slf4j-api-1.4.3.jar"/>
 	<classpathentry kind="lib" path="lib/slf4j-log4j12-1.4.3.jar"/>
 	<classpathentry kind="lib" path="lib/xmlenc-0.52.jar"/>
+	<classpathentry kind="lib" path="/home/kt466/git/elasticMLCompute/WebContent/WEB-INF/lib/aws-java-sdk-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

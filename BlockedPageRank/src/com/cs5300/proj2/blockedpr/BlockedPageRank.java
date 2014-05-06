@@ -32,10 +32,7 @@ public class BlockedPageRank {
 					+ "	s3n://<bucketname>");
 			System.exit(2);
 		}
-		
-		
-		String inputFile = args[0];
-		String outputPath = args[1];
+	
 		try{
 		
 			//PreprocessInput.createFilteredEdgesFileLocally(inputFile,intermediateFilteredEdge);
@@ -45,6 +42,11 @@ public class BlockedPageRank {
 			e.printStackTrace();
 			return;
 		}
+		
+		runJob(args[0], args[1], true);
+	}
+	
+	public static void runJob(String inputFile, String outputPath, boolean useRandomBlocking){
 		boolean success = false;
 		int i = 0;
 		double residualErrorAvg = 0.0f;
@@ -58,13 +60,17 @@ public class BlockedPageRank {
 	            job.setJobName("blockedPrIter_"+ i);
 	            job.setJarByClass(BlockedPageRank.class);
 	            
-	            // Set Mapper and Reducer class
-	           
+	                     
 	            //True for random partitioning
-	            BlockPageRankMapper.use_random_blocking = false;
+	            BlockPageRankMapper.use_random_blocking = useRandomBlocking;
 	            
+	            // Set Mapper and Reducer class
 	            job.setMapperClass(BlockPageRankMapper.class);
 	            job.setReducerClass(BlockPageRankReducer.class);
+	            
+	           //AWS credentials, to access input and output files
+		    	job.getConfiguration().set("fs.s3n.awsAccessKeyId", Constants.AWSAccessKeyId);
+		    	job.getConfiguration().set("fs.s3n.awsSecretAccessKey", Constants.AWSSecretKey);
 	
 	            // set the classes for output key and value
 	            job.setOutputKeyClass(Text.class);
@@ -109,6 +115,8 @@ public class BlockedPageRank {
 			}
 			
 		}while(residualErrorAvg > Constants.TERMINATION_RESIDUAL);
+		
+		System.out.println("Converged!!!");
 
 	}
 
