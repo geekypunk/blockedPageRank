@@ -12,7 +12,7 @@ import com.cs5300.proj2.common.Counters;
 
 
 /**
- * <p>Implements the Simple Blocked version of PageRank algorithm</p>
+ * <p>Implements the  Blocked version of PageRank algorithm</p>
  * @author kt466
  *
  */
