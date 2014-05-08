@@ -19,7 +19,7 @@ import com.cs5300.proj2.common.Counters;
  */
 public class SimplePageRankMain {
 
-	private static final int NUM_ITERATIONS = 5; // # of iterations to run
+	private static final int NUM_ITERATIONS = 25; // # of iterations to run
 
 	private static Logger LOG = Logger.getLogger(SimplePageRankMain.class.getName());
 	public static void main(String[] args) throws Exception {

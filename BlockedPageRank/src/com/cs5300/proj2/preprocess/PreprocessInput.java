@@ -2,6 +2,7 @@ package com.cs5300.proj2.preprocess;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -10,7 +11,10 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
@@ -36,6 +40,8 @@ import com.cs5300.proj2.common.Constants;
  * <p>Reject Min: 0.65736</p>
  * <p>Reject Limit: 0.66736</p>
  * <p>Rejects approximately 0.84706526265% of the edges</p>
+ * <p>Total edges after rejection = 7524964</p>
+ * 
 
  * @author kt466
  *
@@ -46,12 +52,20 @@ public class PreprocessInput {
 	public static void main(String[] args) throws IOException {
 		
 		try{
+			
+			/*
 			AWSCredentials myCredentials = new BasicAWSCredentials(
 				       String.valueOf(Constants.AWSAccessKeyId), String.valueOf(Constants.AWSSecretKey));
 			AmazonS3Client s3Client = new AmazonS3Client(myCredentials); 
 			uploadToS3(s3Client,"/home/kira/blockedPageRank/dummy.txt",
 					"edu-cornell-cs-cs5300s14-kt466-proj2",
-					"preprocessedInputKt466v2.txt");
+					"preprocessedInputKt466v2.txt");*/
+			
+			//PreprocessInput.createFilteredEdgesFileLocally("/home/kt466/edges.txt","/home/kt466/preprocessEdges.txt");
+			Map<String,Boolean> allNodes = getAllNodes("/home/kt466/preprocessEdges.txt");
+			System.out.println("Nodes in preprocessed:"+allNodes.size());
+			PreprocessInput.createPreprocessedInputFile(allNodes,"/home/kt466/preprocessEdges.txt", "/home/kt466/preprocessFinal.txt");
+			
 			
 		}catch(Exception e){
 		
@@ -119,7 +133,7 @@ public class PreprocessInput {
 		return ( ((x >= Constants.REJECT_MIN) && (x < Constants.REJECT_LIMIT)) ? false : true );
 	}
 	
-	public static void createPreprocessedInputFile(String inPath,String outPath) throws IOException{
+	public static void createPreprocessedInputFile(Map<String,Boolean> allNodes,String inPath,String outPath) throws IOException{
 		
 		File inFile = new File(inPath); 
 		//File inFile = new File("test"); 
@@ -134,6 +148,7 @@ public class PreprocessInput {
 		line = reader.readLine();
 		parts = line.trim().split("\\s+");
 		oldnode = Integer.parseInt(parts[0]);
+		allNodes.put(parts[0],true);
 		List<Integer> outNodes = new ArrayList<Integer>();
 		StringBuilder sb;
 		while ((line = reader.readLine()) != null) {      
@@ -145,6 +160,8 @@ public class PreprocessInput {
 					  sb.append(outNodes.get(i)).append(",");
 				  }
 				  sb.append(outNodes.get(outNodes.size()-1));
+				  allNodes.put(parts[0],true);
+				  
 				  bw.write(oldnode+" "+Constants.INIT_PR+" "+outNodes.size()+" "+sb.toString()+"\n");
 				  oldnode = currentNode;
 				  outNodes = new ArrayList<Integer>();
@@ -161,6 +178,20 @@ public class PreprocessInput {
 		}
 		sb.append(outNodes.get(outNodes.size()-1));
 		bw.write(oldnode+" "+Constants.INIT_PR+" "+outNodes.size()+" "+sb.toString()+"\n");
+		
+
+	
+		int i=0;
+		for (Map.Entry<String, Boolean> entry : allNodes.entrySet())
+		{
+		    if(!entry.getValue()){
+		    	i++;
+		    	System.out.println("NoOut:"+entry.getKey()+" "+Constants.INIT_PR+"\n");
+		    	bw.write(entry.getKey()+" "+Constants.INIT_PR+"\n");
+		    }
+		}
+
+		System.out.println("Added "+i +" extra nodes");	
 		bw.close();
 		reader.close();
 	}
@@ -218,5 +249,20 @@ public class PreprocessInput {
 				
 	}
 	
-	
+	private static Map<String,Boolean> getAllNodes(String inPath) throws IOException{
+		
+		File inFile = new File(inPath); 
+		BufferedReader reader = new BufferedReader(new FileReader(inFile));
+		String line;
+		String[] parts = null;
+		Map<String,Boolean> allNodes = new HashMap<>();
+		while ((line = reader.readLine()) != null) {  
+			  parts = line.trim().split("\\s+");
+			  allNodes.put(parts[0],false);
+			  allNodes.put(parts[1],false);
+			
+		}   
+		reader.close();
+		return allNodes;
+	}
 }

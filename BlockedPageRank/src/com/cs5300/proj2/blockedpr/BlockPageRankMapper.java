@@ -27,10 +27,11 @@ public class BlockPageRankMapper extends Mapper<LongWritable, Text, Text, Text>{
 		String[] tuple = line.split("\\s+");
 		int nodeID = Integer.parseInt(tuple[0]);
 		double pageRank = Double.valueOf(tuple[1]);
-		int degree = Integer.parseInt(tuple[2]);
+		int degree = 0;
 		String edgeList = "";
 		if (tuple.length == 4) {
 			edgeList = tuple[3];
+			degree = Integer.parseInt(tuple[2]);
 		}
 	
 		
@@ -42,10 +43,16 @@ public class BlockPageRankMapper extends Mapper<LongWritable, Text, Text, Text>{
 			blockID = randomBlockId(nodeID);
 		}
 	
-		Text mapperKey = new Text(String.valueOf(blockID));
-		Text mapperValue = new Text(Constants.PR_DELIMITER+Constants.TUPLE_DELIMITER + nodeID + Constants.TUPLE_DELIMITER  + String.valueOf(pageRank) 
+		Text mapperKey,mapperValue; 
+		if (tuple.length == 4) {
+			mapperKey = new Text(String.valueOf(blockID));
+			mapperValue = new Text(Constants.PR_DELIMITER+Constants.TUPLE_DELIMITER + nodeID + Constants.TUPLE_DELIMITER  + String.valueOf(pageRank) 
 				+ Constants.TUPLE_DELIMITER + tuple[3]);
-	
+		}else{
+			mapperKey = new Text(String.valueOf(blockID));
+			mapperValue = new Text(Constants.PR_DELIMITER+Constants.TUPLE_DELIMITER + nodeID + Constants.TUPLE_DELIMITER  + String.valueOf(pageRank) 
+				);
+		}
 		//Output tuple ( key , value )
 		//= < blockID , PR nodeID pageRank {outGoingEdgeList}>
 		context.write(mapperKey, mapperValue);

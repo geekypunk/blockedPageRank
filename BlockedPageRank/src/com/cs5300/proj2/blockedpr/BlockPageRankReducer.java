@@ -23,7 +23,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 
 	//New PageRank map <nodeID, pageRank>
 	private HashMap<String, Double> NPR = new HashMap<String, Double>();
-	
+	private HashMap<String, Double> NPR_BACKUP = new HashMap<String, Double>();
 	// <nodeID, {List of vertices to which there is an in-block edge from nodeID}>
 	private HashMap<String, ArrayList<String>> BE = new HashMap<String, ArrayList<String>>();
 	
@@ -60,6 +60,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		NPR.clear();
 		BE.clear();
 		BC.clear();
+		NPR_BACKUP.clear();
 		nodeDataMap.clear();	
 		
 		while (itr.hasNext()) {
@@ -113,6 +114,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		}
 		
 		int i = 0;
+		NPR_BACKUP = new HashMap<>(NPR);
 		do {
 		
 			i++;
@@ -126,7 +128,8 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		residualError = 0.0;
 		for (String v : vList) {
 			Node node = nodeDataMap.get(v);
-			residualError += Math.abs(node.getPageRank() - NPR.get(v)) /(double) NPR.get(v);
+			//residualError += Math.abs(NPR_BACKUP.get(v) - NPR.get(v)) /(double) NPR.get(v);
+			residualError += Math.abs(node.getPageRank()- NPR.get(v)) /(double) NPR.get(v);
 		}
 		residualError = residualError /(double) vList.size();
 		//System.out.println("Block " + key + " overall resError for iteration: " + residualError);
@@ -141,8 +144,16 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		String output = "";
 		for (String v : vList) {
 			Node node = nodeDataMap.get(v);
-			output = NPR.get(v) + Constants.TUPLE_DELIMITER  + node.getDegrees() 
+			
+			if(node.getEdgeList()!=null){
+				output = NPR.get(v) + Constants.TUPLE_DELIMITER  + node.getDegrees() 
 						+ Constants.TUPLE_DELIMITER  + node.getEdgeList();
+				
+			}else{
+				
+				output = String.valueOf(NPR.get(v));
+			}
+			
 			Text outputText = new Text(output);
 			Text outputKey = new Text(v);
 			context.write(outputKey, outputText);
@@ -165,6 +176,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 	protected double IterateBlockOnce() {
 		// used to iterate through the BE list of edges
 		ArrayList<String> uList = new ArrayList<String>();
+		HashMap<String, Double> NNPR = new HashMap<String, Double>();
 		// npr = current PageRank value of Node v
 		double npr = 0.0;
 		// r = sum of PR[u]/deg[u] for boundary nodes pointing to v
@@ -195,14 +207,17 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 	        //NPR[v] = d*NPR[v] + (1-d)/N;
 			npr = (Constants.DAMPING_FACTOR * npr) + randomJumpFactor;
 			// update the global newPR map
-			NPR.put(v, npr);
+			NNPR.put(v, npr);
+			//NPR.put(v, npr);
 			// track the sum of the residual errors
 			resErr += Math.abs(prevPR - npr) /(double) npr;
 		}
+		NPR = new HashMap<>(NNPR);
 		// calculate the average residual error and return it
 		resErr = resErr /(double) vList.size();
 		return resErr;
 	}
-
+	
+	
 }
 
