@@ -23,7 +23,6 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 
 	//New PageRank map <nodeID, pageRank>
 	private HashMap<String, Double> NPR = new HashMap<String, Double>();
-	private HashMap<String, Double> NPR_BACKUP = new HashMap<String, Double>();
 	// <nodeID, {List of vertices to which there is an in-block edge from nodeID}>
 	private HashMap<String, ArrayList<String>> BE = new HashMap<String, ArrayList<String>>();
 	
@@ -60,7 +59,6 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		NPR.clear();
 		BE.clear();
 		BC.clear();
-		NPR_BACKUP.clear();
 		nodeDataMap.clear();	
 		
 		while (itr.hasNext()) {
@@ -114,14 +112,15 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 		}
 		
 		int i = 0;
-		NPR_BACKUP = new HashMap<>(NPR);
 		do {
 		
 			i++;
 			residualError = IterateBlockOnce();
 
 		//Stop whichever happens earlier	
-		} while (i < maxIterations && residualError > Constants.TERMINATION_RESIDUAL);
+		//} while (i < maxIterations && residualError > Constants.TERMINATION_RESIDUAL);
+			context.getCounter(Counters.AVG_ITERS_BLOCK).increment(1*Constants.RESIDUAL_OFFSET);
+		} while (residualError > Constants.TERMINATION_RESIDUAL);
 
 				
 		// compute the sum residual error for all node in this block
@@ -193,7 +192,9 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 				uList = BE.get(v);
 				for (String u : uList) {
 					// npr += PR[u] / deg(u);
-					Node uNode = nodeDataMap.get(u);
+					Node uNode = nodeDataMap.get(u); 
+					//if(NNPR.containsKey(u)) npr += (NNPR.get(u) /(double) uNode.getDegrees());
+					//else npr += (NPR.get(u) /(double) uNode.getDegrees());
 					npr += (NPR.get(u) /(double) uNode.getDegrees());
 				}
 			}
@@ -213,6 +214,7 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 			resErr += Math.abs(prevPR - npr) /(double) npr;
 		}
 		NPR = new HashMap<>(NNPR);
+		
 		// calculate the average residual error and return it
 		resErr = resErr /(double) vList.size();
 		return resErr;

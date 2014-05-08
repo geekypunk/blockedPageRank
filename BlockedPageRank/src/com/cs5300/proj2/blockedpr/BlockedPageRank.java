@@ -168,9 +168,11 @@ public class BlockedPageRank {
 	            
 	            //Print average residual error over all blocks
 	            System.out.println("Average Residual Error for iteration " + i + ": " + residualErrorString);
-	            
+	            long avg = job.getCounters().findCounter(Counters.AVG_ITERS_BLOCK).getValue();
+	            System.out.println("Average iterations per block "+avg/(double)Constants.RESIDUAL_OFFSET/68);
 	            // reset the counter for the next round
 	            job.getCounters().findCounter(Counters.RESIDUAL_ERROR).setValue(0L);
+	            job.getCounters().findCounter(Counters.AVG_ITERS_BLOCK).setValue(0L);
 	            i++;
 			}catch(Exception e){
 				

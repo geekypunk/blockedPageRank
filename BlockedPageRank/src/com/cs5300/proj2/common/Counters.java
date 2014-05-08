@@ -9,5 +9,6 @@ public enum Counters {
 	/**
 	 * Counter the L' relative residual error
 	 */
-	RESIDUAL_ERROR
+	RESIDUAL_ERROR,
+	AVG_ITERS_BLOCK
 }
