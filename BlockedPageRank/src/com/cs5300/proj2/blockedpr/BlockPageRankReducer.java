@@ -193,9 +193,16 @@ public class BlockPageRankReducer extends Reducer<Text, Text, Text, Text> {
 				for (String u : uList) {
 					// npr += PR[u] / deg(u);
 					Node uNode = nodeDataMap.get(u); 
-					//if(NNPR.containsKey(u)) npr += (NNPR.get(u) /(double) uNode.getDegrees());
-					//else npr += (NPR.get(u) /(double) uNode.getDegrees());
-					npr += (NPR.get(u) /(double) uNode.getDegrees());
+					
+					//Tweak for Gauss-Seidel
+					if(NNPR.containsKey(u)){ 
+						npr += (NNPR.get(u) /(double) uNode.getDegrees());
+					}
+					else{ 
+						npr += (NPR.get(u) /(double) uNode.getDegrees());
+					}
+					//Change to below line for Jacobi
+					//npr += (NPR.get(u) /(double) uNode.getDegrees());
 				}
 			}
 			

@@ -2,7 +2,6 @@ package com.cs5300.proj2.preprocess;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -14,7 +13,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
@@ -61,10 +59,10 @@ public class PreprocessInput {
 					"edu-cornell-cs-cs5300s14-kt466-proj2",
 					"preprocessedInputKt466v2.txt");*/
 			
-			//PreprocessInput.createFilteredEdgesFileLocally("/home/kt466/edges.txt","/home/kt466/preprocessEdges.txt");
-			Map<String,Boolean> allNodes = getAllNodes("/home/kt466/preprocessEdges.txt");
+			PreprocessInput.createFilteredEdgesFileLocally("/home/kira/edges.txt","/home/kira/preprocessEdges.txt");
+			Map<String,Boolean> allNodes = getAllNodes("/home/kira/preprocessEdges.txt");
 			System.out.println("Nodes in preprocessed:"+allNodes.size());
-			PreprocessInput.createPreprocessedInputFile(allNodes,"/home/kt466/preprocessEdges.txt", "/home/kt466/preprocessFinal.txt");
+			PreprocessInput.createPreprocessedInputFile(allNodes,"/home/kira/preprocessEdges.txt", "/home/kira/preprocessFinal.txt");
 			
 			
 		}catch(Exception e){

@@ -24,6 +24,7 @@ public class SimplePageRankMain {
 	private static Logger LOG = Logger.getLogger(SimplePageRankMain.class.getName());
 	public static void main(String[] args) throws Exception {
 
+		long startTime = System.currentTimeMillis();
 		//Input file: s3n://edu-cornell-cs-cs5300s14-kt466-proj2/preprocessedInputKT466v2.txt
 		//Output : s3n://edu-cornell-cs-cs5300s14-kt466-proj2/simple_page_rank/runs
 		String inputFile = args[0];
@@ -87,6 +88,9 @@ public class SimplePageRankMain {
 			job.getCounters().findCounter(Counters.RESIDUAL_ERROR)
 					.setValue(0L);
 		}
+		long stopTime = System.currentTimeMillis();
+		long elapsedTime = stopTime - startTime;
+	      System.out.println("Elapsed Time:"+elapsedTime);
 
 	}
 
